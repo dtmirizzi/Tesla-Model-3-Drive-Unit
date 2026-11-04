@@ -454,6 +454,7 @@ def main():
         '#pragma experiment("INSTANCE_TRAITS")',
         "import ElectricPower",
         "import has_designator",
+        "import has_net_name_suggestion",
     ]
     imported = defaultdict(set)
     for _, s, _ in top_inst:
@@ -514,6 +515,16 @@ def main():
     for r in sorted(comps, key=natural):
         if addresses[r].split(".")[0] in ("gate_a", "gate_b", "gate_c"):
             out.append(f'    trait {addresses[r]} has_designator<designator="{r}">')
+    # net names: pin every KiCad net name on one of its pins, so the layout's
+    # tracks/zones keep their nets without `--keep-net-names` (which breaks as
+    # soon as a net is split by an edit)
+    out += ["", "    # ---- net names (identical to the KiCad design) ----"]
+    for net, pads in sorted(nets.items(), key=lambda kv: natural(kv[0])):
+        if net.startswith("unconnected-") or not pads:
+            continue
+        r, p = sorted(pads, key=lambda rp: (natural(rp[0]), natural(rp[1])))[0]
+        name = net.replace('"', "'")
+        out.append(f'    trait {addresses[r]}.{ctx.pin(r, p)} has_net_name_suggestion<name="{name}", level="EXPECTED">')
     (root / "main.ato").write_text("\n".join(out) + "\n")
 
     # designators of single-instance blocks live inside their module

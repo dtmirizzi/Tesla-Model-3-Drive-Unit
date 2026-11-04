@@ -109,18 +109,60 @@ src/
   `check_netlist.py` still passes, and the atopile BOM matches the original JLC
   BOM line for line (703 parts, same LCSC numbers).
 
-### Phase 6 - CI ✅ (written, not yet run on GitHub)
-`.github/workflows/atopile.yml`:
-* regenerates everything from the KiCad sources, builds, and runs `check_netlist.py`
-* fails if the committed generated files are stale (generation is deterministic)
-* in a `kicad/kicad:9.0` container: DRC (report only for now) plus Gerbers, drill
-  and position files as build artifacts
+### Phase 6 - CI ✅ (written and run locally step by step; not yet run on GitHub)
+`.github/workflows/atopile.yml`. Each check is a separate step, and its result
+goes into the GitHub job summary:
+1. **Committed board vs KiCad V3.2**: `check_netlist.py` on `ato/layouts` as committed
+2. **Regenerate and build** from the KiCad sources (`port.sh --no-check`)
+3. **Rebuilt board vs KiCad V3.2**: `check_netlist.py`, covering pad geometry,
+   pad-to-net partition, footprint positions, tracks/arcs/vias and zones
+4. **atopile BOM vs JLC BOM**: `check_bom.py`, the same LCSC number for every designator
+5. **Generated sources up to date**: `git diff --exit-code` (generation is deterministic)
+6. In a `kicad/kicad:9.0` container: DRC (report only for now), plus Gerbers,
+   drill and position files as artifacts
 
-## What's next
-* **Make the modules the source.** Today `src/` is regenerated from KiCad. The
-  next step is to edit it by hand and stop regenerating, leaving
-  `check_netlist.py` as the guard. To switch: drop `gen_modules.py` from
-  `port.sh`, and change CI to `ato build` + `check_netlist.py`.
+Net names are pinned in code (`has_net_name_suggestion`, level `EXPECTED`, one
+per net), so the build no longer needs `--keep-net-names`. That flag made the
+build fail as soon as an edit split a net.
+
+### Editing round-trip (tested on a scratch copy)
+* **Part change.** R1 was moved to a correct 0603 10K part (C25804 instead of
+  the 0805 C17414) and rebuilt on the existing layout. The build succeeded, the
+  layout was untouched, `check_netlist.py` passed, and `check_bom.py` reported
+  exactly `R1: C17414 -> C25804`.
+* **Wiring change.** One connection (`CAN_TX ~ u55.D`) was deleted. The build
+  succeeded and `check_netlist.py` reported exactly that net
+  (`CAN_TX [U16.71, U55.1]`); nothing else changed. Rebuilding again gave the
+  same result.
+
+## How far is this from being the active design?
+**Works today:** atopile builds the real V3.2 board, with the same parts,
+designators, nets, BOM and layout, from modular source, and CI proves it on
+every push. Hand edits flow through to the layout and BOM, and the checkers
+report exactly what changed.
+
+**Gaps before the atopile project can replace the KiCad project:**
+1. **CI has never run on GitHub.** The first run validates the workflow,
+   setup-python 3.14 and the KiCad container.
+2. **DRC/ERC have never been run** on the atopile-built board (KiCad 9 can't be
+   installed in this environment). The fab job does it. If its report matches the
+   original board's, gate on it.
+3. **No fab-output comparison.** The fab job's Gerbers have not been compared
+   with `Design/M3DU_BoardV3_2/Production/M3DU_BoardV3_2_Gerber.zip`. This is the
+   last proof that it is the same board.
+4. **Swap the source of truth** (a one-time switch). Stop regenerating `src/`
+   from KiCad and make the `.ato` files the source:
+   * remove the `extract`/`gen_modules`/`seed_layout` steps from `port.sh` and CI
+   * keep `check_netlist.py` against the frozen V3.2 reference, and expect it to
+     fail on intended changes. Re-baseline it, or turn it into a diff report,
+     once real changes start.
+   * layout edits then happen in `ato/layouts/default/default.kicad_pcb`
+5. **Toolchain risk.** atopile 0.15.9 is the last release of the classic CLI;
+   0.16+ only runs inside the atopile app. The port is pinned and builds offline,
+   but upgrading later will need a migration.
+6. **Decisions on the inherited BOM findings** below (the 0805/0603 mismatches).
+
+**Next steps after switching (improvements, not blockers):**
 * Typed buses: replace the gate-driver SPI, CAN and LIN signals with `SPI`,
   `CAN_TTL` and `UART` interfaces.
 * Design intent as constraints: divider ratios for the HV measurement, current
@@ -129,7 +171,6 @@ src/
   schematic notes (for example "10R RESISTORS ARE 6R2 ON 960 BOARD"), not as
   data, so it needs a reviewed list of affected parts first. Once that exists it
   becomes a derived module per block, like `GateDrivePhaseC`.
-* Gate the DRC in CI once the original board's DRC report has been reviewed.
 
 ## Findings in the original design (kept unchanged by the exact port)
 

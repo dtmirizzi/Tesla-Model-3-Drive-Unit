@@ -13,6 +13,7 @@ Exit status is non-zero on any difference, so this can gate CI.
 from __future__ import annotations
 
 import argparse
+import os
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -81,6 +82,13 @@ def main() -> int:
     ap.add_argument("--orig", type=Path, default=ORIG)
     ap.add_argument("--new", type=Path, default=NEW)
     ap.add_argument("--no-layout", action="store_true", help="only check connectivity")
+    ap.add_argument("--title", default="Netlist + layout equivalence", help="heading for the markdown summary")
+    ap.add_argument(
+        "--summary",
+        type=Path,
+        default=Path(os.environ["GITHUB_STEP_SUMMARY"]) if os.environ.get("GITHUB_STEP_SUMMARY") else None,
+        help="append a markdown report here (defaults to $GITHUB_STEP_SUMMARY in CI)",
+    )
     args = ap.parse_args()
 
     o_fps, o_pads, o_cu, o_zones = load(args.orig)
@@ -135,20 +143,41 @@ def main() -> int:
         if oz != nz:
             errors.append(f"zones differ: lost {dict(oz - nz)} added {dict(nz - oz)}")
 
-    print(f"references : {len(o_fps)} original / {len(n_fps)} atopile")
-    print(f"nets       : {len(po)} multi-pad nets original / {len(pn)} atopile")
-    print(f"copper     : {len(o_cu)} original / {len(n_cu)} atopile (tracks+arcs+vias)")
-    print(f"zones      : {len(o_zones)} original / {len(n_zones)} atopile")
-    print(f"net names  : {len(renamed)} renamed by atopile")
+    rows = [
+        ("references", len(o_fps), len(n_fps)),
+        ("multi-pad nets", len(po), len(pn)),
+        ("tracks + arcs + vias", len(o_cu), len(n_cu)),
+        ("zones", len(o_zones), len(n_zones)),
+    ]
+    for name, a, b in rows:
+        print(f"{name:21}: {a} original / {b} atopile")
+    print(f"{'net names renamed':21}: {len(renamed)}")
     for o, n in sorted(renamed.items())[:15]:
         print(f"    {o!r} -> {n!r}")
-    if errors:
+    ok = not errors
+    if ok:
+        print("\nPASS: atopile build is netlist- and layout-identical to the KiCad V3.2 board")
+    else:
         print(f"\nFAIL: {len(errors)} difference(s)")
         for e in errors:
             print("  -", e)
-        return 1
-    print("\nPASS: atopile build is netlist- and layout-identical to the KiCad V3.2 board")
-    return 0
+
+    if args.summary:
+        def rel(p: Path) -> str:
+            try:
+                return str(p.resolve().relative_to(REPO))
+            except ValueError:
+                return str(p)
+
+        md = [f"### {'✅' if ok else '❌'} {args.title}", "", f"`{rel(args.new)}` vs `{rel(args.orig)}`", "",
+              "| | original | atopile |", "|---|---:|---:|"]
+        md += [f"| {name} | {a} | {b} |" for name, a, b in rows]
+        md += [f"| net names renamed | | {len(renamed)} |", ""]
+        if not ok:
+            md += [f"**{len(errors)} difference(s):**", ""] + [f"- `{e}`" for e in errors[:50]] + [""]
+        with args.summary.open("a") as f:
+            f.write("\n".join(md) + "\n")
+    return 0 if ok else 1
 
 
 if __name__ == "__main__":

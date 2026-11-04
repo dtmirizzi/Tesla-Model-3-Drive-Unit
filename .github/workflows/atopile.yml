@@ -24,11 +24,29 @@ jobs:
       - name: Install atopile
         run: pip install atopile==0.15.9 pandas xlrd
 
-      - name: Regenerate from KiCad, build and check
-        run: PYTHON=python tools/port.sh
+      # 1. the board committed in ato/layouts must already be the V3.2 board
+      - name: "Check: committed atopile board vs KiCad V3.2"
+        run: python -I tools/check_netlist.py --title "Committed board (ato/layouts) vs KiCad V3.2"
 
-      - name: Generated sources are up to date
-        run: git diff --exit-code -- main.ato src parts lib reference
+      # 2. rebuild everything from the KiCad sources
+      - name: Regenerate from KiCad and build
+        run: PYTHON=python tools/port.sh --no-check
+
+      # 3. the rebuilt board must still be the V3.2 board, pad by pad
+      - name: "Check: rebuilt board vs KiCad V3.2 (netlist + layout)"
+        run: python -I tools/check_netlist.py --title "Rebuilt board vs KiCad V3.2"
+
+      # 4. the BOM atopile emits must match the JLC BOM used to build V3.2
+      - name: "Check: atopile BOM vs JLC BOM"
+        run: python -I tools/check_bom.py
+
+      # 5. committed generated code must match what the generators produce
+      - name: "Check: generated sources are up to date"
+        run: |
+          if ! git diff --exit-code --stat -- main.ato src parts lib reference; then
+            echo "::error::Generated atopile sources are stale. Run ato/tools/port.sh and commit the result."
+            exit 1
+          fi
 
       - uses: actions/upload-artifact@v4
         if: always()
