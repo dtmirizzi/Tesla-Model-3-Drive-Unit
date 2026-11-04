@@ -90,12 +90,20 @@ jobs:
       - name: "Check: no DRC violations beyond the original board's"
         run: python3 ato/tools/compare_drc.py out/drc-original.json out/drc.json
 
-      - name: Gerbers, drill, positions
+      - name: Gerbers, drill, positions (atopile board + original board)
         run: |
-          mkdir -p out/fab
-          kicad-cli pcb export gerbers -o out/fab/ out/layouts/default/default.kicad_pcb
-          kicad-cli pcb export drill -o out/fab/ out/layouts/default/default.kicad_pcb
-          kicad-cli pcb export pos --format csv --units mm -o out/fab/positions.csv out/layouts/default/default.kicad_pcb
+          plot() {  # <board.kicad_pcb> <outdir>
+            mkdir -p "$2"
+            kicad-cli pcb export gerbers -o "$2/" "$1"
+            kicad-cli pcb export drill -o "$2/" "$1"
+            kicad-cli pcb export pos --format csv --units mm -o "$2/positions.csv" "$1"
+          }
+          plot out/layouts/default/default.kicad_pcb out/fab
+          plot Design/M3DU_BoardV3_2/M3DU_BoardV3_2.kicad_pcb out/fab-original
+
+      # gate: what would be sent to the fab must be what V3.2 sent
+      - name: "Check: fab outputs identical to the original board's"
+        run: python3 ato/tools/compare_fab.py out/fab-original out/fab
 
       - uses: actions/upload-artifact@v4
         with:
