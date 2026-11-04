@@ -54,6 +54,7 @@ jobs:
           name: atopile-build
           path: |
             ato/layouts/default/default.kicad_pcb
+            ato/layouts/default/default.kicad_pro
             ato/build/builds/default/*.bom.*
             ato/build/builds/default/power_tree.md
 
