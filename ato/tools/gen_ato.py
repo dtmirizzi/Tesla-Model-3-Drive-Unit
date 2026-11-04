@@ -107,16 +107,8 @@ def natural(s: str):
     return [int(t) if t.isdigit() else t for t in re.split(r"(\d+)", s)]
 
 
-def main():
-    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--root", type=Path, default=ATO)
-    args = ap.parse_args()
-    root: Path = args.root
-
-    ref = json.loads((root / "reference" / "netlist.json").read_text())
-    comps = {r: c for r, c in ref["components"].items() if r not in SKIP_REFS}
-    symbols = ref["symbols"]
-
+def write_parts(root: Path, comps: dict, symbols: dict) -> tuple[dict[str, dict], dict[tuple, dict]]:
+    """Write parts/ (one component per BOM line). Returns (ref -> type, key -> type)."""
     parts_dir = root / "parts"
     if parts_dir.exists():
         shutil.rmtree(parts_dir)
@@ -130,7 +122,7 @@ def main():
     inst_type: dict[str, dict] = {}
     for r in sorted(comps, key=natural):
         c = comps[r]
-        key = (c["footprint"], c["symbol"], c["value"], c["lcsc"], c["mpn"])
+        key = part_key(c)
         if key not in types:
             lib, variant = c["footprint"].split(":", 1)
             base = ident(f"{c['value']}_{variant}", prefix="v", signs=False) or ident(variant, prefix="v", signs=False)
@@ -191,8 +183,33 @@ def main():
         for num, nm in sorted(t["pins"].items(), key=lambda kv: natural(kv[0])):
             lines.append(f"    signal {nm} ~ pin {num}")
         (d / f"{t['name']}.ato").write_text("\n".join(lines) + "\n")
+    return inst_type, types
 
-    # ---- main.ato -----------------------------------------------------------
+
+def part_key(c: dict) -> tuple:
+    return (c["footprint"], c["symbol"], c["value"], c["lcsc"], c["mpn"])
+
+
+def load(root: Path):
+    ref = json.loads((root / "reference" / "netlist.json").read_text())
+    comps = {r: c for r, c in ref["components"].items() if r not in SKIP_REFS}
+    return ref, comps
+
+
+def main():
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--root", type=Path, default=ATO)
+    ap.add_argument("--parts-only", action="store_true", help="write parts/ only (main.ato comes from gen_modules.py)")
+    ap.add_argument("--out", type=Path, default=None, help="flat top-level file (default: main.ato)")
+    args = ap.parse_args()
+    root: Path = args.root
+    ref, comps = load(root)
+    inst_type, types = write_parts(root, comps, ref["symbols"])
+    print(f"part types : {len(types)}")
+    if args.parts_only:
+        return
+
+    # ---- flat top level -----------------------------------------------------------
     inst_names = {r: inst_name(r) for r in comps}
     assert len(set(inst_names.values())) == len(inst_names), "instance name collision"
     used = set(inst_names.values())
@@ -248,10 +265,8 @@ def main():
             for e in endpoints[1:]:
                 out.append(f"    {endpoints[0]} ~ {e}")
                 n_conn += 1
-    (root / "main.ato").write_text("\n".join(out) + "\n")
-    (root / "reference" / "net_idents.json").write_text(json.dumps(net_idents, indent=1) + "\n")
+    (args.out or root / "main.ato").write_text("\n".join(out) + "\n")
 
-    print(f"part types : {len(types)}")
     print(f"instances  : {len(comps)}")
     print(f"named nets : {len(net_idents)}")
     print(f"connections: {n_conn}")

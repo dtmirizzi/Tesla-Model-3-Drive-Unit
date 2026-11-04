@@ -59,8 +59,9 @@ BOM output and reuse of an existing layout on a small project.
 
 ### Phase 2 + 3 - exact flat port ✅
 `tools/gen_ato.py` writes one atopile component per BOM line (183 types under
-`parts/`) and `main.ato` (`module M3DU`: 798 instances with their original
-designators, 117 named nets and 1,647 connections).
+`parts/`). The first port was a single flat `main.ato` (`module M3DU`: 798
+instances, 117 named nets, 1,647 connections); it can still be generated with
+`FLAT=1 tools/port.sh`.
 
 ### Phase 4 - carry the layout over ✅
 `tools/seed_layout.py` copies the original PCB into `layouts/default/` and tags
@@ -69,40 +70,66 @@ every footprint with its `atopile_address`. `ato build` then binds to it.
 partition (0 nets renamed), every footprint in place, all 6,913
 tracks/arcs/vias and 92 zones intact.
 
-### Phase 5 - refactor into modules (next)
-Replace the flat `main.ato` one block at a time with hand-written modules,
-re-running `check_netlist.py` after each:
+### Phase 5 - modules ✅
+`tools/gen_modules.py` turns the titled boxes of the A0 schematic into modules
+(`src/`). Every part goes to the box it is drawn in. Nets that stay in a box stay
+private to it; nets that leave it become ports.
 
 ```
 src/
-  power/lv_supply.ato   # 12V in, protection, XL1509 5V, LD1086 3V3, TLE4264, NCV8452
-  power/gate_psu.ato    # TPS40211 + VGT isolated supplies
-  gate_drive/phase.ato  # HS+LS STGAP1AS + MOSFET/clamp network, instantiated 3x
-  sensing/current.ato   # MLX91209 x2
-  sensing/dc_bus.ato    # ACPL-C87A, HV divider, discharge, HV ref 5V
-  sensing/temps.ato     # heatsink / motor NTCs
-  resolver.ato          # exciter amp + SIN/COS conditioning
-  protection/ocp.ato    # LM2901 comparators, 74LVC3G17 / 74LVC1G10 fault logic
-  mcu.ato               # STM32F103, crystal, SWD, decoupling
-  comms.ato             # CAN + ESD, LIN oil pump
-  io.ato                # throttle, digital inputs, outputs
-  connectors.ato        # OEM 30-pin, HVIL, board detect
+  power/lv_supply.ato       LvSupply            12V in, protection, XL1509 5V, LD1086 3V3, TLE4264, NCV8452
+  power/hv_ref_supply.ato   HvRefSupply         HV-referenced +5V supply
+  power/gate_psu.ato        GatePsu             TPS40211 + VGT isolated gate-drive supplies
+  gate_drive/phase.ato      GateDrivePhase x3   HS+LS STGAP1AS, gate network, DESAT/clamp, module pads
+  gate_drive/interface.ato  GateInterface       gate SPI / shutdown fan-out
+  sensing/dc_bus.ato        DcBus               ACPL-C87A, HV divider, active discharge
+  sensing/current.ato       CurrentSensors      MLX91209 x2
+  sensing/temps.ato         HeatsinkTemps, MotorTemp
+  resolver.ato              Resolver            exciter amp + SIN/COS conditioning
+  protection/ocp.ato        OvercurrentDetect   LM2901 comparators + fault logic
+  mcu.ato                   Mcu                 STM32F103VCT6, crystal, SWD
+  comms.ato                 CanBus, OilPumpLin
+  io.ato                    DigitalInputs, ThrottleInputs
+  connectors.ato            Connectors          OEM 30-pin, HVIL, board detect
+  mechanical.ato            BoardMechanics      mounting holes, logo
 ```
-* Replace global labels with typed interfaces (`ElectricPower`, `SPI`, `CAN_TTL`,
-  `SWD`, `ElectricLogic`), so a mis-wired rail fails to compile.
-* Express design intent as constraints and assertions: divider ratios, current
-  sensor scaling, regulator feedback, voltage ratings in the HV divider, and the
-  power rating R339 needs.
-* Make RDU/FDU a variant parameter: population and the 10R -> 6R2 gate resistors
-  instead of text notes.
-* Keep the original designators (`has_designator`) and `atopile_address`
-  values, or re-tag the layout with a small mapping, so the layout stays bound.
-  The gate-drive phase is the first candidate: three identical copies, and it is
-  where a sub-layout pays off most.
 
-### Phase 6 - CI + fab outputs
-GitHub Action: install atopile 0.15.9 on Python 3.14, `ato build --frozen`,
-`check_netlist.py`, KiCad 9 DRC/ERC, and JLC BOM/CPL/Gerber export as artifacts.
+* **One gate-driver phase, three instances.** Graph matching on part type and
+  pin-level connectivity proves phases A, B and C are the same circuit (126 parts
+  each), so `GateDrivePhase` is written once. Child names follow phase A, with
+  `x` replacing the phase digit (`r400x` = R4001/R4003/R4002 on phases A/B/C).
+  The only per-phase BOM difference is TR6's value text, handled by a derived
+  `GateDrivePhaseC` that retypes that one part.
+* **Typed power rails.** +3V3, +3.3VA, +5V, +12V and +12P (to GND), LS_+V (to
+  LS_GND) and /HV+ (to HV-) are `ElectricPower` ports, and the known rail
+  voltages are declared once at the top level.
+* Each module's docstring carries the design notes drawn in its schematic box.
+* Designators are unchanged. `reference/addresses.json` maps every designator to
+  its new atopile address, and `seed_layout.py` tags the layout with it.
+  `check_netlist.py` still passes, and the atopile BOM matches the original JLC
+  BOM line for line (703 parts, same LCSC numbers).
+
+### Phase 6 - CI ✅ (written, not yet run on GitHub)
+`.github/workflows/atopile.yml`:
+* regenerates everything from the KiCad sources, builds, and runs `check_netlist.py`
+* fails if the committed generated files are stale (generation is deterministic)
+* in a `kicad/kicad:9.0` container: DRC (report only for now) plus Gerbers, drill
+  and position files as build artifacts
+
+## What's next
+* **Make the modules the source.** Today `src/` is regenerated from KiCad. The
+  next step is to edit it by hand and stop regenerating, leaving
+  `check_netlist.py` as the guard. To switch: drop `gen_modules.py` from
+  `port.sh`, and change CI to `ato build` + `check_netlist.py`.
+* Typed buses: replace the gate-driver SPI, CAN and LIN signals with `SPI`,
+  `CAN_TTL` and `UART` interfaces.
+* Design intent as constraints: divider ratios for the HV measurement, current
+  sensor scaling, regulator feedback, and the power rating R339 needs.
+* RDU/FDU variant. The FDU ("960 board") population is only described in
+  schematic notes (for example "10R RESISTORS ARE 6R2 ON 960 BOARD"), not as
+  data, so it needs a reviewed list of affected parts first. Once that exists it
+  becomes a derived module per block, like `GateDrivePhaseC`.
+* Gate the DRC in CI once the original board's DRC report has been reviewed.
 
 ## Findings in the original design (kept unchanged by the exact port)
 
@@ -117,3 +144,8 @@ GitHub Action: install atopile 0.15.9 on Python 3.14, `ato build --frozen`,
    discharge is now disabled through connector pin 23, but it is worth confirming.
 3. Two footprint libraries are named `Samacsys` and `Samascys` (typo). They are
    kept as-is so the footprint IDs match.
+4. TR6 (phase C power-module pads) has the value "CH1234" where TR1-TR5 say
+   "M3DU_MOSFETS". It is cosmetic: same footprint, not in the BOM.
+5. Phases A/B/C are identical, but the designators of two parallel capacitors
+   are swapped in phase C (C2582 is the 2.2 uF part there, C2581/C2583 are 1 uF
+   on A/B). This is harmless, but it is easy to misread when comparing phases.

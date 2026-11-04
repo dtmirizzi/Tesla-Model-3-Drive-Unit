@@ -49,6 +49,10 @@ def main():
 
     ref = json.loads((ATO / "reference" / "netlist.json").read_text())
     comps = ref["components"]
+    # atopile address of every designator; written by gen_modules.py (modular
+    # design). Without it, fall back to the flat main.ato naming.
+    addr_file = ATO / "reference" / "addresses.json"
+    addresses = json.loads(addr_file.read_text()) if addr_file.exists() else {}
 
     lines = args.src.read_text().splitlines(keepends=True)
     out: list[str] = []
@@ -66,7 +70,7 @@ def main():
         elif fp_line_idx is not None and (m := re.match(r'\t\t\(property "Reference" "([^"]*)"', line)):
             r = m.group(1)
             if r in comps and r not in SKIP_REFS:
-                out.append(PROP.format(addr=inst_name(r), uuid=uuid.uuid4()))
+                out.append(PROP.format(addr=addresses.get(r) or inst_name(r), uuid=uuid.uuid5(uuid.NAMESPACE_URL, f"m3du/{r}")))
                 tagged += 1
                 want = comps[r]["footprint"]
                 cur = re.match(r'\t\(footprint "([^"]*)"', out[fp_line_idx]).group(1)

@@ -3,6 +3,7 @@
 #
 #   tools/port.sh            extract, generate, seed layout, build, check
 #   tools/port.sh --no-seed  keep the current layouts/ (e.g. after layout edits)
+#   FLAT=1 tools/port.sh     generate the flat, single-module port instead
 #
 # Needs: atopile 0.15.9 (Python 3.14) on PATH as `ato`, plus pandas + xlrd
 # for reading the JLC BOM.
@@ -14,7 +15,12 @@ SEED=1
 [[ "${1:-}" == "--no-seed" ]] && SEED=0
 
 $PY -I tools/extract_kicad.py
-$PY -I tools/gen_ato.py
+if [[ "${FLAT:-0}" == 1 ]]; then
+  rm -f reference/addresses.json
+  $PY -I tools/gen_ato.py               # flat main.ato (one module, every part)
+else
+  $PY -I tools/gen_modules.py           # modular main.ato + src/
+fi
 if [[ $SEED == 1 ]]; then
   $PY -I tools/seed_layout.py
 fi

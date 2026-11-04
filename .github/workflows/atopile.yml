@@ -1,0 +1,74 @@
+name: atopile port
+
+on:
+  push:
+    paths: ["ato/**", "Design/M3DU_BoardV3_2/**", ".github/workflows/atopile.yml"]
+  pull_request:
+    paths: ["ato/**", "Design/M3DU_BoardV3_2/**", ".github/workflows/atopile.yml"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build + prove equivalence to KiCad V3.2
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: ato
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - name: Install atopile
+        run: pip install atopile==0.15.9 pandas xlrd
+
+      - name: Regenerate from KiCad, build and check
+        run: PYTHON=python tools/port.sh
+
+      - name: Generated sources are up to date
+        run: git diff --exit-code -- main.ato src parts lib reference
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: atopile-build
+          path: |
+            ato/layouts/default/default.kicad_pcb
+            ato/build/builds/default/*.bom.*
+            ato/build/builds/default/power_tree.md
+
+  fab:
+    name: KiCad DRC + fabrication outputs
+    needs: build
+    runs-on: ubuntu-24.04
+    container: kicad/kicad:9.0
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: atopile-build
+          path: out
+
+      - name: DRC (report only, the original board has not been DRC-gated)
+        continue-on-error: true
+        run: kicad-cli pcb drc --severity-error --exit-code-violations -o out/drc.rpt out/layouts/default/default.kicad_pcb
+
+      - name: Gerbers, drill, positions
+        run: |
+          mkdir -p out/fab
+          kicad-cli pcb export gerbers -o out/fab/ out/layouts/default/default.kicad_pcb
+          kicad-cli pcb export drill -o out/fab/ out/layouts/default/default.kicad_pcb
+          kicad-cli pcb export pos --format csv --units mm -o out/fab/positions.csv out/layouts/default/default.kicad_pcb
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: fabrication
+          path: out/fab/
+          if-no-files-found: error
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: drc-report
+          path: out/drc.rpt
