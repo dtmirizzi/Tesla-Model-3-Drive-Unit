@@ -221,11 +221,11 @@ report exactly what changed.
    kept as-is so the footprint IDs match.
 4. TR6 (phase C power-module pads) has the value "CH1234" where TR1-TR5 say
    "M3DU_MOSFETS". It is cosmetic: same footprint, not in the BOM.
+5. Phases A/B/C are identical, but the designators of two parallel capacitors
+   are swapped in phase C (C2582 is the 2.2 uF part there, C2581/C2583 are 1 uF
+   on A/B). This is harmless, but it is easy to misread when comparing phases.
 6. **U6 value/MPN conflict.** Value says TPS40210DGQR but the MPN field says
    TPS40211DGQR. These are different parts (700 mV vs 260 mV reference), so the
    feedback divider only suits one of them. The BOM ships the LCSC part on record.
 7. R110's own LCSC field (C26022) disagrees with the JLC BOM (C17398); the
    port follows the JLC BOM.
-5. Phases A/B/C are identical, but the designators of two parallel capacitors
-   are swapped in phase C (C2582 is the 2.2 uF part there, C2581/C2583 are 1 uF
-   on A/B). This is harmless, but it is easy to misread when comparing phases.
