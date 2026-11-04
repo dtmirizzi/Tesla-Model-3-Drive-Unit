@@ -67,14 +67,27 @@ jobs:
       # to the Actions workspace
       options: --user root
     steps:
+      - uses: actions/checkout@v4  # original V3.2 board + tools/compare_drc.py
+
       - uses: actions/download-artifact@v4
         with:
           name: atopile-build
           path: out
 
-      - name: DRC (report only, the original board has not been DRC-gated)
-        continue-on-error: true
-        run: kicad-cli pcb drc --severity-error --exit-code-violations -o out/drc.rpt out/layouts/default/default.kicad_pcb
+      - name: DRC of the original V3.2 board (baseline)
+        run: |
+          kicad-cli pcb drc --format json --severity-error \
+            -o out/drc-original.json Design/M3DU_BoardV3_2/M3DU_BoardV3_2.kicad_pcb
+
+      - name: DRC of the atopile board
+        run: |
+          kicad-cli pcb drc --format json --severity-error \
+            -o out/drc.json out/layouts/default/default.kicad_pcb
+          kicad-cli pcb drc --severity-error -o out/drc.rpt out/layouts/default/default.kicad_pcb
+
+      # gate: the atopile board may not add DRC violations to the original's
+      - name: "Check: no DRC violations beyond the original board's"
+        run: python3 ato/tools/compare_drc.py out/drc-original.json out/drc.json
 
       - name: Gerbers, drill, positions
         run: |
@@ -93,4 +106,7 @@ jobs:
         if: always()
         with:
           name: drc-report
-          path: out/drc.rpt
+          path: |
+            out/drc.rpt
+            out/drc.json
+            out/drc-original.json
