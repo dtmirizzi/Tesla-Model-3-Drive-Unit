@@ -140,7 +140,11 @@ goes into the GitHub job summary:
    original V3.2 board and the atopile board, and `compare_drc.py` fails on any
    violation the atopile board adds. The original board is not DRC-clean (1
    error), so a zero-violation gate would always fail.
-7. Gerbers, drill and position files as artifacts
+7. **Fab-output gate**: Gerbers, drill and positions are plotted for both
+   boards by the same kicad-cli, and `compare_fab.py` compares them as geometry
+   (draws, arcs, flashes and regions per polarity block; drill hits per tool;
+   placements). The first passing run: 36/36 files equivalent, e.g. F_Cu 7,272,
+   F_Silkscreen 42,798 and Edge_Cuts 288 primitives on both boards.
 
 `check_netlist.py` compares, besides nets: every footprint's full content (pads
 incl. overrides, graphics, courtyard, attributes, models, locks), the board
@@ -161,31 +165,36 @@ build fail as soon as an edit split a net.
   same result.
 
 ## How far is this from being the active design?
-**Works today:** atopile builds the real V3.2 board, with the same parts,
-designators, nets, BOM and layout, from modular source, and CI proves it on
-every push. Hand edits flow through to the layout and BOM, and the checkers
+**Proven today, in CI on every push:** the atopile project builds the V3.2
+board with:
+* the same parts, designators and BOM (703 LCSC lines);
+* the same pad-level netlist;
+* identical footprints, text fields, outline, zones, stackup and design rules;
+* DRC identical to the original (1 pre-existing courtyard overlap, 0 new);
+* equivalent Gerbers, drill and placement files.
+
+Hand edits to the `.ato` source flow into the layout and BOM, and the checkers
 report exactly what changed.
 
-**Gaps before the atopile project can replace the KiCad project:**
-1. ~~CI on GitHub~~ done. ~~DRC~~ gated against the original board's DRC.
-   The first DRC run found 31 new violations; their causes are fixed (see
-   "Toolchain notes"). ERC is not run: the atopile build has no KiCad schematic.
-2. **No fab-output comparison.** The fab job's Gerbers have not been compared
-   with `Design/M3DU_BoardV3_2/Production/M3DU_BoardV3_2_Gerber.zip`. This is the
-   last proof that it is the same board.
-3. **Swap the source of truth** (a one-time switch). Stop regenerating `src/`
-   from KiCad and make the `.ato` files the source:
-   * remove the `extract`/`gen_modules`/`seed_layout` steps from `port.sh` and CI
-   * keep `check_netlist.py` against the frozen V3.2 reference, and expect it to
-     fail on intended changes. Re-baseline it, or turn it into a diff report,
-     once real changes start.
-   * layout edits then happen in `ato/layouts/default/default.kicad_pcb`
-   * point `restore_layout.py` (and the DRC baseline) at the last committed
-     layout instead of the frozen V3.2 board
-4. **Toolchain risk.** atopile 0.15.9 is the last release of the classic CLI;
-   0.16+ only runs inside the atopile app. The port is pinned and builds offline,
-   but upgrading later will need a migration.
-5. **Decisions on the inherited BOM findings** below (the 0805/0603 mismatches).
+**Remaining before the atopile project replaces the KiCad project:**
+1. **Swap the source of truth** (a one-time switch, about a day). Today `src/`
+   is regenerated from KiCad on every CI run. To switch:
+   * drop the `extract` / `gen_modules` / `seed_layout` steps from `port.sh`
+     and CI, and stop regenerating;
+   * re-point the references (`restore_layout.py`, the DRC baseline, the fab
+     comparison) from the frozen V3.2 board to the last released layout, so the
+     gates report intended changes as diffs instead of failing forever;
+   * from then on, layout edits happen in `ato/layouts/default/default.kicad_pcb`.
+2. **Toolchain risk.** atopile 0.15.9 is the last classic-CLI release (0.16+
+   is app-only), and it silently drops several KiCad attributes. That is
+   handled by `restore_layout.py` and caught by the checkers, but it is a
+   workaround. Upgrading later will need a migration and a re-validation, which
+   the gates make mechanical.
+3. **No schematic.** There is no ERC and no human-readable schematic PDF from
+   atopile. Reviewers read `.ato` modules, the generated pinout and power tree,
+   or the original V3.2 PDF.
+4. **Decisions on the inherited findings** below: the BOM package mismatches,
+   U6's value/MPN conflict, and `HV DISCH EN`.
 
 **Next steps after switching (improvements, not blockers):**
 * Typed buses: replace the gate-driver SPI, CAN and LIN signals with `SPI`,
@@ -212,6 +221,11 @@ report exactly what changed.
    kept as-is so the footprint IDs match.
 4. TR6 (phase C power-module pads) has the value "CH1234" where TR1-TR5 say
    "M3DU_MOSFETS". It is cosmetic: same footprint, not in the BOM.
+6. **U6 value/MPN conflict.** Value says TPS40210DGQR but the MPN field says
+   TPS40211DGQR. These are different parts (700 mV vs 260 mV reference), so the
+   feedback divider only suits one of them. The BOM ships the LCSC part on record.
+7. R110's own LCSC field (C26022) disagrees with the JLC BOM (C17398); the
+   port follows the JLC BOM.
 5. Phases A/B/C are identical, but the designators of two parallel capacitors
    are swapped in phase C (C2582 is the 2.2 uF part there, C2581/C2583 are 1 uF
    on A/B). This is harmless, but it is easy to misread when comparing phases.
