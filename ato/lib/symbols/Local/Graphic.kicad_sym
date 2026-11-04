@@ -1,0 +1,14 @@
+(kicad_symbol_lib
+	(version 20241209)
+	(generator "kicad_symbol_editor")
+	(symbol "Graphic"
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(property "Reference" "G" (at 0 2.54 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "Graphic" (at 0 -2.54 0) (effects (font (size 1.27 1.27))))
+		(symbol "Graphic_0_1"
+			(rectangle (start -2.54 -1.27) (end 2.54 1.27) (stroke (width 0) (type default)) (fill (type none)))
+		)
+	)
+)
