@@ -26,6 +26,7 @@ from pathlib import Path
 
 _COORD = re.compile(r"(?:X(-?\d+))?(?:Y(-?\d+))?(?:I(-?\d+))?(?:J(-?\d+))?D0?([123])\*$")
 _METADATA = ("G04", "TF.", "TA.", "TO.", "TD")
+COUNTS: dict[str, int] = {}
 
 
 def suffix(p: Path) -> str:
@@ -148,6 +149,12 @@ def compare(a_path: Path, b_path: Path, key: str) -> str | None:
             return f"{sum((a - b).values())} hit(s) only in original, {sum((b - a).values())} only in atopile"
         return None
     (ha, a), (hb, b) = gerber_geometry(a_path), gerber_geometry(b_path)
+    for path, blocks in ((a_path, a), (b_path, b)):
+        ops = len(re.findall(r"D0?[13]\*", path.read_text(errors="replace")))
+        n = sum(sum(c.values()) for _, c in blocks)
+        COUNTS[path.name] = n
+        if ops and not n:  # never let a parser miss turn into "equal"
+            return f"parser extracted no geometry from {path.name} ({ops} draw/flash commands)"
     if ha != hb:
         return f"format/aperture-macro header differs: {sorted(set(ha) ^ set(hb))[:3]}"
     if [p for p, _ in a] != [p for p, _ in b] or any(x != y for (_, x), (_, y) in zip(a, b)):
@@ -182,6 +189,9 @@ def main() -> int:
             same += 1
 
     total = len(set(orig) | set(new))
+    for key in sorted(new):
+        if new[key].name in COUNTS:
+            print(f"  {key:28} {COUNTS.get(orig.get(key, Path('')).name, 0):>8} / {COUNTS[new[key].name]:>8} primitives")
     print(f"compared {total} files: {same} equivalent, {len(errors)} different")
     for e in errors:
         print("  -", e)
