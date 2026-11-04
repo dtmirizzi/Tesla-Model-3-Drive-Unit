@@ -61,7 +61,11 @@ jobs:
     name: KiCad DRC + fabrication outputs
     needs: build
     runs-on: ubuntu-24.04
-    container: kicad/kicad:9.0
+    container:
+      image: kicad/kicad:9.0
+      # the image defaults to the unprivileged `kicad` user, which cannot write
+      # to the Actions workspace
+      options: --user root
     steps:
       - uses: actions/download-artifact@v4
         with:
