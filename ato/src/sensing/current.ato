@@ -5,13 +5,14 @@
 import ElectricPower
 import has_designator
 from "parts/Tesla/MLX91209LVA_CAA_000_SP_SIP_4L_VA.ato" import MLX91209LVA_CAA_000_SP_SIP_4L_VA
-from "parts/Resistor_SMD/v10k_R_0805_2012Metric.ato" import v10k_R_0805_2012Metric
+from "parts/Resistor_SMD/v10k_R_0805_2012Metric_v5.ato" import v10k_R_0805_2012Metric_v5
 from "parts/Capacitor_SMD/v10nF_C_0603_1608Metric.ato" import v10nF_C_0603_1608Metric
 from "parts/Inductor_SMD/v10uH_L_0805_2012Metric.ato" import v10uH_L_0805_2012Metric
 from "parts/Capacitor_SMD/v1nF_C_0805_2012Metric.ato" import v1nF_C_0805_2012Metric
-from "parts/Capacitor_SMD/v1uF_C_0805_2012Metric_3.ato" import v1uF_C_0805_2012Metric_3
-from "parts/Resistor_SMD/v3K6_R_0805_2012Metric.ato" import v3K6_R_0805_2012Metric
-from "parts/Resistor_SMD/v6K2_R_0805_2012Metric.ato" import v6K2_R_0805_2012Metric
+from "parts/Capacitor_SMD/v1nF_C_0805_2012Metric_v2.ato" import v1nF_C_0805_2012Metric_v2
+from "parts/Capacitor_SMD/v1uF_C_0805_2012Metric.ato" import v1uF_C_0805_2012Metric
+from "parts/Resistor_SMD/v3K6_R_0805_2012Metric_v2.ato" import v3K6_R_0805_2012Metric_v2
+from "parts/Resistor_SMD/v6K2_R_0805_2012Metric_v2.ato" import v6K2_R_0805_2012Metric_v2
 
 
 module CurrentSensors:
@@ -25,17 +26,17 @@ module CurrentSensors:
     c3 = new v10nF_C_0603_1608Metric
     c4 = new v10nF_C_0603_1608Metric
     c72 = new v1nF_C_0805_2012Metric
-    c73 = new v1nF_C_0805_2012Metric
-    c74 = new v1uF_C_0805_2012Metric_3
-    c75 = new v1uF_C_0805_2012Metric_3
+    c73 = new v1nF_C_0805_2012Metric_v2
+    c74 = new v1uF_C_0805_2012Metric
+    c75 = new v1uF_C_0805_2012Metric
     l4 = new v10uH_L_0805_2012Metric
     l5 = new v10uH_L_0805_2012Metric
-    r124 = new v3K6_R_0805_2012Metric
-    r125 = new v6K2_R_0805_2012Metric
-    r126 = new v3K6_R_0805_2012Metric
-    r127 = new v6K2_R_0805_2012Metric
-    r139 = new v10k_R_0805_2012Metric
-    r140 = new v10k_R_0805_2012Metric
+    r124 = new v3K6_R_0805_2012Metric_v2
+    r125 = new v6K2_R_0805_2012Metric_v2
+    r126 = new v3K6_R_0805_2012Metric_v2
+    r127 = new v6K2_R_0805_2012Metric_v2
+    r139 = new v10k_R_0805_2012Metric_v5
+    r140 = new v10k_R_0805_2012Metric_v5
     u30 = new MLX91209LVA_CAA_000_SP_SIP_4L_VA
     u40 = new MLX91209LVA_CAA_000_SP_SIP_4L_VA
 

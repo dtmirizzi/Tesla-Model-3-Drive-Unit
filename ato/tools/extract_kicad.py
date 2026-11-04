@@ -119,26 +119,44 @@ def normalise_footprint(fp: list) -> list:
     for p in children(fp, "property"):
         if p[1] == "Reference":
             p[2] = "REF**"
+    push_overrides_to_pads(fp)
     return fp
 
 
-def pad_signature(fp_norm: list) -> tuple:
-    sig = []
-    for p in children(fp_norm, "pad"):
-        at = child(p, "at")
-        size = child(p, "size")
-        sig.append(
-            (
-                str(p[1]),
-                str(p[2]),
-                str(p[3]),
-                round(fnum(at[1]), 3),
-                round(fnum(at[2]), 3),
-                round(fnum(size[1]), 3) if size else 0,
-                round(fnum(size[2]), 3) if size else 0,
-            )
-        )
-    return tuple(sorted(sig))
+# footprint-level defaults that atopile 0.15.9 cannot represent on a footprint
+# but can on a pad; KiCad applies them to every pad without its own value
+PAD_INHERITED = ("clearance", "zone_connect", "solder_mask_margin", "solder_paste_margin", "solder_paste_margin_ratio")
+
+
+def push_overrides_to_pads(fp: list) -> None:
+    for key in PAD_INHERITED:
+        if (fp_level := child(fp, key)) is None:
+            continue
+        for pad in children(fp, "pad"):
+            if child(pad, key) is None:
+                pad.append(copy.deepcopy(fp_level))
+
+
+def canon(node, nd: int = 4) -> str:
+    """Order-preserving canonical text of an S-expression; numbers rounded."""
+    if not isinstance(node, list):
+        if isinstance(node, Sym):
+            try:
+                return f"{round(float(node), nd) + 0.0:g}"
+            except ValueError:
+                return str(node)
+        return repr(str(node))
+    return "(" + " ".join(canon(c, nd) for c in node) + ")"
+
+
+def footprint_signature(fp_norm: list) -> tuple:
+    """Everything that makes up the footprint except its properties.
+
+    atopile rewrites board footprints from the library copy, so two instances
+    may only share a library footprint if they are identical: same pads (incl.
+    per-pad zone/thermal overrides), graphics, courtyard, attributes, models.
+    """
+    return tuple(sorted(canon(c) for c in fp_norm[2:] if isinstance(c, list) and head(c) != "property"))
 
 
 def to_library_fp(fp_norm: list, name: str) -> list:
@@ -246,19 +264,20 @@ def main():
     chosen: dict[str, tuple[int, list]] = {}  # variant name -> (score, normalised fp)
     components = {}
     warnings = []
+    variant_notes = []
 
     for fp in children(pcb, "footprint"):
         fpid = fp[1]
         ref = prop(fp, "Reference")
         attr = child(fp, "attr") or []
         norm = normalise_footprint(fp)
-        sig = pad_signature(norm)
+        sig = footprint_signature(norm)
         lib, name = fpid.split(":", 1) if ":" in fpid else ("Board", fpid)
         vmap = variants[fpid]
         if sig not in vmap:
             vmap[sig] = name if not vmap else f"{name}__v{len(vmap) + 1}"
             if len(vmap) > 1:
-                warnings.append(f"{fpid}: pad geometry variant {vmap[sig]} (first seen on {ref})")
+                variant_notes.append(f"{fpid}: variant {vmap[sig]} (first seen on {ref})")
         vname = vmap[sig]
         at = child(fp, "at")
         rot = fnum(at[3]) if len(at) > 3 else 0.0
@@ -338,7 +357,7 @@ def main():
 
     print(f"components on PCB : {len(components)}")
     print(f"nets              : {len(nets)}")
-    print(f"footprints written: {len(chosen)}")
+    print(f"footprints written: {len(chosen)} ({len(variant_notes)} per-instance variants)")
     print(f"symbols written   : {len(symbols)}")
     print(f"LCSC numbers      : {sum(1 for c in components.values() if c['lcsc'])}")
     print(f"schematic-only    : {len(only_sch)} {only_sch[:20]}")

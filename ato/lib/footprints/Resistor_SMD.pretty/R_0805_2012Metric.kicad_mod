@@ -6,7 +6,7 @@
 	(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 	(tags "resistor")
 	(property "Reference" "REF**"
-		(at 0 -1.65)
+		(at -0.075 1.75 180)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,8 +15,8 @@
 			)
 		)
 	)
-	(property "Value" "1K5"
-		(at 0 1.65)
+	(property "Value" "220R"
+		(at 0 1.65 180)
 		(layer "F.Fab")
 		(effects
 			(font
@@ -51,15 +51,6 @@
 	)
 	(attr smd)
 	(fp_line
-		(start -0.227064 -0.735)
-		(end 0.227064 -0.735)
-		(stroke
-			(width 0.12)
-			(type solid)
-		)
-		(layer "F.SilkS")
-	)
-	(fp_line
 		(start -0.227064 0.735)
 		(end 0.227064 0.735)
 		(stroke
@@ -69,17 +60,17 @@
 		(layer "F.SilkS")
 	)
 	(fp_line
-		(start -1.68 -0.95)
-		(end 1.68 -0.95)
+		(start -0.227064 -0.735)
+		(end 0.227064 -0.735)
 		(stroke
-			(width 0.05)
+			(width 0.12)
 			(type solid)
 		)
-		(layer "F.CrtYd")
+		(layer "F.SilkS")
 	)
 	(fp_line
-		(start -1.68 0.95)
-		(end -1.68 -0.95)
+		(start 1.68 0.95)
+		(end -1.68 0.95)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -96,8 +87,8 @@
 		(layer "F.CrtYd")
 	)
 	(fp_line
-		(start 1.68 0.95)
-		(end -1.68 0.95)
+		(start -1.68 0.95)
+		(end -1.68 -0.95)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -105,17 +96,17 @@
 		(layer "F.CrtYd")
 	)
 	(fp_line
-		(start -1 -0.625)
-		(end 1 -0.625)
+		(start -1.68 -0.95)
+		(end 1.68 -0.95)
 		(stroke
-			(width 0.1)
+			(width 0.05)
 			(type solid)
 		)
-		(layer "F.Fab")
+		(layer "F.CrtYd")
 	)
 	(fp_line
-		(start -1 0.625)
-		(end -1 -0.625)
+		(start 1 0.625)
+		(end -1 0.625)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -132,8 +123,17 @@
 		(layer "F.Fab")
 	)
 	(fp_line
-		(start 1 0.625)
-		(end -1 0.625)
+		(start -1 0.625)
+		(end -1 -0.625)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start -1 -0.625)
+		(end 1 -0.625)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -141,7 +141,7 @@
 		(layer "F.Fab")
 	)
 	(fp_text user "${REFERENCE}"
-		(at 0 0)
+		(at 0 0 180)
 		(layer "F.Fab")
 		(effects
 			(font

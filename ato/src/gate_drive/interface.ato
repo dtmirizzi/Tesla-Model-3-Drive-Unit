@@ -7,7 +7,8 @@ import has_designator
 from "parts/Connector_PinSocket_2.54mm/Conn_01x12_Socket_PinSocket_1x12_P2_54mm_Vertical.ato" import Conn_01x12_Socket_PinSocket_1x12_P2_54mm_Vertical
 from "parts/Package_SO/SN74LVC245APW_TSSOP_20_4_4x6_5mm_P0_65mm.ato" import SN74LVC245APW_TSSOP_20_4_4x6_5mm_P0_65mm
 from "parts/Tesla/TestPoint_TestPoint_Via.ato" import TestPoint_TestPoint_Via
-from "parts/Capacitor_SMD/v1uF_C_0805_2012Metric_3.ato" import v1uF_C_0805_2012Metric_3
+from "parts/Capacitor_SMD/v1uF_C_0805_2012Metric.ato" import v1uF_C_0805_2012Metric
+from "parts/Capacitor_SMD/v1uF_C_0805_2012Metric_v2_2.ato" import v1uF_C_0805_2012Metric_v2_2
 from "parts/Package_SO/v74LVC3G17_VSSOP_8_2_3x2mm_P0_5mm.ato" import v74LVC3G17_VSSOP_8_2_3x2mm_P0_5mm
 
 
@@ -16,8 +17,8 @@ module GateInterface:
     6 parts: C55, C56, J5, TP58, U7, U11
     """
 
-    c55 = new v1uF_C_0805_2012Metric_3
-    c56 = new v1uF_C_0805_2012Metric_3
+    c55 = new v1uF_C_0805_2012Metric
+    c56 = new v1uF_C_0805_2012Metric_v2_2
     j5 = new Conn_01x12_Socket_PinSocket_1x12_P2_54mm_Vertical
     tp58 = new TestPoint_TestPoint_Via
     u7 = new v74LVC3G17_VSSOP_8_2_3x2mm_P0_5mm

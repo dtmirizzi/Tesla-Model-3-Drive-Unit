@@ -127,11 +127,13 @@
 		(at -0.65 0)
 		(size 1 1.5)
 		(layers "F.Cu" "F.Mask")
+		(zone_connect 1)
 	)
 	(pad "2" smd rect
 		(at 0.65 0)
 		(size 1 1.5)
 		(layers "F.Cu" "F.Mask")
+		(zone_connect 1)
 	)
 	(embedded_fonts no)
 )

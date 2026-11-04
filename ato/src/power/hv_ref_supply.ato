@@ -9,13 +9,13 @@ from "parts/Samacsys/SMAJ7_0A_DIOM5026X229N.ato" import SMAJ7_0A_DIOM5026X229N
 from "parts/Tesla/TL432AQDBZRQ1_SOT95P237X112_3N.ato" import TL432AQDBZRQ1_SOT95P237X112_3N
 from "parts/Samascys/TLE4264G_SOT230P700X180_4N.ato" import TLE4264G_SOT230P700X180_4N
 from "parts/TestPoint/TestPoint_TestPoint_Pad_D1_0mm.ato" import TestPoint_TestPoint_Pad_D1_0mm
-from "parts/Resistor_SMD/v0R_R_0805_2012Metric_2.ato" import v0R_R_0805_2012Metric_2
+from "parts/Resistor_SMD/v0R_R_0805_2012Metric_v4.ato" import v0R_R_0805_2012Metric_v4
 from "parts/Capacitor_Tantalum_SMD/v100uF_6_3V_CP_EIA_3528_15_AVX_H.ato" import v100uF_6_3V_CP_EIA_3528_15_AVX_H
-from "parts/Capacitor_SMD/v10nF_C_0603_1608Metric.ato" import v10nF_C_0603_1608Metric
-from "parts/Capacitor_SMD/v10uF_C_0805_2012Metric_3.ato" import v10uF_C_0805_2012Metric_3
-from "parts/Capacitor_SMD/v1nF_C_0805_2012Metric.ato" import v1nF_C_0805_2012Metric
-from "parts/Capacitor_SMD/v1uF_C_0805_2012Metric_2.ato" import v1uF_C_0805_2012Metric_2
-from "parts/Capacitor_SMD/v22nF_C_0603_1608Metric.ato" import v22nF_C_0603_1608Metric
+from "parts/Capacitor_SMD/v10nF_C_0603_1608Metric_v2.ato" import v10nF_C_0603_1608Metric_v2
+from "parts/Capacitor_SMD/v10uF_C_0805_2012Metric_v3.ato" import v10uF_C_0805_2012Metric_v3
+from "parts/Capacitor_SMD/v1nF_C_0805_2012Metric_v4.ato" import v1nF_C_0805_2012Metric_v4
+from "parts/Capacitor_SMD/v1uF_C_0805_2012Metric_v3_2.ato" import v1uF_C_0805_2012Metric_v3_2
+from "parts/Capacitor_SMD/v22nF_C_0603_1608Metric_v2.ato" import v22nF_C_0603_1608Metric_v2
 from "parts/Tesla/v25K_R_0603_1608Metric.ato" import v25K_R_0603_1608Metric
 from "parts/Tesla/v2K_R_0603_1608Metric.ato" import v2K_R_0603_1608Metric
 from "parts/Tesla/v35K6_R_0603_1608Metric.ato" import v35K6_R_0603_1608Metric
@@ -35,11 +35,11 @@ module HvRefSupply:
 
     c46 = new v100uF_6_3V_CP_EIA_3528_15_AVX_H
     c47 = new v100uF_6_3V_CP_EIA_3528_15_AVX_H
-    c83 = new v1nF_C_0805_2012Metric
-    c282 = new v10nF_C_0603_1608Metric
-    c286 = new v22nF_C_0603_1608Metric
-    c306 = new v1uF_C_0805_2012Metric_2
-    c307 = new v10uF_C_0805_2012Metric_3
+    c83 = new v1nF_C_0805_2012Metric_v4
+    c282 = new v10nF_C_0603_1608Metric_v2
+    c286 = new v22nF_C_0603_1608Metric_v2
+    c306 = new v1uF_C_0805_2012Metric_v3_2
+    c307 = new v10uF_C_0805_2012Metric_v3
     d16 = new SMAJ7_0A_DIOM5026X229N
     l3 = new v3uH_L_APV_ANR6020
     r201 = new v35K6_R_0603_1608Metric
@@ -47,7 +47,7 @@ module HvRefSupply:
     r204 = new v5K6_R_0603_1608Metric
     r208 = new v39K_R_0603_1608Metric
     r212 = new v25K_R_0603_1608Metric
-    r384 = new v0R_R_0805_2012Metric_2
+    r384 = new v0R_R_0805_2012Metric_v4
     r7008 = new v2K_R_0603_1608Metric
     tp24 = new TestPoint_TestPoint_Pad_D1_0mm
     u5 = new ACPL_M49T_000E_SOIC127P700X260_6N

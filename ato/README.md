@@ -29,6 +29,7 @@ uv pip install atopile==0.15.9 pandas xlrd
 tools/port.sh            # extract -> generate -> seed layout -> ato build -> check
 # or, once seeded:
 ato build --no-standardize-designators
+python tools/restore_layout.py  # put back attributes atopile 0.15.9 drops
 python tools/check_netlist.py   # board vs KiCad V3.2: nets + layout
 python tools/check_bom.py       # BOM vs the V3.2 JLC BOM
 ```

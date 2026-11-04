@@ -14,13 +14,15 @@ from "parts/Crystal/X50328MSB2GI_Crystal_SMD_5032_2Pin_5_0x3_2mm.ato" import X50
 from "parts/Capacitor_SMD/v100nF_C_0805_2012Metric_2.ato" import v100nF_C_0805_2012Metric_2
 from "parts/Capacitor_SMD/v10uF_C_0805_2012Metric.ato" import v10uF_C_0805_2012Metric
 from "parts/Inductor_SMD/v10uH_L_0805_2012Metric.ato" import v10uH_L_0805_2012Metric
-from "parts/Resistor_SMD/v1K_R_0805_2012Metric.ato" import v1K_R_0805_2012Metric
-from "parts/Capacitor_SMD/v1uF_C_0805_2012Metric_3.ato" import v1uF_C_0805_2012Metric_3
+from "parts/Resistor_SMD/v1K_R_0805_2012Metric_v2.ato" import v1K_R_0805_2012Metric_v2
+from "parts/Resistor_SMD/v1K_R_0805_2012Metric_v3.ato" import v1K_R_0805_2012Metric_v3
+from "parts/Capacitor_SMD/v1uF_C_0805_2012Metric.ato" import v1uF_C_0805_2012Metric
+from "parts/Capacitor_SMD/v1uF_C_0805_2012Metric_v2_2.ato" import v1uF_C_0805_2012Metric_v2_2
 from "parts/Capacitor_SMD/v22pF_C_0805_2012Metric.ato" import v22pF_C_0805_2012Metric
-from "parts/Resistor_SMD/v330R_R_0805_2012Metric.ato" import v330R_R_0805_2012Metric
-from "parts/Resistor_SMD/v3K3_R_0805_2012Metric.ato" import v3K3_R_0805_2012Metric
-from "parts/Resistor_SMD/v47K_R_0805_2012Metric.ato" import v47K_R_0805_2012Metric
-from "parts/Resistor_SMD/v4K7_R_0805_2012Metric.ato" import v4K7_R_0805_2012Metric
+from "parts/Resistor_SMD/v330R_R_0805_2012Metric_v2.ato" import v330R_R_0805_2012Metric_v2
+from "parts/Resistor_SMD/v3K3_R_0805_2012Metric_v2.ato" import v3K3_R_0805_2012Metric_v2
+from "parts/Resistor_SMD/v47K_R_0805_2012Metric_v2.ato" import v47K_R_0805_2012Metric_v2
+from "parts/Resistor_SMD/v4K7_R_0805_2012Metric_v2.ato" import v4K7_R_0805_2012Metric_v2
 
 
 module Mcu:
@@ -33,11 +35,11 @@ module Mcu:
     """
 
     c33 = new v10uF_C_0805_2012Metric
-    c34 = new v1uF_C_0805_2012Metric_3
-    c35 = new v1uF_C_0805_2012Metric_3
-    c36 = new v1uF_C_0805_2012Metric_3
-    c37 = new v1uF_C_0805_2012Metric_3
-    c38 = new v1uF_C_0805_2012Metric_3
+    c34 = new v1uF_C_0805_2012Metric_v2_2
+    c35 = new v1uF_C_0805_2012Metric_v2_2
+    c36 = new v1uF_C_0805_2012Metric_v2_2
+    c37 = new v1uF_C_0805_2012Metric
+    c38 = new v1uF_C_0805_2012Metric
     c39 = new v22pF_C_0805_2012Metric
     c40 = new v22pF_C_0805_2012Metric
     c41 = new v100nF_C_0805_2012Metric_2
@@ -47,14 +49,14 @@ module Mcu:
     j3 = new M032_54MM_PinHeader_1x03_P2_54mm_Vertical
     j4 = new WiFi_Serial_Interface_PinHeader_1x05_P2_54mm_Vertical
     l2 = new v10uH_L_0805_2012Metric
-    r39 = new v1K_R_0805_2012Metric
-    r40 = new v1K_R_0805_2012Metric
-    r41 = new v4K7_R_0805_2012Metric
-    r43 = new v1K_R_0805_2012Metric
-    r44 = new v47K_R_0805_2012Metric
-    r45 = new v3K3_R_0805_2012Metric
-    r98 = new v1K_R_0805_2012Metric
-    r2001 = new v330R_R_0805_2012Metric
+    r39 = new v1K_R_0805_2012Metric_v2
+    r40 = new v1K_R_0805_2012Metric_v2
+    r41 = new v4K7_R_0805_2012Metric_v2
+    r43 = new v1K_R_0805_2012Metric_v2
+    r44 = new v47K_R_0805_2012Metric_v2
+    r45 = new v3K3_R_0805_2012Metric_v2
+    r98 = new v1K_R_0805_2012Metric_v3
+    r2001 = new v330R_R_0805_2012Metric_v2
     tp1 = new TestPoint_TestPoint_Pad_D1_0mm
     tp3 = new TestPoint_TestPoint_Pad_D1_0mm
     tp4 = new TestPoint_TestPoint_Pad_D1_0mm

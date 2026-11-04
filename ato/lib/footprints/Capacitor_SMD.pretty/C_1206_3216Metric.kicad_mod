@@ -6,7 +6,7 @@
 	(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 	(tags "capacitor")
 	(property "Reference" "REF**"
-		(at 0 -1.85)
+		(at 0 1.7 180)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -16,7 +16,7 @@
 		)
 	)
 	(property "Value" "10uF"
-		(at 0 1.85)
+		(at 0 1.85 180)
 		(layer "F.Fab")
 		(effects
 			(font
@@ -51,15 +51,6 @@
 	)
 	(attr smd)
 	(fp_line
-		(start -0.711252 -0.91)
-		(end 0.711252 -0.91)
-		(stroke
-			(width 0.12)
-			(type solid)
-		)
-		(layer "F.SilkS")
-	)
-	(fp_line
 		(start -0.711252 0.91)
 		(end 0.711252 0.91)
 		(stroke
@@ -69,17 +60,17 @@
 		(layer "F.SilkS")
 	)
 	(fp_line
-		(start -2.3 -1.15)
-		(end 2.3 -1.15)
+		(start -0.711252 -0.91)
+		(end 0.711252 -0.91)
 		(stroke
-			(width 0.05)
+			(width 0.12)
 			(type solid)
 		)
-		(layer "F.CrtYd")
+		(layer "F.SilkS")
 	)
 	(fp_line
-		(start -2.3 1.15)
-		(end -2.3 -1.15)
+		(start 2.3 1.15)
+		(end -2.3 1.15)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -96,8 +87,8 @@
 		(layer "F.CrtYd")
 	)
 	(fp_line
-		(start 2.3 1.15)
-		(end -2.3 1.15)
+		(start -2.3 1.15)
+		(end -2.3 -1.15)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -105,17 +96,17 @@
 		(layer "F.CrtYd")
 	)
 	(fp_line
-		(start -1.6 -0.8)
-		(end 1.6 -0.8)
+		(start -2.3 -1.15)
+		(end 2.3 -1.15)
 		(stroke
-			(width 0.1)
+			(width 0.05)
 			(type solid)
 		)
-		(layer "F.Fab")
+		(layer "F.CrtYd")
 	)
 	(fp_line
-		(start -1.6 0.8)
-		(end -1.6 -0.8)
+		(start 1.6 0.8)
+		(end -1.6 0.8)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -132,8 +123,17 @@
 		(layer "F.Fab")
 	)
 	(fp_line
-		(start 1.6 0.8)
-		(end -1.6 0.8)
+		(start -1.6 0.8)
+		(end -1.6 -0.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start -1.6 -0.8)
+		(end 1.6 -0.8)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -141,7 +141,7 @@
 		(layer "F.Fab")
 	)
 	(fp_text user "${REFERENCE}"
-		(at 0 0)
+		(at 0 0 180)
 		(layer "F.Fab")
 		(effects
 			(font

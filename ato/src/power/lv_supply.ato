@@ -6,21 +6,24 @@ import ElectricPower
 import has_designator
 from "parts/Samacsys/JFC2410_0500TS_FUSC6126X280N.ato" import JFC2410_0500TS_FUSC6126X280N
 from "parts/Package_TO_SOT_SMD/LD1086DT33TR_TO_252_2.ato" import LD1086DT33TR_TO_252_2
-from "parts/Package_TO_SOT_SMD/MMBT3904_SOT_23.ato" import MMBT3904_SOT_23
+from "parts/Package_TO_SOT_SMD/MMBT3904_SOT_23_v3.ato" import MMBT3904_SOT_23_v3
 from "parts/Samacsys/SMAJ18CA_DIONM5127X229N.ato" import SMAJ18CA_DIONM5127X229N
-from "parts/Samacsys/SMAJ7_0A_DIOM5026X229N.ato" import SMAJ7_0A_DIOM5026X229N
+from "parts/Samacsys/SMAJ7_0A_DIOM5026X229N_v2.ato" import SMAJ7_0A_DIOM5026X229N_v2
 from "parts/Samacsys/SS54B_DIOM5336X244N.ato" import SS54B_DIOM5336X244N
+from "parts/Samacsys/SS54B_DIOM5336X244N_v2.ato" import SS54B_DIOM5336X244N_v2
 from "parts/Samacsys/XL1509_5_0E1_SOIC127P600X175_8N.ato" import XL1509_5_0E1_SOIC127P600X175_8N
 from "parts/Capacitor_SMD/v0_1uF_C_0805_2012Metric_2.ato" import v0_1uF_C_0805_2012Metric_2
 from "parts/Capacitor_SMD/v100uF_25V_CP_Elec_10x10.ato" import v100uF_25V_CP_Elec_10x10
 from "parts/Capacitor_Tantalum_SMD/v100uF_6_3V_CP_EIA_3528_15_AVX_H_v2.ato" import v100uF_6_3V_CP_EIA_3528_15_AVX_H_v2
-from "parts/Resistor_SMD/v10K_R_0805_2012Metric.ato" import v10K_R_0805_2012Metric
-from "parts/Capacitor_SMD/v1uF_C_0805_2012Metric_2.ato" import v1uF_C_0805_2012Metric_2
+from "parts/Resistor_SMD/v10K_R_0805_2012Metric_v3.ato" import v10K_R_0805_2012Metric_v3
+from "parts/Resistor_SMD/v10K_R_0805_2012Metric_v6.ato" import v10K_R_0805_2012Metric_v6
+from "parts/Capacitor_SMD/v1uF_C_0805_2012Metric_3.ato" import v1uF_C_0805_2012Metric_3
+from "parts/Capacitor_SMD/v1uF_C_0805_2012Metric_v2.ato" import v1uF_C_0805_2012Metric_v2
 from "parts/Samacsys/v2051_09_SM_RPLF_DIOM5336X244N.ato" import v2051_09_SM_RPLF_DIOM5336X244N
 from "parts/Capacitor_SMD/v220uF_35V_CP_Elec_10x10.ato" import v220uF_35V_CP_Elec_10x10
-from "parts/Resistor_SMD/v27K_R_0805_2012Metric.ato" import v27K_R_0805_2012Metric
+from "parts/Resistor_SMD/v27K_R_0805_2012Metric_v4.ato" import v27K_R_0805_2012Metric_v4
 from "parts/LED_SMD/v3V3_LED_LED_0805_2012Metric.ato" import v3V3_LED_LED_0805_2012Metric
-from "parts/Resistor_SMD/v680R_R_0805_2012Metric.ato" import v680R_R_0805_2012Metric
+from "parts/Resistor_SMD/v680R_R_0805_2012Metric_v2.ato" import v680R_R_0805_2012Metric_v2
 from "parts/Inductor_SMD/v68uH_L_12x12mm_H8mm.ato" import v68uH_L_12x12mm_H8mm
 
 
@@ -29,35 +32,35 @@ module LvSupply:
     31 parts: C15, C16, C19, C20, C21, C44, C45, C209, C273, C274, C275, C276, C277, D7, D12, D13, D14, D15, D20, F1, GD1, L1, Q16, Q17, R4, R8, R9, R19, R25, U4, U70
     """
 
-    c15 = new v1uF_C_0805_2012Metric_2
+    c15 = new v1uF_C_0805_2012Metric_v2
     c16 = new v100uF_6_3V_CP_EIA_3528_15_AVX_H_v2
-    c19 = new v1uF_C_0805_2012Metric_2
+    c19 = new v1uF_C_0805_2012Metric_v2
     c20 = new v100uF_6_3V_CP_EIA_3528_15_AVX_H_v2
     c21 = new v100uF_6_3V_CP_EIA_3528_15_AVX_H_v2
     c44 = new v100uF_6_3V_CP_EIA_3528_15_AVX_H_v2
-    c45 = new v1uF_C_0805_2012Metric_2
+    c45 = new v1uF_C_0805_2012Metric_3
     c209 = new v100uF_25V_CP_Elec_10x10
     c273 = new v220uF_35V_CP_Elec_10x10
     c274 = new v220uF_35V_CP_Elec_10x10
     c275 = new v0_1uF_C_0805_2012Metric_2
-    c276 = new v1uF_C_0805_2012Metric_2
-    c277 = new v1uF_C_0805_2012Metric_2
+    c276 = new v1uF_C_0805_2012Metric_3
+    c277 = new v1uF_C_0805_2012Metric_3
     d7 = new v3V3_LED_LED_0805_2012Metric
     d12 = new SMAJ18CA_DIONM5127X229N
     d13 = new SS54B_DIOM5336X244N
     d14 = new SS54B_DIOM5336X244N
-    d15 = new SS54B_DIOM5336X244N
-    d20 = new SMAJ7_0A_DIOM5026X229N
+    d15 = new SS54B_DIOM5336X244N_v2
+    d20 = new SMAJ7_0A_DIOM5026X229N_v2
     f1 = new JFC2410_0500TS_FUSC6126X280N
     gd1 = new v2051_09_SM_RPLF_DIOM5336X244N
     l1 = new v68uH_L_12x12mm_H8mm
-    q16 = new MMBT3904_SOT_23
-    q17 = new MMBT3904_SOT_23
-    r4 = new v10K_R_0805_2012Metric
-    r8 = new v10K_R_0805_2012Metric
-    r9 = new v27K_R_0805_2012Metric
-    r19 = new v680R_R_0805_2012Metric
-    r25 = new v10K_R_0805_2012Metric
+    q16 = new MMBT3904_SOT_23_v3
+    q17 = new MMBT3904_SOT_23_v3
+    r4 = new v10K_R_0805_2012Metric_v6
+    r8 = new v10K_R_0805_2012Metric_v3
+    r9 = new v27K_R_0805_2012Metric_v4
+    r19 = new v680R_R_0805_2012Metric_v2
+    r25 = new v10K_R_0805_2012Metric_v3
     u4 = new LD1086DT33TR_TO_252_2
     u70 = new XL1509_5_0E1_SOIC127P600X175_8N
 

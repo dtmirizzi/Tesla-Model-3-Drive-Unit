@@ -86,6 +86,7 @@
 		(size 2.2 2.2)
 		(drill 2.2)
 		(layers "*.Cu" "*.Mask")
+		(clearance 2)
 	)
 	(embedded_fonts no)
 )

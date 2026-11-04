@@ -15,6 +15,7 @@ from "src/comms.ato" import OilPumpLin
 from "src/connectors.ato" import Connectors
 from "src/gate_drive/interface.ato" import GateInterface
 from "src/gate_drive/phase.ato" import GateDrivePhase
+from "src/gate_drive/phase.ato" import GateDrivePhaseB
 from "src/gate_drive/phase.ato" import GateDrivePhaseC
 from "src/io.ato" import DigitalInputs
 from "src/io.ato" import ThrottleInputs
@@ -53,7 +54,7 @@ module M3DU:
     connectors = new Connectors
     mechanical = new BoardMechanics
     gate_a = new GateDrivePhase
-    gate_b = new GateDrivePhase
+    gate_b = new GateDrivePhaseB
     gate_c = new GateDrivePhaseC
 
     # ---- power rails ----

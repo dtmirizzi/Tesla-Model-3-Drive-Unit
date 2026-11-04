@@ -33,6 +33,9 @@ if [[ $SEED == 1 ]]; then
   $PY -I tools/seed_layout.py
 fi
 ato --non-interactive build --no-standardize-designators
+# atopile 0.15.9 drops some footprint attributes (locks, zone/thermal settings,
+# fab text, model flags) when it writes the board; put them back
+$PY -I tools/restore_layout.py
 if [[ $CHECK == 1 ]]; then
   $PY -I tools/check_netlist.py
   $PY -I tools/check_bom.py

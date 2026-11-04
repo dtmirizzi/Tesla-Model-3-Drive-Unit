@@ -7,7 +7,7 @@ import has_designator
 from "parts/Tesla/Conn_01x30_Male_M3DU_MAINCONN.ato" import Conn_01x30_Male_M3DU_MAINCONN
 from "parts/Tesla/HV_Hvil_HV_HVIL.ato" import HV_Hvil_HV_HVIL
 from "parts/Tesla/HVp_M3_HVPOS.ato" import HVp_M3_HVPOS
-from "parts/Diode_SMD/SMAJ18CA_D_SMA.ato" import SMAJ18CA_D_SMA
+from "parts/Diode_SMD/SMAJ18CA_D_SMA_v3.ato" import SMAJ18CA_D_SMA_v3
 from "parts/Fuse/v1206L050_24WR_Fuse_1206_3216Metric.ato" import v1206L050_24WR_Fuse_1206_3216Metric
 
 
@@ -26,7 +26,7 @@ module Connectors:
     """
 
     conn1 = new HV_Hvil_HV_HVIL
-    d24 = new SMAJ18CA_D_SMA
+    d24 = new SMAJ18CA_D_SMA_v3
     e12 = new HVp_M3_HVPOS
     e13 = new HVp_M3_HVPOS
     e14 = new HVp_M3_HVPOS

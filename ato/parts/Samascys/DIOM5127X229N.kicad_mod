@@ -6,7 +6,7 @@
 	(descr "SMA (DO-214AC)_2021")
 	(tags "TVS Diode (Uni-directional)")
 	(property "Reference" "REF**"
-		(at 0 -2.55 180)
+		(at 4.65 0 180)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -16,7 +16,7 @@
 		)
 	)
 	(property "Value" "SMAJ18CA"
-		(at 0 0)
+		(at 0 0 180)
 		(layer "F.SilkS")
 		(hide yes)
 		(effects
@@ -27,7 +27,7 @@
 		)
 	)
 	(property "Datasheet" "https://www.bourns.com/docs/Product-Datasheets/SMAJ.pdf"
-		(at 0 0)
+		(at 0 0 180)
 		(layer "F.Fab")
 		(hide yes)
 		(effects
@@ -38,7 +38,7 @@
 		)
 	)
 	(property "Description" "ESD Suppressors / TVS Diodes 18volts 5uA 13.7 Amps Bi-Dir"
-		(at 0 0)
+		(at 0 0 180)
 		(layer "F.Fab")
 		(hide yes)
 		(effects
@@ -134,15 +134,6 @@
 	)
 	(attr smd)
 	(fp_line
-		(start -2.552 1.332)
-		(end 2.552 1.332)
-		(stroke
-			(width 0.2)
-			(type solid)
-		)
-		(layer "F.SilkS")
-	)
-	(fp_line
 		(start 2.552 -1.332)
 		(end -2.825 -1.332)
 		(stroke
@@ -152,17 +143,17 @@
 		(layer "F.SilkS")
 	)
 	(fp_line
-		(start -3.4 -1.645)
-		(end 3.4 -1.645)
+		(start -2.552 1.332)
+		(end 2.552 1.332)
 		(stroke
-			(width 0.05)
+			(width 0.2)
 			(type solid)
 		)
-		(layer "F.CrtYd")
+		(layer "F.SilkS")
 	)
 	(fp_line
-		(start -3.4 1.645)
-		(end -3.4 -1.645)
+		(start 3.4 1.645)
+		(end -3.4 1.645)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -179,8 +170,8 @@
 		(layer "F.CrtYd")
 	)
 	(fp_line
-		(start 3.4 1.645)
-		(end -3.4 1.645)
+		(start -3.4 1.645)
+		(end -3.4 -1.645)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -188,26 +179,17 @@
 		(layer "F.CrtYd")
 	)
 	(fp_line
-		(start -2.552 -1.332)
-		(end 2.552 -1.332)
+		(start -3.4 -1.645)
+		(end 3.4 -1.645)
 		(stroke
-			(width 0.1)
+			(width 0.05)
 			(type solid)
 		)
-		(layer "F.Fab")
+		(layer "F.CrtYd")
 	)
 	(fp_line
-		(start -2.552 -0.558)
-		(end -1.778 -1.332)
-		(stroke
-			(width 0.1)
-			(type solid)
-		)
-		(layer "F.Fab")
-	)
-	(fp_line
-		(start -2.552 1.332)
-		(end -2.552 -1.332)
+		(start 2.552 1.332)
+		(end -2.552 1.332)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -224,8 +206,26 @@
 		(layer "F.Fab")
 	)
 	(fp_line
-		(start 2.552 1.332)
-		(end -2.552 1.332)
+		(start -2.552 1.332)
+		(end -2.552 -1.332)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start -2.552 -0.558)
+		(end -1.778 -1.332)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start -2.552 -1.332)
+		(end 2.552 -1.332)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -233,7 +233,7 @@
 		(layer "F.Fab")
 	)
 	(fp_text user "${REFERENCE}"
-		(at 0 0)
+		(at 0 0 180)
 		(layer "F.Fab")
 		(effects
 			(font
@@ -253,15 +253,15 @@
 		(layers "F.Cu" "F.Mask" "F.Paste")
 	)
 	(embedded_fonts no)
-	(model "${KICAD6_3RD_PARTY}/Samacsys.3dshapes/SMAJ18CA.stp"
+	(model "SMAJ5.0A.stp"
 		(offset
-			(xyz 0 0 1.5)
+			(xyz 0 0 0)
 		)
 		(scale
 			(xyz 1 1 1)
 		)
 		(rotate
-			(xyz -90 -0 -0)
+			(xyz 0 0 0)
 		)
 	)
 	(model "${KICAD_3RD_PARTY}/Samacsys.3dshapes/SMAJ5.0A.stp"

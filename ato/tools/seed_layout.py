@@ -82,6 +82,12 @@ def main():
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text("".join(out))
+    # design rules + net classes (min clearance 0.12/0.14 mm, power/GND classes)
+    # live in the KiCad project file; without it DRC falls back to KiCad defaults
+    pro = args.src.with_suffix(".kicad_pro")
+    if pro.exists():
+        args.out.with_suffix(".kicad_pro").write_text(pro.read_text())
+        print(f"copied design rules from {pro.name}")
     print(f"tagged {tagged} footprints, renamed {renamed} footprint ids, dropped {dropped} ki_fp_filters -> {args.out}")
 
 

@@ -128,7 +128,7 @@ def sections_from_schematic(path: Path):
     sec_notes = defaultdict(list)
     for text, x, y in notes:
         if (sec := section(x, y)) is not None:
-            sec_notes[sec].append(text.replace("\\n", "\n").strip())
+            sec_notes[sec].append(text.replace("\\n", "\n").replace('\\"', '"').strip())
     return ref_sec, sec_notes
 
 
@@ -164,7 +164,9 @@ def wl_colors(ctx: Ctx, refs: set[str], fixed: dict[str, str]):
 
     def ptype(r):
         c = ctx.comps[r]
-        return (c["footprint"], c["symbol"])  # values may differ between phases
+        # values and per-instance footprint variants (__vN) may differ between
+        # phases; those become retypes in a derived module
+        return (c["footprint"].split("__v")[0], c["symbol"])
 
     col = {r: H(ptype(r), fixed.get(r)) for r in refs}
     for _ in range(40):

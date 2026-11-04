@@ -5,11 +5,16 @@
 import ElectricPower
 import has_designator
 from "parts/Samascys/SMAJ18CA_DIOM5127X229N.ato" import SMAJ18CA_DIOM5127X229N
+from "parts/Samascys/SMAJ18CA_DIOM5127X229N_v2.ato" import SMAJ18CA_DIOM5127X229N_v2
 from "parts/Samascys/SMAJ7_0A_DIOM5026X229N_2.ato" import SMAJ7_0A_DIOM5026X229N_2
-from "parts/Resistor_SMD/v1K5_R_0805_2012Metric.ato" import v1K5_R_0805_2012Metric
-from "parts/Resistor_SMD/v1K_R_0805_2012Metric.ato" import v1K_R_0805_2012Metric
-from "parts/Capacitor_SMD/v1uF_C_0805_2012Metric.ato" import v1uF_C_0805_2012Metric
-from "parts/Resistor_SMD/v4K7_R_0805_2012Metric.ato" import v4K7_R_0805_2012Metric
+from "parts/Resistor_SMD/v1K5_R_0805_2012Metric_v2.ato" import v1K5_R_0805_2012Metric_v2
+from "parts/Resistor_SMD/v1K5_R_0805_2012Metric_v3.ato" import v1K5_R_0805_2012Metric_v3
+from "parts/Resistor_SMD/v1K_R_0805_2012Metric_v2.ato" import v1K_R_0805_2012Metric_v2
+from "parts/Capacitor_SMD/v1uF_C_0805_2012Metric_2.ato" import v1uF_C_0805_2012Metric_2
+from "parts/Capacitor_SMD/v1uF_C_0805_2012Metric_v2_3.ato" import v1uF_C_0805_2012Metric_v2_3
+from "parts/Capacitor_SMD/v1uF_C_0805_2012Metric_v3.ato" import v1uF_C_0805_2012Metric_v3
+from "parts/Resistor_SMD/v4K7_R_0805_2012Metric_v2.ato" import v4K7_R_0805_2012Metric_v2
+from "parts/Resistor_SMD/v4K7_R_0805_2012Metric_v3.ato" import v4K7_R_0805_2012Metric_v3
 
 
 module DigitalInputs:
@@ -17,26 +22,26 @@ module DigitalInputs:
     20 parts: C1, C29, C30, C31, C32, D3, D4, D5, D19, D21, R6, R7, R31, R32, R33, R34, R35, R36, R37, R38
     """
 
-    c1 = new v1uF_C_0805_2012Metric
-    c29 = new v1uF_C_0805_2012Metric
-    c30 = new v1uF_C_0805_2012Metric
-    c31 = new v1uF_C_0805_2012Metric
-    c32 = new v1uF_C_0805_2012Metric
+    c1 = new v1uF_C_0805_2012Metric_v3
+    c29 = new v1uF_C_0805_2012Metric_2
+    c30 = new v1uF_C_0805_2012Metric_2
+    c31 = new v1uF_C_0805_2012Metric_2
+    c32 = new v1uF_C_0805_2012Metric_2
     d3 = new SMAJ18CA_DIOM5127X229N
     d4 = new SMAJ18CA_DIOM5127X229N
     d5 = new SMAJ18CA_DIOM5127X229N
     d19 = new SMAJ18CA_DIOM5127X229N
-    d21 = new SMAJ18CA_DIOM5127X229N
-    r6 = new v1K5_R_0805_2012Metric
-    r7 = new v4K7_R_0805_2012Metric
-    r31 = new v4K7_R_0805_2012Metric
-    r32 = new v4K7_R_0805_2012Metric
-    r33 = new v1K5_R_0805_2012Metric
-    r34 = new v1K5_R_0805_2012Metric
-    r35 = new v4K7_R_0805_2012Metric
-    r36 = new v4K7_R_0805_2012Metric
-    r37 = new v1K5_R_0805_2012Metric
-    r38 = new v1K5_R_0805_2012Metric
+    d21 = new SMAJ18CA_DIOM5127X229N_v2
+    r6 = new v1K5_R_0805_2012Metric_v3
+    r7 = new v4K7_R_0805_2012Metric_v3
+    r31 = new v4K7_R_0805_2012Metric_v2
+    r32 = new v4K7_R_0805_2012Metric_v2
+    r33 = new v1K5_R_0805_2012Metric_v2
+    r34 = new v1K5_R_0805_2012Metric_v2
+    r35 = new v4K7_R_0805_2012Metric_v2
+    r36 = new v4K7_R_0805_2012Metric_v2
+    r37 = new v1K5_R_0805_2012Metric_v2
+    r38 = new v1K5_R_0805_2012Metric_v2
 
     # ports (nets that leave this block) and named internal nets
     signal BRAKE
@@ -132,14 +137,14 @@ module ThrottleInputs:
     8 parts: C27, C28, D22, D23, R29, R2007, R2008, R3000
     """
 
-    c27 = new v1uF_C_0805_2012Metric
-    c28 = new v1uF_C_0805_2012Metric
+    c27 = new v1uF_C_0805_2012Metric_v2_3
+    c28 = new v1uF_C_0805_2012Metric_v2_3
     d22 = new SMAJ7_0A_DIOM5026X229N_2
     d23 = new SMAJ7_0A_DIOM5026X229N_2
-    r29 = new v1K_R_0805_2012Metric
-    r2007 = new v1K_R_0805_2012Metric
-    r2008 = new v1K_R_0805_2012Metric
-    r3000 = new v1K_R_0805_2012Metric
+    r29 = new v1K_R_0805_2012Metric_v2
+    r2007 = new v1K_R_0805_2012Metric_v2
+    r2008 = new v1K_R_0805_2012Metric_v2
+    r3000 = new v1K_R_0805_2012Metric_v2
 
     # ports (nets that leave this block) and named internal nets
     signal ACCEL1

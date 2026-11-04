@@ -6,6 +6,8 @@ import ElectricPower
 import has_designator
 from "parts/Tesla/LOGO_US_Irish_Flag_neg.ato" import LOGO_US_Irish_Flag_neg
 from "parts/MountingHole/MountingHole_MountingHole_2_2mm_M2.ato" import MountingHole_MountingHole_2_2mm_M2
+from "parts/MountingHole/MountingHole_MountingHole_2_2mm_M2_v2.ato" import MountingHole_MountingHole_2_2mm_M2_v2
+from "parts/MountingHole/MountingHole_MountingHole_2_2mm_M2_v3.ato" import MountingHole_MountingHole_2_2mm_M2_v3
 from "parts/MountingHole/MountingHole_MountingHole_3_5mm.ato" import MountingHole_MountingHole_3_5mm
 from "parts/MountingHole/MountingHole_MountingHole_3_7mm.ato" import MountingHole_MountingHole_3_7mm
 from "parts/MountingHole/MountingHole_MountingHole_4mm.ato" import MountingHole_MountingHole_4mm
@@ -30,16 +32,16 @@ module BoardMechanics:
     h9 = new MountingHole_Pad_MountingHole_4_5mm_Pad_TopBottom
     h10 = new MountingHole_Pad_MountingHole_4_5mm_Pad_TopBottom
     h11 = new MountingHole_Pad_MountingHole_4_5mm_Pad_TopBottom
-    h12 = new MountingHole_MountingHole_2_2mm_M2
-    h13 = new MountingHole_MountingHole_2_2mm_M2
-    h14 = new MountingHole_MountingHole_2_2mm_M2
-    h15 = new MountingHole_MountingHole_2_2mm_M2
+    h12 = new MountingHole_MountingHole_2_2mm_M2_v2
+    h13 = new MountingHole_MountingHole_2_2mm_M2_v3
+    h14 = new MountingHole_MountingHole_2_2mm_M2_v2
+    h15 = new MountingHole_MountingHole_2_2mm_M2_v2
     h16 = new MountingHole_MountingHole_3_7mm
     h17 = new MountingHole_MountingHole_3_5mm
     h18 = new MountingHole_MountingHole_4mm
     h19 = new MountingHole_MountingHole_4mm
     h20 = new MountingHole_MountingHole_2_2mm_M2
-    h21 = new MountingHole_MountingHole_2_2mm_M2
+    h21 = new MountingHole_MountingHole_2_2mm_M2_v2
 
     # ports (nets that leave this block) and named internal nets
     signal GND

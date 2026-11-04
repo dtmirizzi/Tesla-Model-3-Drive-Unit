@@ -4,15 +4,17 @@
 #pragma experiment("INSTANCE_TRAITS")
 import ElectricPower
 import has_designator
-from "parts/LED_SMD/LED_LED_0805_2012Metric.ato" import LED_LED_0805_2012Metric
+from "parts/LED_SMD/LED_LED_0805_2012Metric_v2.ato" import LED_LED_0805_2012Metric_v2
 from "parts/Package_SO/LM2901_SOIC_14_3_9x8_7mm_P1_27mm.ato" import LM2901_SOIC_14_3_9x8_7mm_P1_27mm
 from "parts/TestPoint/TestPoint_TestPoint_Pad_2_5x2_5mm.ato" import TestPoint_TestPoint_Pad_2_5x2_5mm
 from "parts/TestPoint/TestPoint_TestPoint_Pad_D1_0mm.ato" import TestPoint_TestPoint_Pad_D1_0mm
-from "parts/Resistor_SMD/v10K_R_0805_2012Metric.ato" import v10K_R_0805_2012Metric
-from "parts/Capacitor_SMD/v10nF_C_0603_1608Metric.ato" import v10nF_C_0603_1608Metric
-from "parts/Resistor_SMD/v1K_R_0805_2012Metric.ato" import v1K_R_0805_2012Metric
-from "parts/Capacitor_SMD/v1uF_C_0805_2012Metric_3.ato" import v1uF_C_0805_2012Metric_3
-from "parts/Resistor_SMD/v4K7_R_0805_2012Metric.ato" import v4K7_R_0805_2012Metric
+from "parts/Resistor_SMD/v10K_R_0805_2012Metric_v2.ato" import v10K_R_0805_2012Metric_v2
+from "parts/Resistor_SMD/v10K_R_0805_2012Metric_v9.ato" import v10K_R_0805_2012Metric_v9
+from "parts/Capacitor_SMD/v10nF_C_0603_1608Metric_v3.ato" import v10nF_C_0603_1608Metric_v3
+from "parts/Resistor_SMD/v1K_R_0805_2012Metric_v2.ato" import v1K_R_0805_2012Metric_v2
+from "parts/Capacitor_SMD/v1uF_C_0805_2012Metric.ato" import v1uF_C_0805_2012Metric
+from "parts/Capacitor_SMD/v1uF_C_0805_2012Metric_v2_2.ato" import v1uF_C_0805_2012Metric_v2_2
+from "parts/Resistor_SMD/v4K7_R_0805_2012Metric_v2.ato" import v4K7_R_0805_2012Metric_v2
 from "parts/Package_TO_SOT_SMD/v74LVC1G10_SOT_23_6.ato" import v74LVC1G10_SOT_23_6
 
 
@@ -21,18 +23,18 @@ module OvercurrentDetect:
     18 parts: C2, C22, C23, C24, C25, D58, R5, R21, R22, R23, R24, R265, TP2, TP21, TP22, TP23, U3, U14
     """
 
-    c2 = new v10nF_C_0603_1608Metric
-    c22 = new v1uF_C_0805_2012Metric_3
-    c23 = new v1uF_C_0805_2012Metric_3
-    c24 = new v1uF_C_0805_2012Metric_3
-    c25 = new v1uF_C_0805_2012Metric_3
-    d58 = new LED_LED_0805_2012Metric
-    r5 = new v10K_R_0805_2012Metric
-    r21 = new v10K_R_0805_2012Metric
-    r22 = new v10K_R_0805_2012Metric
-    r23 = new v4K7_R_0805_2012Metric
-    r24 = new v4K7_R_0805_2012Metric
-    r265 = new v1K_R_0805_2012Metric
+    c2 = new v10nF_C_0603_1608Metric_v3
+    c22 = new v1uF_C_0805_2012Metric_v2_2
+    c23 = new v1uF_C_0805_2012Metric
+    c24 = new v1uF_C_0805_2012Metric_v2_2
+    c25 = new v1uF_C_0805_2012Metric_v2_2
+    d58 = new LED_LED_0805_2012Metric_v2
+    r5 = new v10K_R_0805_2012Metric_v9
+    r21 = new v10K_R_0805_2012Metric_v2
+    r22 = new v10K_R_0805_2012Metric_v2
+    r23 = new v4K7_R_0805_2012Metric_v2
+    r24 = new v4K7_R_0805_2012Metric_v2
+    r265 = new v1K_R_0805_2012Metric_v2
     tp2 = new TestPoint_TestPoint_Pad_2_5x2_5mm
     tp21 = new TestPoint_TestPoint_Pad_2_5x2_5mm
     tp22 = new TestPoint_TestPoint_Pad_D1_0mm

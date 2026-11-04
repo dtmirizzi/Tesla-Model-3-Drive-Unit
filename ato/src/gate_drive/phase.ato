@@ -5,16 +5,22 @@
 import ElectricPower
 import has_designator
 from "parts/Tesla/BSS138BK_SOT_23.ato" import BSS138BK_SOT_23
+from "parts/Tesla/BSS138BK_SOT_23_v2.ato" import BSS138BK_SOT_23_v2
 from "parts/Tesla/BSS84AK_SOT_23.ato" import BSS84AK_SOT_23
+from "parts/Tesla/BSS84AK_SOT_23_v2.ato" import BSS84AK_SOT_23_v2
 from "parts/Tesla/CH1234_M3DU_Mosfets.ato" import CH1234_M3DU_Mosfets
-from "parts/Tesla/G1_D_SOD_323.ato" import G1_D_SOD_323
+from "parts/Tesla/G1_D_SOD_323_v3.ato" import G1_D_SOD_323_v3
 from "parts/Tesla/JV_D_SOD_323.ato" import JV_D_SOD_323
+from "parts/Tesla/JV_D_SOD_323_v3.ato" import JV_D_SOD_323_v3
 from "parts/Tesla/M3DU_MOSFETS_M3DU_Mosfets.ato" import M3DU_MOSFETS_M3DU_Mosfets
 from "parts/Tesla/SG_NMOS_D_SOT_23.ato" import SG_NMOS_D_SOT_23
 from "parts/Package_SO/STGAP1AS_SOIC_24W_7_5x15_4mm_P1_27mm.ato" import STGAP1AS_SOIC_24W_7_5x15_4mm_P1_27mm
+from "parts/Package_SO/STGAP1AS_SOIC_24W_7_5x15_4mm_P1_27mm_v2.ato" import STGAP1AS_SOIC_24W_7_5x15_4mm_P1_27mm_v2
+from "parts/Package_SO/STGAP1AS_SOIC_24W_7_5x15_4mm_P1_27mm_v3.ato" import STGAP1AS_SOIC_24W_7_5x15_4mm_P1_27mm_v3
 from "parts/Tesla/TestPoint_TestPoint_Pad_D1_5mm.ato" import TestPoint_TestPoint_Pad_D1_5mm
 from "parts/Tesla/TestPoint_TestPoint_Via.ato" import TestPoint_TestPoint_Via
 from "parts/Diode_SMD/VN17_D_SMA.ato" import VN17_D_SMA
+from "parts/Diode_SMD/VN17_D_SMA_v2.ato" import VN17_D_SMA_v2
 from "parts/Tesla/v0R_R_0603_1608Metric.ato" import v0R_R_0603_1608Metric
 from "parts/Tesla/v0_56R_R_0805_2012Metric.ato" import v0_56R_R_0805_2012Metric
 from "parts/Tesla/v100_R_0603_1608Metric.ato" import v100_R_0603_1608Metric
@@ -26,18 +32,23 @@ from "parts/Tesla/v1k_R_0603_1608Metric.ato" import v1k_R_0603_1608Metric
 from "parts/Tesla/v1uF_C_0805_2012Metric_4.ato" import v1uF_C_0805_2012Metric_4
 from "parts/Tesla/v200_R_0603_1608Metric.ato" import v200_R_0603_1608Metric
 from "parts/Tesla/v27K_R_0603_1608Metric.ato" import v27K_R_0603_1608Metric
+from "parts/Tesla/v27K_R_0603_1608Metric_v3.ato" import v27K_R_0603_1608Metric_v3
 from "parts/Tesla/v2H2_D_SMA.ato" import v2H2_D_SMA
 from "parts/Tesla/v2_2uF_C_0805_2012Metric.ato" import v2_2uF_C_0805_2012Metric
 from "parts/Tesla/v3N0408_TO_252_2.ato" import v3N0408_TO_252_2
 from "parts/Tesla/v45P4LLF6_TO_252_2.ato" import v45P4LLF6_TO_252_2
 from "parts/Tesla/v470_R_0603_1608Metric.ato" import v470_R_0603_1608Metric
-from "parts/Tesla/v470pF_C_0603_1608Metric.ato" import v470pF_C_0603_1608Metric
+from "parts/Tesla/v470pF_C_0603_1608Metric_v2.ato" import v470pF_C_0603_1608Metric_v2
 from "parts/Resistor_SMD/v4K7_R_1210_3225Metric.ato" import v4K7_R_1210_3225Metric
+from "parts/Resistor_SMD/v4K7_R_1210_3225Metric_v2.ato" import v4K7_R_1210_3225Metric_v2
 from "parts/Tesla/v4_7uF_C_0805_2012Metric.ato" import v4_7uF_C_0805_2012Metric
 from "parts/Tesla/v4_7uF_C_1210_3225Metric.ato" import v4_7uF_C_1210_3225Metric
 from "parts/Tesla/v680_R_0603_1608Metric.ato" import v680_R_0603_1608Metric
 from "parts/Tesla/v82pF_C_0603_1608Metric.ato" import v82pF_C_0603_1608Metric
+from "parts/Tesla/v82pF_C_0603_1608Metric_v2.ato" import v82pF_C_0603_1608Metric_v2
 from "parts/Tesla/v8_2V_D_SOD_323.ato" import v8_2V_D_SOD_323
+from "parts/Tesla/v8_2V_D_SOD_323_v2.ato" import v8_2V_D_SOD_323_v2
+from "parts/Tesla/v8_2V_D_SOD_323_v3.ato" import v8_2V_D_SOD_323_v3
 
 
 module GateDrivePhase:
@@ -66,21 +77,21 @@ module GateDrivePhase:
     c235x = new v4_7uF_C_1210_3225Metric
     c236x = new v1uF_C_0805_2012Metric_4
     c237x = new v100nF_C_0603_1608Metric
-    c239x = new v82pF_C_0603_1608Metric
+    c239x = new v82pF_C_0603_1608Metric_v2
     c240x = new v4_7uF_C_0805_2012Metric
     c241x = new v1uF_C_0805_2012Metric_4
     c242x = new v1uF_C_0805_2012Metric_4
     c243x = new v4_7uF_C_1210_3225Metric
-    c244x = new v470pF_C_0603_1608Metric
-    c245x = new v82pF_C_0603_1608Metric
-    c246x = new v82pF_C_0603_1608Metric
+    c244x = new v470pF_C_0603_1608Metric_v2
+    c245x = new v82pF_C_0603_1608Metric_v2
+    c246x = new v82pF_C_0603_1608Metric_v2
     c247x = new v82pF_C_0603_1608Metric
-    c248x = new v82pF_C_0603_1608Metric
+    c248x = new v82pF_C_0603_1608Metric_v2
     c249x = new v4_7uF_C_1210_3225Metric
     c250x = new v1uF_C_0805_2012Metric_4
-    c251x = new v82pF_C_0603_1608Metric
+    c251x = new v82pF_C_0603_1608Metric_v2
     c252x = new v100nF_C_0603_1608Metric
-    c255x = new v82pF_C_0603_1608Metric
+    c255x = new v82pF_C_0603_1608Metric_v2
     c256x = new v100nF_C_0603_1608Metric
     c257x = new v1uF_C_0805_2012Metric_4
     c2581 = new v1uF_C_0805_2012Metric_4
@@ -88,13 +99,13 @@ module GateDrivePhase:
     c269x = new v4_7uF_C_0805_2012Metric
     c270x = new v4_7uF_C_0805_2012Metric
     c272x = new v4_7uF_C_0805_2012Metric
-    d53 = new G1_D_SOD_323
+    d53 = new G1_D_SOD_323_v3
     d74 = new VN17_D_SMA
     d41x = new JV_D_SOD_323
     d42x = new VN17_D_SMA
-    d47x = new JV_D_SOD_323
-    d48x = new VN17_D_SMA
-    d49x = new VN17_D_SMA
+    d47x = new JV_D_SOD_323_v3
+    d48x = new VN17_D_SMA_v2
+    d49x = new VN17_D_SMA_v2
     d70x = new JV_D_SOD_323
     d100x = new v2H2_D_SMA
     d101x = new v2H2_D_SMA
@@ -106,9 +117,9 @@ module GateDrivePhase:
     d107x = new v2H2_D_SMA
     q4x = new v45P4LLF6_TO_252_2
     q5x = new SG_NMOS_D_SOT_23
-    q18x = new BSS84AK_SOT_23
+    q18x = new BSS84AK_SOT_23_v2
     q21x = new v3N0408_TO_252_2
-    q30x = new BSS138BK_SOT_23
+    q30x = new BSS138BK_SOT_23_v2
     q31x = new BSS84AK_SOT_23
     q32x = new BSS138BK_SOT_23
     q98x = new v45P4LLF6_TO_252_2
@@ -132,12 +143,12 @@ module GateDrivePhase:
     r164x = new v100_R_0603_1608Metric
     r1651 = new v27K_R_0603_1608Metric
     r166x = new v27K_R_0603_1608Metric
-    r167x = new v4K7_R_1210_3225Metric
+    r167x = new v4K7_R_1210_3225Metric_v2
     r168x = new v4K7_R_1210_3225Metric
     r169x = new v27K_R_0603_1608Metric
     r170x = new v27K_R_0603_1608Metric
     r171x = new v100_R_0603_1608Metric
-    r172x = new v27K_R_0603_1608Metric
+    r172x = new v27K_R_0603_1608Metric_v3
     r176x = new v27K_R_0603_1608Metric
     r1851 = new v470_R_0603_1608Metric
     r321x = new v0R_R_0603_1608Metric
@@ -176,14 +187,14 @@ module GateDrivePhase:
     tr1 = new M3DU_MOSFETS_M3DU_Mosfets
     tr2 = new M3DU_MOSFETS_M3DU_Mosfets
     u29x = new STGAP1AS_SOIC_24W_7_5x15_4mm_P1_27mm
-    u30x = new STGAP1AS_SOIC_24W_7_5x15_4mm_P1_27mm
+    u30x = new STGAP1AS_SOIC_24W_7_5x15_4mm_P1_27mm_v3
     z18x = new v8_2V_D_SOD_323
-    z19x = new v8_2V_D_SOD_323
+    z19x = new v8_2V_D_SOD_323_v3
     z20x = new v8_2V_D_SOD_323
     z21x = new v8_2V_D_SOD_323
     z22x = new v8_2V_D_SOD_323
-    z23x = new v8_2V_D_SOD_323
-    z24x = new v8_2V_D_SOD_323
+    z23x = new v8_2V_D_SOD_323_v2
+    z24x = new v8_2V_D_SOD_323_v3
     z25x = new v8_2V_D_SOD_323
 
     # power ports
@@ -541,6 +552,13 @@ module GateDrivePhase:
     c246x.p1 ~ u30x.nCS
 
 
+module GateDrivePhaseB from GateDrivePhase:
+    """GateDrivePhase with the parts that differ on this phase in the V3.2 BOM."""
+    u29x -> STGAP1AS_SOIC_24W_7_5x15_4mm_P1_27mm_v3
+
+
 module GateDrivePhaseC from GateDrivePhase:
     """GateDrivePhase with the parts that differ on this phase in the V3.2 BOM."""
     tr2 -> CH1234_M3DU_Mosfets
+    u29x -> STGAP1AS_SOIC_24W_7_5x15_4mm_P1_27mm_v2
+    u30x -> STGAP1AS_SOIC_24W_7_5x15_4mm_P1_27mm

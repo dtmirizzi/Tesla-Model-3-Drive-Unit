@@ -7,19 +7,19 @@ import has_designator
 from "parts/Connector_PinHeader_2.54mm/CAN_MON_PinHeader_1x03_P2_54mm_Vertical.ato" import CAN_MON_PinHeader_1x03_P2_54mm_Vertical
 from "parts/Samacsys/ESDCAN01_2BLY_SOT95P255X150_3N.ato" import ESDCAN01_2BLY_SOT95P255X150_3N
 from "parts/Package_TO_SOT_SMD/MMBT3904_SOT_23.ato" import MMBT3904_SOT_23
-from "parts/Package_SO/SN65HVD230_SOIC_8_3_9x4_9mm_P1_27mm.ato" import SN65HVD230_SOIC_8_3_9x4_9mm_P1_27mm
+from "parts/Package_SO/SN65HVD230_SOIC_8_3_9x4_9mm_P1_27mm_v2.ato" import SN65HVD230_SOIC_8_3_9x4_9mm_P1_27mm_v2
 from "parts/Jumper/SolderJumper_2_Open_SolderJumper_2_P1_3mm_Open_Pad1_0x1_5mm.ato" import SolderJumper_2_Open_SolderJumper_2_P1_3mm_Open_Pad1_0x1_5mm
 from "parts/Package_SO/TJA1021T_SOIC_8_3_9x4_9mm_P1_27mm.ato" import TJA1021T_SOIC_8_3_9x4_9mm_P1_27mm
 from "parts/TestPoint/TestPoint_TestPoint_Pad_2_5x2_5mm.ato" import TestPoint_TestPoint_Pad_2_5x2_5mm
 from "parts/Capacitor_SMD/v100nF_C_0805_2012Metric.ato" import v100nF_C_0805_2012Metric
-from "parts/Resistor_SMD/v10K_R_0805_2012Metric.ato" import v10K_R_0805_2012Metric
-from "parts/Resistor_SMD/v120R_R_0805_2012Metric.ato" import v120R_R_0805_2012Metric
-from "parts/Resistor_SMD/v1K_R_0805_2012Metric.ato" import v1K_R_0805_2012Metric
+from "parts/Resistor_SMD/v10K_R_0805_2012Metric_v2.ato" import v10K_R_0805_2012Metric_v2
+from "parts/Resistor_SMD/v120R_R_0805_2012Metric_v2.ato" import v120R_R_0805_2012Metric_v2
+from "parts/Resistor_SMD/v1K_R_0805_2012Metric_v2.ato" import v1K_R_0805_2012Metric_v2
 from "parts/Diode_SMD/v1N4148W_D_SOD_123.ato" import v1N4148W_D_SOD_123
 from "parts/Capacitor_SMD/v1nF_C_0805_2012Metric_2.ato" import v1nF_C_0805_2012Metric_2
-from "parts/Capacitor_SMD/v1uF_C_0805_2012Metric_3.ato" import v1uF_C_0805_2012Metric_3
-from "parts/Resistor_SMD/v2K2_R_0805_2012Metric.ato" import v2K2_R_0805_2012Metric
-from "parts/Resistor_SMD/v3K3_R_0805_2012Metric.ato" import v3K3_R_0805_2012Metric
+from "parts/Capacitor_SMD/v1uF_C_0805_2012Metric_v2_2.ato" import v1uF_C_0805_2012Metric_v2_2
+from "parts/Resistor_SMD/v2K2_R_0805_2012Metric_v2.ato" import v2K2_R_0805_2012Metric_v2
+from "parts/Resistor_SMD/v3K3_R_0805_2012Metric_v2.ato" import v3K3_R_0805_2012Metric_v2
 
 
 module CanBus:
@@ -31,8 +31,8 @@ module CanBus:
     d17 = new ESDCAN01_2BLY_SOT95P255X150_3N
     j2 = new CAN_MON_PinHeader_1x03_P2_54mm_Vertical
     jp1 = new SolderJumper_2_Open_SolderJumper_2_P1_3mm_Open_Pad1_0x1_5mm
-    r26 = new v120R_R_0805_2012Metric
-    u55 = new SN65HVD230_SOIC_8_3_9x4_9mm_P1_27mm
+    r26 = new v120R_R_0805_2012Metric_v2
+    u55 = new SN65HVD230_SOIC_8_3_9x4_9mm_P1_27mm_v2
 
     # power ports
     power_3v3 = new ElectricPower  # +3V3
@@ -89,16 +89,16 @@ module OilPumpLin:
     - LINBUS ON USART4
     """
 
-    c70 = new v1uF_C_0805_2012Metric_3
+    c70 = new v1uF_C_0805_2012Metric_v2_2
     c71 = new v1nF_C_0805_2012Metric_2
     d27 = new v1N4148W_D_SOD_123
     q10 = new MMBT3904_SOT_23
-    r118 = new v1K_R_0805_2012Metric
-    r119 = new v10K_R_0805_2012Metric
-    r120 = new v2K2_R_0805_2012Metric
-    r121 = new v2K2_R_0805_2012Metric
-    r122 = new v3K3_R_0805_2012Metric
-    r123 = new v1K_R_0805_2012Metric
+    r118 = new v1K_R_0805_2012Metric_v2
+    r119 = new v10K_R_0805_2012Metric_v2
+    r120 = new v2K2_R_0805_2012Metric_v2
+    r121 = new v2K2_R_0805_2012Metric_v2
+    r122 = new v3K3_R_0805_2012Metric_v2
+    r123 = new v1K_R_0805_2012Metric_v2
     tp25 = new TestPoint_TestPoint_Pad_2_5x2_5mm
     u8 = new TJA1021T_SOIC_8_3_9x4_9mm_P1_27mm
 

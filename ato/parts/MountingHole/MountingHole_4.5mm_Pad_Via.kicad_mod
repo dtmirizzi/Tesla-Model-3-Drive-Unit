@@ -119,6 +119,7 @@
 		(drill 4.5)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
+		(zone_connect 2)
 	)
 	(pad "1" thru_hole circle
 		(at 0 3.375)

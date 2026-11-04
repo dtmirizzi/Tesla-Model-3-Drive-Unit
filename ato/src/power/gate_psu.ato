@@ -9,29 +9,33 @@ from "parts/TestPoint/GND_ISO_C_TestPoint_Keystone_5000_5004_Miniature.ato" impo
 from "parts/Tesla/IPD50N06S409ATMA2_IPD50N06S409ATMA2.ato" import IPD50N06S409ATMA2_IPD50N06S409ATMA2
 from "parts/Package_TO_SOT_SMD/MMBT3904_SOT_23.ato" import MMBT3904_SOT_23
 from "parts/Samacsys/NJVMJD127T4G_NVD5117PLT4GVF01.ato" import NJVMJD127T4G_NVD5117PLT4GVF01
+from "parts/Samacsys/NJVMJD127T4G_NVD5117PLT4GVF01_v2.ato" import NJVMJD127T4G_NVD5117PLT4GVF01_v2
 from "parts/Diode_SMD/SS35_D_SMA.ato" import SS35_D_SMA
+from "parts/Diode_SMD/SS35_D_SMA_v2.ato" import SS35_D_SMA_v2
 from "parts/Diode_SMD/STPS2H100_Y_D_SMA.ato" import STPS2H100_Y_D_SMA
+from "parts/Diode_SMD/STPS2H100_Y_D_SMA_v2.ato" import STPS2H100_Y_D_SMA_v2
 from "parts/Tesla/TDK_VGT_VGT22EPC_200S6A12.ato" import TDK_VGT_VGT22EPC_200S6A12
 from "parts/Samacsys/TPS40210DGQR_SOP50P490X110_11N.ato" import TPS40210DGQR_SOP50P490X110_11N
 from "parts/TestPoint/TestPoint_TestPoint_Keystone_5000_5004_Miniature.ato" import TestPoint_TestPoint_Keystone_5000_5004_Miniature
 from "parts/Diode_SMD/Zener_5V1_D_SMA.ato" import Zener_5V1_D_SMA
 from "parts/Resistor_SMD/v0_01R_R_2512_6332Metric_Pad1_40x3_35mm_HandSolder.ato" import v0_01R_R_2512_6332Metric_Pad1_40x3_35mm_HandSolder
 from "parts/Tesla/v0_1uF_C_0805_2012Metric.ato" import v0_1uF_C_0805_2012Metric
-from "parts/Tesla/v100K_R_0603_1608Metric.ato" import v100K_R_0603_1608Metric
+from "parts/Tesla/v100K_R_0603_1608Metric_v2.ato" import v100K_R_0603_1608Metric_v2
 from "parts/Tesla/v10K_R_0603_1608Metric.ato" import v10K_R_0603_1608Metric
 from "parts/Capacitor_SMD/v15uF_C_2220_5750Metric.ato" import v15uF_C_2220_5750Metric
 from "parts/Tesla/v18K_R_0603_1608Metric.ato" import v18K_R_0603_1608Metric
-from "parts/Samacsys/v1N5819_DIOM5336X244N.ato" import v1N5819_DIOM5336X244N
-from "parts/Samacsys/v1N5935B_DIOM5336X244N.ato" import v1N5935B_DIOM5336X244N
+from "parts/Samacsys/v1N5819_DIOM5336X244N_v2.ato" import v1N5819_DIOM5336X244N_v2
+from "parts/Samacsys/v1N5935B_DIOM5336X244N_v2.ato" import v1N5935B_DIOM5336X244N_v2
 from "parts/Tesla/v1k_R_0603_1608Metric.ato" import v1k_R_0603_1608Metric
 from "parts/Tesla/v1uF_C_0805_2012Metric_4.ato" import v1uF_C_0805_2012Metric_4
 from "parts/Tesla/v200pF_C_0805_2012Metric.ato" import v200pF_C_0805_2012Metric
-from "parts/Tesla/v20R_R_0603_1608Metric.ato" import v20R_R_0603_1608Metric
+from "parts/Tesla/v20R_R_0603_1608Metric_v2.ato" import v20R_R_0603_1608Metric_v2
 from "parts/Tesla/v22K_R_0603_1608Metric.ato" import v22K_R_0603_1608Metric
+from "parts/Tesla/v22K_R_0603_1608Metric_v2.ato" import v22K_R_0603_1608Metric_v2
 from "parts/Tesla/v2_2uF_C_1210_3225Metric.ato" import v2_2uF_C_1210_3225Metric
 from "parts/Tesla/v300K_R_0603_1608Metric.ato" import v300K_R_0603_1608Metric
 from "parts/Tesla/v330pF_C_0805_2012Metric.ato" import v330pF_C_0805_2012Metric
-from "parts/Tesla/v33_2K_R_0603_1608Metric.ato" import v33_2K_R_0603_1608Metric
+from "parts/Tesla/v33_2K_R_0603_1608Metric_v2.ato" import v33_2K_R_0603_1608Metric_v2
 from "parts/Tesla/v3K3_R_0603_1608Metric.ato" import v3K3_R_0603_1608Metric
 from "parts/Capacitor_SMD/v3_3uF_C_1812_4532Metric.ato" import v3_3uF_C_1812_4532Metric
 from "parts/Tesla/v470pF_C_0805_2012Metric.ato" import v470pF_C_0805_2012Metric
@@ -40,8 +44,11 @@ from "parts/Tesla/v4K7_R_0603_1608Metric.ato" import v4K7_R_0603_1608Metric
 from "parts/Resistor_SMD/v4K7_R_1812_4532Metric.ato" import v4K7_R_1812_4532Metric
 from "parts/Tesla/v4R7_R_0603_1608Metric.ato" import v4R7_R_0603_1608Metric
 from "parts/Tesla/v4R99_R_1210_3225Metric.ato" import v4R99_R_1210_3225Metric
+from "parts/Tesla/v4R99_R_1210_3225Metric_v2.ato" import v4R99_R_1210_3225Metric_v2
 from "parts/Diode_SMD/v5V1_D_SOD_323.ato" import v5V1_D_SOD_323
+from "parts/Diode_SMD/v5V1_D_SOD_323_v2.ato" import v5V1_D_SOD_323_v2
 from "parts/Tesla/v80_6R_R_0603_1608Metric.ato" import v80_6R_R_0603_1608Metric
+from "parts/Tesla/v80_6R_R_0603_1608Metric_v2.ato" import v80_6R_R_0603_1608Metric_v2
 from "parts/Tesla/v82pF_C_0603_1608Metric.ato" import v82pF_C_0603_1608Metric
 
 
@@ -79,30 +86,30 @@ module GatePsu:
     c503 = new v15uF_C_2220_5750Metric
     c504 = new v15uF_C_2220_5750Metric
     c505 = new v15uF_C_2220_5750Metric
-    d1 = new v1N5819_DIOM5336X244N
-    d2 = new v1N5935B_DIOM5336X244N
-    d6 = new v5V1_D_SOD_323
-    d8 = new v5V1_D_SOD_323
+    d1 = new v1N5819_DIOM5336X244N_v2
+    d2 = new v1N5935B_DIOM5336X244N_v2
+    d6 = new v5V1_D_SOD_323_v2
+    d8 = new v5V1_D_SOD_323_v2
     d9 = new v5V1_D_SOD_323
-    d10 = new SS35_D_SMA
+    d10 = new SS35_D_SMA_v2
     d11 = new SS35_D_SMA
-    d40 = new SS35_D_SMA
-    d45 = new STPS2H100_Y_D_SMA
+    d40 = new SS35_D_SMA_v2
+    d45 = new STPS2H100_Y_D_SMA_v2
     d54 = new STPS2H100_Y_D_SMA
     d63 = new STPS2H100_Y_D_SMA
-    d64 = new STPS2H100_Y_D_SMA
+    d64 = new STPS2H100_Y_D_SMA_v2
     d68 = new Zener_5V1_D_SMA
     q1 = new IPD50N06S409ATMA2_IPD50N06S409ATMA2
     q2 = new BC857BT_7_F_SOT50P160X90_3N
     q3 = new BC857BT_7_F_SOT50P160X90_3N
     q4 = new BC857BT_7_F_SOT50P160X90_3N
-    q5 = new NJVMJD127T4G_NVD5117PLT4GVF01
-    q6 = new NJVMJD127T4G_NVD5117PLT4GVF01
+    q5 = new NJVMJD127T4G_NVD5117PLT4GVF01_v2
+    q6 = new NJVMJD127T4G_NVD5117PLT4GVF01_v2
     q7 = new BC857BT_7_F_SOT50P160X90_3N
     q8 = new NJVMJD127T4G_NVD5117PLT4GVF01
     q9 = new BC857BT_7_F_SOT50P160X90_3N
     q12 = new MMBT3904_SOT_23
-    q15 = new NJVMJD127T4G_NVD5117PLT4GVF01
+    q15 = new NJVMJD127T4G_NVD5117PLT4GVF01_v2
     q19 = new NJVMJD127T4G_NVD5117PLT4GVF01
     q20 = new BC857BT_7_F_SOT50P160X90_3N
     q25 = new NJVMJD127T4G_NVD5117PLT4GVF01
@@ -110,28 +117,28 @@ module GatePsu:
     r2 = new v3K3_R_0603_1608Metric
     r10 = new v4R99_R_1210_3225Metric
     r11 = new v22K_R_0603_1608Metric
-    r12 = new v4R99_R_1210_3225Metric
+    r12 = new v4R99_R_1210_3225Metric_v2
     r13 = new v4R99_R_1210_3225Metric
     r14 = new v4K7_R_0603_1608Metric
-    r15 = new v22K_R_0603_1608Metric
+    r15 = new v22K_R_0603_1608Metric_v2
     r16 = new v22K_R_0603_1608Metric
     r17 = new v4K7_R_0603_1608Metric
     r18 = new v4K7_R_0603_1608Metric
     r20 = new v4R7_R_0603_1608Metric
     r27 = new v300K_R_0603_1608Metric
-    r28 = new v33_2K_R_0603_1608Metric
+    r28 = new v33_2K_R_0603_1608Metric_v2
     r30 = new v18K_R_0603_1608Metric
-    r96 = new v4R99_R_1210_3225Metric
+    r96 = new v4R99_R_1210_3225Metric_v2
     r97 = new v22K_R_0603_1608Metric
     r99 = new v4R99_R_1210_3225Metric
     r100 = new v22K_R_0603_1608Metric
-    r102 = new v4R99_R_1210_3225Metric
+    r102 = new v4R99_R_1210_3225Metric_v2
     r103 = new v22K_R_0603_1608Metric
     r175 = new v1k_R_0603_1608Metric
-    r182 = new v100K_R_0603_1608Metric
-    r200 = new v20R_R_0603_1608Metric
+    r182 = new v100K_R_0603_1608Metric_v2
+    r200 = new v20R_R_0603_1608Metric_v2
     r205 = new v0_01R_R_2512_6332Metric_Pad1_40x3_35mm_HandSolder
-    r238 = new v80_6R_R_0603_1608Metric
+    r238 = new v80_6R_R_0603_1608Metric_v2
     r272 = new v80_6R_R_0603_1608Metric
     r283 = new v80_6R_R_0603_1608Metric
     r291 = new v80_6R_R_0603_1608Metric

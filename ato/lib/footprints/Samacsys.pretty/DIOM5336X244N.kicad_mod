@@ -6,7 +6,7 @@
 	(descr "SS54B")
 	(tags "Diode")
 	(property "Reference" "REF**"
-		(at 4.725 -1.4)
+		(at 5.5 0 180)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -15,8 +15,8 @@
 			)
 		)
 	)
-	(property "Value" "1N5935B"
-		(at 0 0)
+	(property "Value" "SS54B"
+		(at 0 0 180)
 		(layer "F.SilkS")
 		(hide yes)
 		(effects
@@ -26,8 +26,8 @@
 			)
 		)
 	)
-	(property "Datasheet" "~"
-		(at 0 0)
+	(property "Datasheet" "https://datasheet.datasheetarchive.com/originals/distributors/Datasheets-3/DSA-43270.pdf"
+		(at 0 0 180)
 		(layer "F.Fab")
 		(hide yes)
 		(effects
@@ -37,27 +37,102 @@
 			)
 		)
 	)
-	(property "Description" "Zener diode"
-		(at 0 0)
+	(property "Description" "HY Electronic Corp SS54B, SMT Rectifier Schottky Diode, 40V 5A, 2-Pin SMB"
+		(at 0 0 180)
 		(layer "F.Fab")
 		(hide yes)
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Height" "2.44"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Name" "HY Electronic"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Part_Number" "SS54B"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Part Number" ""
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Price/Stock" ""
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Arrow Part Number" ""
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Arrow Price/Stock" ""
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
 				(thickness 0.15)
 			)
 		)
 	)
 	(attr smd)
-	(fp_line
-		(start -2.635 1.81)
-		(end 2.635 1.81)
-		(stroke
-			(width 0.2)
-			(type solid)
-		)
-		(layer "F.SilkS")
-	)
 	(fp_line
 		(start 2.635 -1.81)
 		(end -3.175 -1.81)
@@ -68,17 +143,17 @@
 		(layer "F.SilkS")
 	)
 	(fp_line
-		(start -3.525 -2.22)
-		(end 3.525 -2.22)
+		(start -2.635 1.81)
+		(end 2.635 1.81)
 		(stroke
-			(width 0.05)
+			(width 0.2)
 			(type solid)
 		)
-		(layer "F.CrtYd")
+		(layer "F.SilkS")
 	)
 	(fp_line
-		(start -3.525 2.22)
-		(end -3.525 -2.22)
+		(start 3.525 2.22)
+		(end -3.525 2.22)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -95,8 +170,8 @@
 		(layer "F.CrtYd")
 	)
 	(fp_line
-		(start 3.525 2.22)
-		(end -3.525 2.22)
+		(start -3.525 2.22)
+		(end -3.525 -2.22)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -104,26 +179,17 @@
 		(layer "F.CrtYd")
 	)
 	(fp_line
-		(start -2.635 -1.81)
-		(end 2.635 -1.81)
+		(start -3.525 -2.22)
+		(end 3.525 -2.22)
 		(stroke
-			(width 0.1)
+			(width 0.05)
 			(type solid)
 		)
-		(layer "F.Fab")
+		(layer "F.CrtYd")
 	)
 	(fp_line
-		(start -2.635 -0.785)
-		(end -1.61 -1.81)
-		(stroke
-			(width 0.1)
-			(type solid)
-		)
-		(layer "F.Fab")
-	)
-	(fp_line
-		(start -2.635 1.81)
-		(end -2.635 -1.81)
+		(start 2.635 1.81)
+		(end -2.635 1.81)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -140,8 +206,26 @@
 		(layer "F.Fab")
 	)
 	(fp_line
-		(start 2.635 1.81)
-		(end -2.635 1.81)
+		(start -2.635 1.81)
+		(end -2.635 -1.81)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start -2.635 -0.785)
+		(end -1.61 -1.81)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start -2.635 -1.81)
+		(end 2.635 -1.81)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -149,7 +233,7 @@
 		(layer "F.Fab")
 	)
 	(fp_text user "${REFERENCE}"
-		(at 0 0)
+		(at 0 0 180)
 		(layer "F.Fab")
 		(effects
 			(font

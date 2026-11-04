@@ -41,6 +41,24 @@ footprint, track, via and zone is still in place.
   as `ki_fp_filters`. `seed_layout.py` strips them; they are only schematic hints.
 * Footprints with no atopile counterpart are deleted from the layout, so even
   the silkscreen logo is modelled as a pad-less part.
+* **atopile rewrites every footprint from its library copy**, so instances may
+  only share a library footprint if they are identical. `extract_kicad.py`
+  splits variants by full content (127 footprints for 84 names), not just pad
+  positions. Sharing one copy per name is what produced the first DRC failures:
+  different courtyards, lost per-instance zone/clearance overrides, a lost DNP flag.
+* **atopile 0.15.9's KiCad data model has no field for** footprint-level
+  `locked`, `clearance`, `zone_connect` and groups, pad `thermal_bridge_angle`, or
+  `locked` on zones and images. It also rewrites the stackup: soldermask colour
+  becomes Black, copper finish becomes ENIG, and the grid origin is dropped. These
+  are silently lost on every build. The fixes:
+  * footprint-level clearance/zone_connect are pushed down onto the pads, where
+    atopile keeps them (same meaning in KiCad);
+  * `tools/restore_layout.py` runs after every build and restores the rest from
+    the reference board, but only on footprints atopile left as the same
+    footprint (same ID, placement and side).
+* The design rules and net classes (min clearance 0.12/0.14 mm, GND/power
+  classes) live in the KiCad project file. `seed_layout.py` copies it to
+  `layouts/default/default.kicad_pro`; without it DRC used KiCad's 0.2 mm default.
 
 ## Phases
 
@@ -109,7 +127,7 @@ src/
   `check_netlist.py` still passes, and the atopile BOM matches the original JLC
   BOM line for line (703 parts, same LCSC numbers).
 
-### Phase 6 - CI ✅ (written and run locally step by step; not yet run on GitHub)
+### Phase 6 - CI ✅ (running on GitHub)
 `.github/workflows/atopile.yml`. Each check is a separate step, and its result
 goes into the GitHub job summary:
 1. **Committed board vs KiCad V3.2**: `check_netlist.py` on `ato/layouts` as committed
@@ -118,8 +136,15 @@ goes into the GitHub job summary:
    pad-to-net partition, footprint positions, tracks/arcs/vias and zones
 4. **atopile BOM vs JLC BOM**: `check_bom.py`, the same LCSC number for every designator
 5. **Generated sources up to date**: `git diff --exit-code` (generation is deterministic)
-6. In a `kicad/kicad:9.0` container: DRC (report only for now), plus Gerbers,
-   drill and position files as artifacts
+6. **DRC gate** in a `kicad/kicad:9.0` container: DRC runs on both the
+   original V3.2 board and the atopile board, and `compare_drc.py` fails on any
+   violation the atopile board adds. The original board is not DRC-clean (1
+   error), so a zero-violation gate would always fail.
+7. Gerbers, drill and position files as artifacts
+
+`check_netlist.py` compares, besides nets: every footprint's full content (pads
+incl. overrides, graphics, courtyard, attributes, models, locks), the board
+setup and stackup, the outline and all graphics, and the full zone definitions.
 
 Net names are pinned in code (`has_net_name_suggestion`, level `EXPECTED`, one
 per net), so the build no longer needs `--keep-net-names`. That flag made the
@@ -142,25 +167,25 @@ every push. Hand edits flow through to the layout and BOM, and the checkers
 report exactly what changed.
 
 **Gaps before the atopile project can replace the KiCad project:**
-1. **CI has never run on GitHub.** The first run validates the workflow,
-   setup-python 3.14 and the KiCad container.
-2. **DRC/ERC have never been run** on the atopile-built board (KiCad 9 can't be
-   installed in this environment). The fab job does it. If its report matches the
-   original board's, gate on it.
-3. **No fab-output comparison.** The fab job's Gerbers have not been compared
+1. ~~CI on GitHub~~ done. ~~DRC~~ gated against the original board's DRC.
+   The first DRC run found 31 new violations; their causes are fixed (see
+   "Toolchain notes"). ERC is not run: the atopile build has no KiCad schematic.
+2. **No fab-output comparison.** The fab job's Gerbers have not been compared
    with `Design/M3DU_BoardV3_2/Production/M3DU_BoardV3_2_Gerber.zip`. This is the
    last proof that it is the same board.
-4. **Swap the source of truth** (a one-time switch). Stop regenerating `src/`
+3. **Swap the source of truth** (a one-time switch). Stop regenerating `src/`
    from KiCad and make the `.ato` files the source:
    * remove the `extract`/`gen_modules`/`seed_layout` steps from `port.sh` and CI
    * keep `check_netlist.py` against the frozen V3.2 reference, and expect it to
      fail on intended changes. Re-baseline it, or turn it into a diff report,
      once real changes start.
    * layout edits then happen in `ato/layouts/default/default.kicad_pcb`
-5. **Toolchain risk.** atopile 0.15.9 is the last release of the classic CLI;
+   * point `restore_layout.py` (and the DRC baseline) at the last committed
+     layout instead of the frozen V3.2 board
+4. **Toolchain risk.** atopile 0.15.9 is the last release of the classic CLI;
    0.16+ only runs inside the atopile app. The port is pinned and builds offline,
    but upgrading later will need a migration.
-6. **Decisions on the inherited BOM findings** below (the 0805/0603 mismatches).
+5. **Decisions on the inherited BOM findings** below (the 0805/0603 mismatches).
 
 **Next steps after switching (improvements, not blockers):**
 * Typed buses: replace the gate-driver SPI, CAN and LIN signals with `SPI`,

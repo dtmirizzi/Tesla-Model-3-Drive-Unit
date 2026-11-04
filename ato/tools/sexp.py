@@ -1,7 +1,8 @@
 """Minimal, lossless-enough S-expression reader/writer for KiCad files.
 
-Atoms are kept as `Sym` (bare symbols / numbers) or `str` (quoted strings),
-so a parse -> dump round trip preserves the quoting KiCad expects.
+Atoms are kept as `Sym` (bare symbols / numbers) or `str` (quoted strings).
+Quoted strings are kept exactly as written (escapes untouched), so a
+parse -> dump round trip reproduces every string byte for byte.
 """
 
 from __future__ import annotations
@@ -40,7 +41,7 @@ def loads(text: str) -> list:
             node = stack.pop()
             stack[-1].append(node)
         elif qs is not None:
-            stack[-1].append(_unescape(qs))
+            stack[-1].append(qs)  # raw: escapes are preserved as written
         elif atom is not None:
             stack[-1].append(Sym(atom))
     assert len(stack) == 1, "unbalanced parentheses"
@@ -52,7 +53,7 @@ def _dump_atom(a) -> str:
     if isinstance(a, Sym):
         return str(a)
     if isinstance(a, str):
-        return f'"{_escape(a)}"'
+        return f'"{a}"'
     if isinstance(a, bool):
         return "yes" if a else "no"
     if isinstance(a, float):

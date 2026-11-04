@@ -5,11 +5,11 @@
 import ElectricPower
 import has_designator
 from "parts/Tesla/Thermistor_B59100C0140A070.ato" import Thermistor_B59100C0140A070
-from "parts/Resistor_SMD/v10K_R_0805_2012Metric.ato" import v10K_R_0805_2012Metric
-from "parts/Resistor_SMD/v1K_R_0805_2012Metric.ato" import v1K_R_0805_2012Metric
+from "parts/Resistor_SMD/v10K_R_0805_2012Metric_v2.ato" import v10K_R_0805_2012Metric_v2
+from "parts/Resistor_SMD/v1K_R_0805_2012Metric_v2.ato" import v1K_R_0805_2012Metric_v2
 from "parts/Capacitor_SMD/v1uF_C_0805_2012Metric.ato" import v1uF_C_0805_2012Metric
-from "parts/Capacitor_SMD/v1uF_C_0805_2012Metric_3.ato" import v1uF_C_0805_2012Metric_3
-from "parts/Resistor_SMD/v47K_R_0805_2012Metric.ato" import v47K_R_0805_2012Metric
+from "parts/Capacitor_SMD/v1uF_C_0805_2012Metric_2.ato" import v1uF_C_0805_2012Metric_2
+from "parts/Resistor_SMD/v47K_R_0805_2012Metric_v2.ato" import v47K_R_0805_2012Metric_v2
 
 
 module HeatsinkTemps:
@@ -20,12 +20,12 @@ module HeatsinkTemps:
     - approx 23k at 20c  drops on increasing temp
     """
 
-    c76 = new v1uF_C_0805_2012Metric_3
-    c77 = new v1uF_C_0805_2012Metric_3
-    c78 = new v1uF_C_0805_2012Metric_3
-    r128 = new v10K_R_0805_2012Metric
-    r129 = new v10K_R_0805_2012Metric
-    r130 = new v10K_R_0805_2012Metric
+    c76 = new v1uF_C_0805_2012Metric
+    c77 = new v1uF_C_0805_2012Metric
+    c78 = new v1uF_C_0805_2012Metric
+    r128 = new v10K_R_0805_2012Metric_v2
+    r129 = new v10K_R_0805_2012Metric_v2
+    r130 = new v10K_R_0805_2012Metric_v2
     st1 = new Thermistor_B59100C0140A070
     st3 = new Thermistor_B59100C0140A070
     st4 = new Thermistor_B59100C0140A070
@@ -85,10 +85,10 @@ module MotorTemp:
     - Approx 150k at 20c.Drops on increasing temp. Change R131,R132 to 1k. R42 to 47K
     """
 
-    c79 = new v1uF_C_0805_2012Metric
-    r42 = new v47K_R_0805_2012Metric
-    r131 = new v1K_R_0805_2012Metric
-    r132 = new v1K_R_0805_2012Metric
+    c79 = new v1uF_C_0805_2012Metric_2
+    r42 = new v47K_R_0805_2012Metric_v2
+    r131 = new v1K_R_0805_2012Metric_v2
+    r132 = new v1K_R_0805_2012Metric_v2
 
     # power ports
     power_3v3 = new ElectricPower  # +3V3

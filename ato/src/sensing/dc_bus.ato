@@ -6,23 +6,26 @@ import ElectricPower
 import has_designator
 from "parts/Package_SO/ACPL_C87A_SSO_8_6_8x5_9mm_P1_27mm_Clearance8mm.ato" import ACPL_C87A_SSO_8_6_8x5_9mm_P1_27mm_Clearance8mm
 from "parts/Samacsys/ACPL_M49T_000E_SOIC127P700X260_6N.ato" import ACPL_M49T_000E_SOIC127P700X260_6N
-from "parts/Package_TO_SOT_SMD/BSS84W_SOT_23.ato" import BSS84W_SOT_23
+from "parts/Package_TO_SOT_SMD/BSS84W_SOT_23_v2.ato" import BSS84W_SOT_23_v2
 from "parts/Tesla/FGD3N60LSDTM_FGD3N60LSDTM.ato" import FGD3N60LSDTM_FGD3N60LSDTM
 from "parts/Tesla/OPA320AIDBVR_SOT95P280X145_5N.ato" import OPA320AIDBVR_SOT95P280X145_5N
-from "parts/Resistor_SMD/v100K_R_0805_2012Metric.ato" import v100K_R_0805_2012Metric
+from "parts/Resistor_SMD/v100K_R_0805_2012Metric_v2.ato" import v100K_R_0805_2012Metric_v2
 from "parts/Tesla/v100nF_C_0603_1608Metric.ato" import v100nF_C_0603_1608Metric
+from "parts/Tesla/v100nF_C_0603_1608Metric_v2.ato" import v100nF_C_0603_1608Metric_v2
 from "parts/Capacitor_SMD/v100pF_C_0805_2012Metric.ato" import v100pF_C_0805_2012Metric
 from "parts/Tesla/v10K_R_0603_1608Metric.ato" import v10K_R_0603_1608Metric
 from "parts/Tesla/v10R_R_0603_1608Metric.ato" import v10R_R_0603_1608Metric
 from "parts/Tesla/v10nF_C_0603_1608Metric_2.ato" import v10nF_C_0603_1608Metric_2
 from "parts/Tesla/v10uF_C_0805_2012Metric_2.ato" import v10uF_C_0805_2012Metric_2
-from "parts/Diode_SMD/v15V_D_SMA.ato" import v15V_D_SMA
+from "parts/Tesla/v10uF_C_0805_2012Metric_v2.ato" import v10uF_C_0805_2012Metric_v2
+from "parts/Diode_SMD/v15V_D_SMA_v4.ato" import v15V_D_SMA_v4
 from "parts/Tesla/v1K6_R_0603_1608Metric.ato" import v1K6_R_0603_1608Metric
-from "parts/Capacitor_SMD/v1uF_C_0805_2012Metric_3.ato" import v1uF_C_0805_2012Metric_3
-from "parts/Resistor_SMD/v2K2_R_0805_2012Metric.ato" import v2K2_R_0805_2012Metric
+from "parts/Capacitor_SMD/v1uF_C_0805_2012Metric.ato" import v1uF_C_0805_2012Metric
+from "parts/Resistor_SMD/v2K2_R_0805_2012Metric_v2.ato" import v2K2_R_0805_2012Metric_v2
 from "parts/Tesla/v39R_R_0603_1608Metric.ato" import v39R_R_0603_1608Metric
 from "parts/Resistor_SMD/v3K9_R_2512_6332Metric.ato" import v3K9_R_2512_6332Metric
-from "parts/Resistor_SMD/v50K_R_0805_2012Metric.ato" import v50K_R_0805_2012Metric
+from "parts/Resistor_SMD/v3K9_R_2512_6332Metric_v2.ato" import v3K9_R_2512_6332Metric_v2
+from "parts/Resistor_SMD/v50K_R_0805_2012Metric_v4.ato" import v50K_R_0805_2012Metric_v4
 from "parts/Tesla/v75K_R_1210_3225Metric.ato" import v75K_R_1210_3225Metric
 from "parts/Tesla/v82K_R_1210_3225Metric.ato" import v82K_R_1210_3225Metric
 
@@ -39,54 +42,54 @@ module DcBus:
     - This bleed resistor is on all boards always connected
     """
 
-    c80 = new v1uF_C_0805_2012Metric_3
+    c80 = new v1uF_C_0805_2012Metric
     c81 = new v100pF_C_0805_2012Metric
     c82 = new v100pF_C_0805_2012Metric
     c261 = new v10uF_C_0805_2012Metric_2
-    c262 = new v10uF_C_0805_2012Metric_2
+    c262 = new v10uF_C_0805_2012Metric_v2
     c263 = new v100nF_C_0603_1608Metric
-    c264 = new v100nF_C_0603_1608Metric
+    c264 = new v100nF_C_0603_1608Metric_v2
     c265 = new v10nF_C_0603_1608Metric_2
-    c341 = new v1uF_C_0805_2012Metric_3
-    d56 = new v15V_D_SMA
+    c341 = new v1uF_C_0805_2012Metric
+    d56 = new v15V_D_SMA_v4
     q11 = new FGD3N60LSDTM_FGD3N60LSDTM
-    q23 = new BSS84W_SOT_23
+    q23 = new BSS84W_SOT_23_v2
     r3 = new v82K_R_1210_3225Metric
     r46 = new v3K9_R_2512_6332Metric
-    r47 = new v3K9_R_2512_6332Metric
-    r48 = new v3K9_R_2512_6332Metric
-    r49 = new v3K9_R_2512_6332Metric
-    r50 = new v3K9_R_2512_6332Metric
+    r47 = new v3K9_R_2512_6332Metric_v2
+    r48 = new v3K9_R_2512_6332Metric_v2
+    r49 = new v3K9_R_2512_6332Metric_v2
+    r50 = new v3K9_R_2512_6332Metric_v2
     r51 = new v3K9_R_2512_6332Metric
-    r52 = new v3K9_R_2512_6332Metric
-    r53 = new v3K9_R_2512_6332Metric
-    r54 = new v3K9_R_2512_6332Metric
-    r55 = new v3K9_R_2512_6332Metric
+    r52 = new v3K9_R_2512_6332Metric_v2
+    r53 = new v3K9_R_2512_6332Metric_v2
+    r54 = new v3K9_R_2512_6332Metric_v2
+    r55 = new v3K9_R_2512_6332Metric_v2
     r56 = new v3K9_R_2512_6332Metric
-    r57 = new v3K9_R_2512_6332Metric
-    r58 = new v3K9_R_2512_6332Metric
-    r59 = new v3K9_R_2512_6332Metric
-    r60 = new v3K9_R_2512_6332Metric
+    r57 = new v3K9_R_2512_6332Metric_v2
+    r58 = new v3K9_R_2512_6332Metric_v2
+    r59 = new v3K9_R_2512_6332Metric_v2
+    r60 = new v3K9_R_2512_6332Metric_v2
     r61 = new v3K9_R_2512_6332Metric
-    r62 = new v3K9_R_2512_6332Metric
-    r63 = new v3K9_R_2512_6332Metric
-    r64 = new v3K9_R_2512_6332Metric
-    r65 = new v3K9_R_2512_6332Metric
+    r62 = new v3K9_R_2512_6332Metric_v2
+    r63 = new v3K9_R_2512_6332Metric_v2
+    r64 = new v3K9_R_2512_6332Metric_v2
+    r65 = new v3K9_R_2512_6332Metric_v2
     r66 = new v3K9_R_2512_6332Metric
-    r67 = new v3K9_R_2512_6332Metric
-    r68 = new v3K9_R_2512_6332Metric
-    r69 = new v3K9_R_2512_6332Metric
-    r70 = new v3K9_R_2512_6332Metric
+    r67 = new v3K9_R_2512_6332Metric_v2
+    r68 = new v3K9_R_2512_6332Metric_v2
+    r69 = new v3K9_R_2512_6332Metric_v2
+    r70 = new v3K9_R_2512_6332Metric_v2
     r71 = new v3K9_R_2512_6332Metric
-    r72 = new v3K9_R_2512_6332Metric
-    r73 = new v3K9_R_2512_6332Metric
-    r74 = new v3K9_R_2512_6332Metric
-    r75 = new v3K9_R_2512_6332Metric
+    r72 = new v3K9_R_2512_6332Metric_v2
+    r73 = new v3K9_R_2512_6332Metric_v2
+    r74 = new v3K9_R_2512_6332Metric_v2
+    r75 = new v3K9_R_2512_6332Metric_v2
     r76 = new v3K9_R_2512_6332Metric
-    r77 = new v3K9_R_2512_6332Metric
-    r78 = new v3K9_R_2512_6332Metric
-    r79 = new v3K9_R_2512_6332Metric
-    r80 = new v3K9_R_2512_6332Metric
+    r77 = new v3K9_R_2512_6332Metric_v2
+    r78 = new v3K9_R_2512_6332Metric_v2
+    r79 = new v3K9_R_2512_6332Metric_v2
+    r80 = new v3K9_R_2512_6332Metric_v2
     r81 = new v3K9_R_2512_6332Metric
     r82 = new v3K9_R_2512_6332Metric
     r83 = new v3K9_R_2512_6332Metric
@@ -99,14 +102,14 @@ module DcBus:
     r135 = new v82K_R_1210_3225Metric
     r136 = new v10K_R_0603_1608Metric
     r137 = new v82K_R_1210_3225Metric
-    r138 = new v2K2_R_0805_2012Metric
-    r173 = new v50K_R_0805_2012Metric
-    r174 = new v50K_R_0805_2012Metric
-    r186 = new v50K_R_0805_2012Metric
+    r138 = new v2K2_R_0805_2012Metric_v2
+    r173 = new v50K_R_0805_2012Metric_v4
+    r174 = new v50K_R_0805_2012Metric_v4
+    r186 = new v50K_R_0805_2012Metric_v4
     r211 = new v75K_R_1210_3225Metric
     r222 = new v82K_R_1210_3225Metric
     r223 = new v82K_R_1210_3225Metric
-    r228 = new v100K_R_0805_2012Metric
+    r228 = new v100K_R_0805_2012Metric_v2
     r229 = new v75K_R_1210_3225Metric
     r235 = new v10K_R_0603_1608Metric
     r237 = new v10K_R_0603_1608Metric
@@ -115,7 +118,7 @@ module DcBus:
     r248 = new v10R_R_0603_1608Metric
     r253 = new v39R_R_0603_1608Metric
     r254 = new v1K6_R_0603_1608Metric
-    r257 = new v100K_R_0805_2012Metric
+    r257 = new v100K_R_0805_2012Metric_v2
     r327 = new v75K_R_1210_3225Metric
     r329 = new v82K_R_1210_3225Metric
     u1 = new OPA320AIDBVR_SOT95P280X145_5N

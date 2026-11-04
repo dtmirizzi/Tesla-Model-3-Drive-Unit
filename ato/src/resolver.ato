@@ -4,19 +4,23 @@
 #pragma experiment("INSTANCE_TRAITS")
 import ElectricPower
 import has_designator
-from "parts/Samascys/NCV8452STT3G_SOT230P700X180_4N.ato" import NCV8452STT3G_SOT230P700X180_4N
+from "parts/Samascys/NCV8452STT3G_SOT230P700X180_4N_v2.ato" import NCV8452STT3G_SOT230P700X180_4N_v2
 from "parts/Samacsys/TDA2822D013TR_SOIC127P600X175_8N.ato" import TDA2822D013TR_SOIC127P600X175_8N
-from "parts/Resistor_SMD/v0R_R_0805_2012Metric.ato" import v0R_R_0805_2012Metric
+from "parts/Resistor_SMD/v0R_R_0805_2012Metric_v2.ato" import v0R_R_0805_2012Metric_v2
 from "parts/Samacsys/v100uF_6_3V_CAPPM3528X210N.ato" import v100uF_6_3V_CAPPM3528X210N
-from "parts/Resistor_SMD/v10K_R_0805_2012Metric.ato" import v10K_R_0805_2012Metric
+from "parts/Samacsys/v100uF_6_3V_CAPPM3528X210N_v2.ato" import v100uF_6_3V_CAPPM3528X210N_v2
+from "parts/Resistor_SMD/v10K_R_0805_2012Metric_v2.ato" import v10K_R_0805_2012Metric_v2
 from "parts/Capacitor_SMD/v10uF_C_1206_3216Metric.ato" import v10uF_C_1206_3216Metric
-from "parts/Resistor_SMD/v1K8_R_0805_2012Metric.ato" import v1K8_R_0805_2012Metric
+from "parts/Capacitor_SMD/v10uF_C_1206_3216Metric_v2.ato" import v10uF_C_1206_3216Metric_v2
+from "parts/Resistor_SMD/v1K8_R_0805_2012Metric_v2.ato" import v1K8_R_0805_2012Metric_v2
 from "parts/Resistor_SMD/v1K_R_0603_1608Metric.ato" import v1K_R_0603_1608Metric
 from "parts/Capacitor_SMD/v1nF_C_0805_2012Metric.ato" import v1nF_C_0805_2012Metric
 from "parts/Resistor_SMD/v220R_R_0805_2012Metric.ato" import v220R_R_0805_2012Metric
+from "parts/Resistor_SMD/v220R_R_0805_2012Metric_v2.ato" import v220R_R_0805_2012Metric_v2
 from "parts/Capacitor_SMD/v22nF_C_0805_2012Metric.ato" import v22nF_C_0805_2012Metric
-from "parts/Resistor_SMD/v3K9_R_0805_2012Metric.ato" import v3K9_R_0805_2012Metric
-from "parts/Resistor_SMD/v3K9_R_0805_2012Metric_2.ato" import v3K9_R_0805_2012Metric_2
+from "parts/Capacitor_SMD/v22nF_C_0805_2012Metric_v2.ato" import v22nF_C_0805_2012Metric_v2
+from "parts/Resistor_SMD/v3K9_R_0805_2012Metric_v7.ato" import v3K9_R_0805_2012Metric_v7
+from "parts/Resistor_SMD/v3K9_R_0805_2012Metric_v8.ato" import v3K9_R_0805_2012Metric_v8
 
 
 module Resolver:
@@ -27,32 +31,32 @@ module Resolver:
     c57 = new v100uF_6_3V_CAPPM3528X210N
     c58 = new v22nF_C_0805_2012Metric
     c59 = new v22nF_C_0805_2012Metric
-    c60 = new v100uF_6_3V_CAPPM3528X210N
+    c60 = new v100uF_6_3V_CAPPM3528X210N_v2
     c61 = new v22nF_C_0805_2012Metric
-    c62 = new v22nF_C_0805_2012Metric
-    c63 = new v10uF_C_1206_3216Metric
+    c62 = new v22nF_C_0805_2012Metric_v2
+    c63 = new v10uF_C_1206_3216Metric_v2
     c64 = new v1nF_C_0805_2012Metric
-    c65 = new v10uF_C_1206_3216Metric
+    c65 = new v10uF_C_1206_3216Metric_v2
     c66 = new v22nF_C_0805_2012Metric
     c67 = new v22nF_C_0805_2012Metric
     c68 = new v10uF_C_1206_3216Metric
     c69 = new v1nF_C_0805_2012Metric
     r91 = new v1K_R_0603_1608Metric
-    r106 = new v3K9_R_0805_2012Metric
-    r107 = new v220R_R_0805_2012Metric
-    r108 = new v220R_R_0805_2012Metric
-    r109 = new v1K8_R_0805_2012Metric
-    r110 = new v1K8_R_0805_2012Metric
+    r106 = new v3K9_R_0805_2012Metric_v7
+    r107 = new v220R_R_0805_2012Metric_v2
+    r108 = new v220R_R_0805_2012Metric_v2
+    r109 = new v1K8_R_0805_2012Metric_v2
+    r110 = new v1K8_R_0805_2012Metric_v2
     r111 = new v220R_R_0805_2012Metric
-    r112 = new v220R_R_0805_2012Metric
-    r113 = new v10K_R_0805_2012Metric
-    r114 = new v10K_R_0805_2012Metric
-    r115 = new v10K_R_0805_2012Metric
-    r116 = new v10K_R_0805_2012Metric
-    r117 = new v0R_R_0805_2012Metric
-    r141 = new v3K9_R_0805_2012Metric_2
+    r112 = new v220R_R_0805_2012Metric_v2
+    r113 = new v10K_R_0805_2012Metric_v2
+    r114 = new v10K_R_0805_2012Metric_v2
+    r115 = new v10K_R_0805_2012Metric_v2
+    r116 = new v10K_R_0805_2012Metric_v2
+    r117 = new v0R_R_0805_2012Metric_v2
+    r141 = new v3K9_R_0805_2012Metric_v8
     u2 = new TDA2822D013TR_SOIC127P600X175_8N
-    u22 = new NCV8452STT3G_SOT230P700X180_4N
+    u22 = new NCV8452STT3G_SOT230P700X180_4N_v2
 
     # power ports
     power_12v = new ElectricPower  # +12V

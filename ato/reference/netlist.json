@@ -2,7 +2,7 @@
  "source": "Design/M3DU_BoardV3_2/M3DU_BoardV3_2.kicad_pcb",
  "components": {
   "C1": {
-   "footprint": "Capacitor_SMD:C_0805_2012Metric",
+   "footprint": "Capacitor_SMD:C_0805_2012Metric__v3",
    "value": "1uF",
    "layer": "F.Cu",
    "attrs": [
@@ -173,7 +173,7 @@
    "in_schematic": true
   },
   "C15": {
-   "footprint": "Capacitor_SMD:C_0805_2012Metric",
+   "footprint": "Capacitor_SMD:C_0805_2012Metric__v2",
    "value": "1uF",
    "layer": "F.Cu",
    "attrs": [
@@ -230,7 +230,7 @@
    "in_schematic": true
   },
   "C19": {
-   "footprint": "Capacitor_SMD:C_0805_2012Metric",
+   "footprint": "Capacitor_SMD:C_0805_2012Metric__v2",
    "value": "1uF",
    "layer": "F.Cu",
    "attrs": [
@@ -249,7 +249,7 @@
    "in_schematic": true
   },
   "C2": {
-   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric__v3",
    "value": "10nF",
    "layer": "F.Cu",
    "attrs": [
@@ -382,7 +382,7 @@
    "in_schematic": true
   },
   "C22": {
-   "footprint": "Capacitor_SMD:C_0805_2012Metric",
+   "footprint": "Capacitor_SMD:C_0805_2012Metric__v2",
    "value": "1uF",
    "layer": "F.Cu",
    "attrs": [
@@ -648,7 +648,7 @@
    "in_schematic": true
   },
   "C2391": {
-   "footprint": "Tesla:C_0603_1608Metric",
+   "footprint": "Tesla:C_0603_1608Metric__v2",
    "value": "82pF",
    "layer": "F.Cu",
    "attrs": [
@@ -667,7 +667,7 @@
    "in_schematic": true
   },
   "C2392": {
-   "footprint": "Tesla:C_0603_1608Metric",
+   "footprint": "Tesla:C_0603_1608Metric__v2",
    "value": "82pF",
    "layer": "F.Cu",
    "attrs": [
@@ -686,7 +686,7 @@
    "in_schematic": true
   },
   "C2393": {
-   "footprint": "Tesla:C_0603_1608Metric",
+   "footprint": "Tesla:C_0603_1608Metric__v2",
    "value": "82pF",
    "layer": "F.Cu",
    "attrs": [
@@ -705,7 +705,7 @@
    "in_schematic": true
   },
   "C24": {
-   "footprint": "Capacitor_SMD:C_0805_2012Metric",
+   "footprint": "Capacitor_SMD:C_0805_2012Metric__v2",
    "value": "1uF",
    "layer": "F.Cu",
    "attrs": [
@@ -952,7 +952,7 @@
    "in_schematic": true
   },
   "C2441": {
-   "footprint": "Tesla:C_0603_1608Metric",
+   "footprint": "Tesla:C_0603_1608Metric__v2",
    "value": "470pF",
    "layer": "F.Cu",
    "attrs": [
@@ -971,7 +971,7 @@
    "in_schematic": true
   },
   "C2442": {
-   "footprint": "Tesla:C_0603_1608Metric",
+   "footprint": "Tesla:C_0603_1608Metric__v2",
    "value": "470pF",
    "layer": "F.Cu",
    "attrs": [
@@ -990,7 +990,7 @@
    "in_schematic": true
   },
   "C2443": {
-   "footprint": "Tesla:C_0603_1608Metric",
+   "footprint": "Tesla:C_0603_1608Metric__v2",
    "value": "470pF",
    "layer": "F.Cu",
    "attrs": [
@@ -1009,7 +1009,7 @@
    "in_schematic": true
   },
   "C2451": {
-   "footprint": "Tesla:C_0603_1608Metric",
+   "footprint": "Tesla:C_0603_1608Metric__v2",
    "value": "82pF",
    "layer": "F.Cu",
    "attrs": [
@@ -1028,7 +1028,7 @@
    "in_schematic": true
   },
   "C2452": {
-   "footprint": "Tesla:C_0603_1608Metric",
+   "footprint": "Tesla:C_0603_1608Metric__v2",
    "value": "82pF",
    "layer": "F.Cu",
    "attrs": [
@@ -1047,7 +1047,7 @@
    "in_schematic": true
   },
   "C2453": {
-   "footprint": "Tesla:C_0603_1608Metric",
+   "footprint": "Tesla:C_0603_1608Metric__v2",
    "value": "82pF",
    "layer": "F.Cu",
    "attrs": [
@@ -1066,7 +1066,7 @@
    "in_schematic": true
   },
   "C2461": {
-   "footprint": "Tesla:C_0603_1608Metric",
+   "footprint": "Tesla:C_0603_1608Metric__v2",
    "value": "82pF",
    "layer": "F.Cu",
    "attrs": [
@@ -1085,7 +1085,7 @@
    "in_schematic": true
   },
   "C2462": {
-   "footprint": "Tesla:C_0603_1608Metric",
+   "footprint": "Tesla:C_0603_1608Metric__v2",
    "value": "82pF",
    "layer": "F.Cu",
    "attrs": [
@@ -1104,7 +1104,7 @@
    "in_schematic": true
   },
   "C2463": {
-   "footprint": "Tesla:C_0603_1608Metric",
+   "footprint": "Tesla:C_0603_1608Metric__v2",
    "value": "82pF",
    "layer": "F.Cu",
    "attrs": [
@@ -1180,7 +1180,7 @@
    "in_schematic": true
   },
   "C2481": {
-   "footprint": "Tesla:C_0603_1608Metric",
+   "footprint": "Tesla:C_0603_1608Metric__v2",
    "value": "82pF",
    "layer": "F.Cu",
    "attrs": [
@@ -1199,7 +1199,7 @@
    "in_schematic": true
   },
   "C2482": {
-   "footprint": "Tesla:C_0603_1608Metric",
+   "footprint": "Tesla:C_0603_1608Metric__v2",
    "value": "82pF",
    "layer": "F.Cu",
    "attrs": [
@@ -1218,7 +1218,7 @@
    "in_schematic": true
   },
   "C2483": {
-   "footprint": "Tesla:C_0603_1608Metric",
+   "footprint": "Tesla:C_0603_1608Metric__v2",
    "value": "82pF",
    "layer": "F.Cu",
    "attrs": [
@@ -1294,7 +1294,7 @@
    "in_schematic": true
   },
   "C25": {
-   "footprint": "Capacitor_SMD:C_0805_2012Metric",
+   "footprint": "Capacitor_SMD:C_0805_2012Metric__v2",
    "value": "1uF",
    "layer": "F.Cu",
    "attrs": [
@@ -1370,7 +1370,7 @@
    "in_schematic": true
   },
   "C2511": {
-   "footprint": "Tesla:C_0603_1608Metric",
+   "footprint": "Tesla:C_0603_1608Metric__v2",
    "value": "82pF",
    "layer": "F.Cu",
    "attrs": [
@@ -1389,7 +1389,7 @@
    "in_schematic": true
   },
   "C2512": {
-   "footprint": "Tesla:C_0603_1608Metric",
+   "footprint": "Tesla:C_0603_1608Metric__v2",
    "value": "82pF",
    "layer": "F.Cu",
    "attrs": [
@@ -1408,7 +1408,7 @@
    "in_schematic": true
   },
   "C2513": {
-   "footprint": "Tesla:C_0603_1608Metric",
+   "footprint": "Tesla:C_0603_1608Metric__v2",
    "value": "82pF",
    "layer": "F.Cu",
    "attrs": [
@@ -1484,7 +1484,7 @@
    "in_schematic": true
   },
   "C2551": {
-   "footprint": "Tesla:C_0603_1608Metric",
+   "footprint": "Tesla:C_0603_1608Metric__v2",
    "value": "82pF",
    "layer": "F.Cu",
    "attrs": [
@@ -1503,7 +1503,7 @@
    "in_schematic": true
   },
   "C2552": {
-   "footprint": "Tesla:C_0603_1608Metric",
+   "footprint": "Tesla:C_0603_1608Metric__v2",
    "value": "82pF",
    "layer": "F.Cu",
    "attrs": [
@@ -1522,7 +1522,7 @@
    "in_schematic": true
   },
   "C2553": {
-   "footprint": "Tesla:C_0603_1608Metric",
+   "footprint": "Tesla:C_0603_1608Metric__v2",
    "value": "82pF",
    "layer": "F.Cu",
    "attrs": [
@@ -1807,7 +1807,7 @@
    "in_schematic": true
   },
   "C262": {
-   "footprint": "Tesla:C_0805_2012Metric",
+   "footprint": "Tesla:C_0805_2012Metric__v2",
    "value": "10uF",
    "layer": "F.Cu",
    "attrs": [
@@ -1845,7 +1845,7 @@
    "in_schematic": true
   },
   "C264": {
-   "footprint": "Tesla:C_0603_1608Metric",
+   "footprint": "Tesla:C_0603_1608Metric__v2",
    "value": "100nF",
    "layer": "F.Cu",
    "attrs": [
@@ -1940,7 +1940,7 @@
    "in_schematic": true
   },
   "C27": {
-   "footprint": "Capacitor_SMD:C_0805_2012Metric",
+   "footprint": "Capacitor_SMD:C_0805_2012Metric__v2",
    "value": "1uF",
    "layer": "F.Cu",
    "attrs": [
@@ -2187,7 +2187,7 @@
    "in_schematic": true
   },
   "C28": {
-   "footprint": "Capacitor_SMD:C_0805_2012Metric",
+   "footprint": "Capacitor_SMD:C_0805_2012Metric__v2",
    "value": "1uF",
    "layer": "F.Cu",
    "attrs": [
@@ -2225,7 +2225,7 @@
    "in_schematic": true
   },
   "C282": {
-   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric__v2",
    "value": "10nF",
    "layer": "F.Cu",
    "attrs": [
@@ -2282,7 +2282,7 @@
    "in_schematic": true
   },
   "C286": {
-   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric__v2",
    "value": "22nF",
    "layer": "F.Cu",
    "attrs": [
@@ -2567,7 +2567,7 @@
    "in_schematic": true
   },
   "C306": {
-   "footprint": "Capacitor_SMD:C_0805_2012Metric",
+   "footprint": "Capacitor_SMD:C_0805_2012Metric__v3",
    "value": "1uF",
    "layer": "F.Cu",
    "attrs": [
@@ -2586,7 +2586,7 @@
    "in_schematic": true
   },
   "C307": {
-   "footprint": "Capacitor_SMD:C_0805_2012Metric",
+   "footprint": "Capacitor_SMD:C_0805_2012Metric__v3",
    "value": "10uF",
    "layer": "F.Cu",
    "attrs": [
@@ -2662,7 +2662,7 @@
    "in_schematic": true
   },
   "C34": {
-   "footprint": "Capacitor_SMD:C_0805_2012Metric",
+   "footprint": "Capacitor_SMD:C_0805_2012Metric__v2",
    "value": "1uF",
    "layer": "F.Cu",
    "attrs": [
@@ -2700,7 +2700,7 @@
    "in_schematic": true
   },
   "C35": {
-   "footprint": "Capacitor_SMD:C_0805_2012Metric",
+   "footprint": "Capacitor_SMD:C_0805_2012Metric__v2",
    "value": "1uF",
    "layer": "F.Cu",
    "attrs": [
@@ -2719,7 +2719,7 @@
    "in_schematic": true
   },
   "C36": {
-   "footprint": "Capacitor_SMD:C_0805_2012Metric",
+   "footprint": "Capacitor_SMD:C_0805_2012Metric__v2",
    "value": "1uF",
    "layer": "F.Cu",
    "attrs": [
@@ -3099,7 +3099,7 @@
    "in_schematic": true
   },
   "C56": {
-   "footprint": "Capacitor_SMD:C_0805_2012Metric",
+   "footprint": "Capacitor_SMD:C_0805_2012Metric__v2",
    "value": "1uF",
    "layer": "F.Cu",
    "attrs": [
@@ -3175,7 +3175,7 @@
    "in_schematic": true
   },
   "C60": {
-   "footprint": "Samacsys:CAPPM3528X210N",
+   "footprint": "Samacsys:CAPPM3528X210N__v2",
    "value": "100uF 6.3V",
    "layer": "F.Cu",
    "attrs": [
@@ -3213,7 +3213,7 @@
    "in_schematic": true
   },
   "C62": {
-   "footprint": "Capacitor_SMD:C_0805_2012Metric",
+   "footprint": "Capacitor_SMD:C_0805_2012Metric__v2",
    "value": "22nF",
    "layer": "F.Cu",
    "attrs": [
@@ -3232,7 +3232,7 @@
    "in_schematic": true
   },
   "C63": {
-   "footprint": "Capacitor_SMD:C_1206_3216Metric",
+   "footprint": "Capacitor_SMD:C_1206_3216Metric__v2",
    "value": "10uF",
    "layer": "F.Cu",
    "attrs": [
@@ -3270,7 +3270,7 @@
    "in_schematic": true
   },
   "C65": {
-   "footprint": "Capacitor_SMD:C_1206_3216Metric",
+   "footprint": "Capacitor_SMD:C_1206_3216Metric__v2",
    "value": "10uF",
    "layer": "F.Cu",
    "attrs": [
@@ -3365,7 +3365,7 @@
    "in_schematic": true
   },
   "C70": {
-   "footprint": "Capacitor_SMD:C_0805_2012Metric",
+   "footprint": "Capacitor_SMD:C_0805_2012Metric__v2",
    "value": "1uF",
    "layer": "F.Cu",
    "attrs": [
@@ -3422,7 +3422,7 @@
    "in_schematic": true
   },
   "C73": {
-   "footprint": "Capacitor_SMD:C_0805_2012Metric",
+   "footprint": "Capacitor_SMD:C_0805_2012Metric__v2",
    "value": "1nF",
    "layer": "F.Cu",
    "attrs": [
@@ -3612,7 +3612,7 @@
    "in_schematic": true
   },
   "C83": {
-   "footprint": "Capacitor_SMD:C_0805_2012Metric",
+   "footprint": "Capacitor_SMD:C_0805_2012Metric__v4",
    "value": "1nF",
    "layer": "F.Cu",
    "attrs": [
@@ -3671,7 +3671,7 @@
    "in_schematic": true
   },
   "D1": {
-   "footprint": "Samacsys:DIOM5336X244N",
+   "footprint": "Samacsys:DIOM5336X244N__v2",
    "value": "1N5819",
    "layer": "F.Cu",
    "attrs": [
@@ -3690,7 +3690,7 @@
    "in_schematic": true
   },
   "D10": {
-   "footprint": "Diode_SMD:D_SMA",
+   "footprint": "Diode_SMD:D_SMA__v2",
    "value": "SS35",
    "layer": "F.Cu",
    "attrs": [
@@ -4241,7 +4241,7 @@
    "in_schematic": true
   },
   "D15": {
-   "footprint": "Samacsys:DIOM5336X244N",
+   "footprint": "Samacsys:DIOM5336X244N__v2",
    "value": "SS54B",
    "layer": "F.Cu",
    "attrs": [
@@ -4337,7 +4337,7 @@
    "in_schematic": true
   },
   "D2": {
-   "footprint": "Samacsys:DIOM5336X244N",
+   "footprint": "Samacsys:DIOM5336X244N__v2",
    "value": "1N5935B",
    "layer": "F.Cu",
    "attrs": [
@@ -4356,7 +4356,7 @@
    "in_schematic": true
   },
   "D20": {
-   "footprint": "Samacsys:DIOM5026X229N",
+   "footprint": "Samacsys:DIOM5026X229N__v2",
    "value": "SMAJ7.0A",
    "layer": "F.Cu",
    "attrs": [
@@ -4375,7 +4375,7 @@
    "in_schematic": true
   },
   "D21": {
-   "footprint": "Samascys:DIOM5127X229N",
+   "footprint": "Samascys:DIOM5127X229N__v2",
    "value": "SMAJ18CA",
    "layer": "F.Cu",
    "attrs": [
@@ -4432,7 +4432,7 @@
    "in_schematic": true
   },
   "D24": {
-   "footprint": "Diode_SMD:D_SMA",
+   "footprint": "Diode_SMD:D_SMA__v3",
    "value": "SMAJ18CA",
    "layer": "F.Cu",
    "attrs": [
@@ -4508,7 +4508,7 @@
    "in_schematic": true
   },
   "D40": {
-   "footprint": "Diode_SMD:D_SMA",
+   "footprint": "Diode_SMD:D_SMA__v2",
    "value": "SS35",
    "layer": "F.Cu",
    "attrs": [
@@ -4641,7 +4641,7 @@
    "in_schematic": true
   },
   "D45": {
-   "footprint": "Diode_SMD:D_SMA",
+   "footprint": "Diode_SMD:D_SMA__v2",
    "value": "STPS2H100-Y",
    "layer": "F.Cu",
    "attrs": [
@@ -4660,7 +4660,7 @@
    "in_schematic": true
   },
   "D471": {
-   "footprint": "Tesla:D_SOD-323",
+   "footprint": "Tesla:D_SOD-323__v3",
    "value": "JV",
    "layer": "F.Cu",
    "attrs": [
@@ -4679,7 +4679,7 @@
    "in_schematic": true
   },
   "D472": {
-   "footprint": "Tesla:D_SOD-323",
+   "footprint": "Tesla:D_SOD-323__v3",
    "value": "JV",
    "layer": "F.Cu",
    "attrs": [
@@ -4698,7 +4698,7 @@
    "in_schematic": true
   },
   "D473": {
-   "footprint": "Tesla:D_SOD-323",
+   "footprint": "Tesla:D_SOD-323__v3",
    "value": "JV",
    "layer": "F.Cu",
    "attrs": [
@@ -4717,7 +4717,7 @@
    "in_schematic": true
   },
   "D481": {
-   "footprint": "Diode_SMD:D_SMA",
+   "footprint": "Diode_SMD:D_SMA__v2",
    "value": "VN17",
    "layer": "F.Cu",
    "attrs": [
@@ -4736,7 +4736,7 @@
    "in_schematic": true
   },
   "D482": {
-   "footprint": "Diode_SMD:D_SMA",
+   "footprint": "Diode_SMD:D_SMA__v2",
    "value": "VN17",
    "layer": "F.Cu",
    "attrs": [
@@ -4755,7 +4755,7 @@
    "in_schematic": true
   },
   "D483": {
-   "footprint": "Diode_SMD:D_SMA",
+   "footprint": "Diode_SMD:D_SMA__v2",
    "value": "VN17",
    "layer": "F.Cu",
    "attrs": [
@@ -4774,7 +4774,7 @@
    "in_schematic": true
   },
   "D491": {
-   "footprint": "Diode_SMD:D_SMA",
+   "footprint": "Diode_SMD:D_SMA__v2",
    "value": "VN17",
    "layer": "F.Cu",
    "attrs": [
@@ -4793,7 +4793,7 @@
    "in_schematic": true
   },
   "D492": {
-   "footprint": "Diode_SMD:D_SMA",
+   "footprint": "Diode_SMD:D_SMA__v2",
    "value": "VN17",
    "layer": "F.Cu",
    "attrs": [
@@ -4812,7 +4812,7 @@
    "in_schematic": true
   },
   "D493": {
-   "footprint": "Diode_SMD:D_SMA",
+   "footprint": "Diode_SMD:D_SMA__v2",
    "value": "VN17",
    "layer": "F.Cu",
    "attrs": [
@@ -4850,7 +4850,7 @@
    "in_schematic": true
   },
   "D53": {
-   "footprint": "Tesla:D_SOD-323",
+   "footprint": "Tesla:D_SOD-323__v3",
    "value": "G1",
    "layer": "F.Cu",
    "attrs": [
@@ -4888,7 +4888,7 @@
    "in_schematic": true
   },
   "D56": {
-   "footprint": "Diode_SMD:D_SMA",
+   "footprint": "Diode_SMD:D_SMA__v4",
    "value": "15V",
    "layer": "F.Cu",
    "attrs": [
@@ -4907,7 +4907,7 @@
    "in_schematic": true
   },
   "D58": {
-   "footprint": "LED_SMD:LED_0805_2012Metric",
+   "footprint": "LED_SMD:LED_0805_2012Metric__v2",
    "value": "LED",
    "layer": "F.Cu",
    "attrs": [
@@ -4926,7 +4926,7 @@
    "in_schematic": true
   },
   "D6": {
-   "footprint": "Diode_SMD:D_SOD-323",
+   "footprint": "Diode_SMD:D_SOD-323__v2",
    "value": "5V1",
    "layer": "F.Cu",
    "attrs": [
@@ -4945,7 +4945,7 @@
    "in_schematic": true
   },
   "D61": {
-   "footprint": "Tesla:D_SOD-323",
+   "footprint": "Tesla:D_SOD-323__v3",
    "value": "G1",
    "layer": "F.Cu",
    "attrs": [
@@ -4964,7 +4964,7 @@
    "in_schematic": true
   },
   "D62": {
-   "footprint": "Tesla:D_SOD-323",
+   "footprint": "Tesla:D_SOD-323__v3",
    "value": "G1",
    "layer": "F.Cu",
    "attrs": [
@@ -5002,7 +5002,7 @@
    "in_schematic": true
   },
   "D64": {
-   "footprint": "Diode_SMD:D_SMA",
+   "footprint": "Diode_SMD:D_SMA__v2",
    "value": "STPS2H100-Y",
    "layer": "F.Cu",
    "attrs": [
@@ -5173,7 +5173,7 @@
    "in_schematic": true
   },
   "D8": {
-   "footprint": "Diode_SMD:D_SOD-323",
+   "footprint": "Diode_SMD:D_SOD-323__v2",
    "value": "5V1",
    "layer": "F.Cu",
    "attrs": [
@@ -5412,7 +5412,7 @@
    "in_schematic": true
   },
   "H12": {
-   "footprint": "MountingHole:MountingHole_2.2mm_M2",
+   "footprint": "MountingHole:MountingHole_2.2mm_M2__v2",
    "value": "MountingHole",
    "layer": "F.Cu",
    "attrs": [
@@ -5428,7 +5428,7 @@
    "in_schematic": true
   },
   "H13": {
-   "footprint": "MountingHole:MountingHole_2.2mm_M2",
+   "footprint": "MountingHole:MountingHole_2.2mm_M2__v3",
    "value": "MountingHole",
    "layer": "F.Cu",
    "attrs": [
@@ -5444,7 +5444,7 @@
    "in_schematic": true
   },
   "H14": {
-   "footprint": "MountingHole:MountingHole_2.2mm_M2",
+   "footprint": "MountingHole:MountingHole_2.2mm_M2__v2",
    "value": "MountingHole",
    "layer": "F.Cu",
    "attrs": [
@@ -5460,7 +5460,7 @@
    "in_schematic": true
   },
   "H15": {
-   "footprint": "MountingHole:MountingHole_2.2mm_M2",
+   "footprint": "MountingHole:MountingHole_2.2mm_M2__v2",
    "value": "MountingHole",
    "layer": "F.Cu",
    "attrs": [
@@ -5574,7 +5574,7 @@
    "in_schematic": true
   },
   "H21": {
-   "footprint": "MountingHole:MountingHole_2.2mm_M2",
+   "footprint": "MountingHole:MountingHole_2.2mm_M2__v2",
    "value": "MountingHole",
    "layer": "F.Cu",
    "attrs": [
@@ -6048,7 +6048,7 @@
    "in_schematic": true
   },
   "Q15": {
-   "footprint": "Samacsys:NVD5117PLT4GVF01",
+   "footprint": "Samacsys:NVD5117PLT4GVF01__v2",
    "value": "NJVMJD127T4G",
    "layer": "F.Cu",
    "attrs": [
@@ -6068,7 +6068,7 @@
    "in_schematic": true
   },
   "Q16": {
-   "footprint": "Package_TO_SOT_SMD:SOT-23",
+   "footprint": "Package_TO_SOT_SMD:SOT-23__v3",
    "value": "MMBT3904",
    "layer": "F.Cu",
    "attrs": [
@@ -6088,7 +6088,7 @@
    "in_schematic": true
   },
   "Q17": {
-   "footprint": "Package_TO_SOT_SMD:SOT-23",
+   "footprint": "Package_TO_SOT_SMD:SOT-23__v3",
    "value": "MMBT3904",
    "layer": "F.Cu",
    "attrs": [
@@ -6108,7 +6108,7 @@
    "in_schematic": true
   },
   "Q181": {
-   "footprint": "Tesla:SOT-23",
+   "footprint": "Tesla:SOT-23__v2",
    "value": "BSS84AK",
    "layer": "F.Cu",
    "attrs": [
@@ -6128,7 +6128,7 @@
    "in_schematic": true
   },
   "Q182": {
-   "footprint": "Tesla:SOT-23",
+   "footprint": "Tesla:SOT-23__v2",
    "value": "BSS84AK",
    "layer": "F.Cu",
    "attrs": [
@@ -6148,7 +6148,7 @@
    "in_schematic": true
   },
   "Q183": {
-   "footprint": "Tesla:SOT-23",
+   "footprint": "Tesla:SOT-23__v2",
    "value": "BSS84AK",
    "layer": "F.Cu",
    "attrs": [
@@ -6288,7 +6288,7 @@
    "in_schematic": true
   },
   "Q23": {
-   "footprint": "Package_TO_SOT_SMD:SOT-23",
+   "footprint": "Package_TO_SOT_SMD:SOT-23__v2",
    "value": "BSS84W",
    "layer": "F.Cu",
    "attrs": [
@@ -6348,7 +6348,7 @@
    "in_schematic": true
   },
   "Q301": {
-   "footprint": "Tesla:SOT-23",
+   "footprint": "Tesla:SOT-23__v2",
    "value": "BSS138BK",
    "layer": "F.Cu",
    "attrs": [
@@ -6368,7 +6368,7 @@
    "in_schematic": true
   },
   "Q302": {
-   "footprint": "Tesla:SOT-23",
+   "footprint": "Tesla:SOT-23__v2",
    "value": "BSS138BK",
    "layer": "F.Cu",
    "attrs": [
@@ -6388,7 +6388,7 @@
    "in_schematic": true
   },
   "Q303": {
-   "footprint": "Tesla:SOT-23",
+   "footprint": "Tesla:SOT-23__v2",
    "value": "BSS138BK",
    "layer": "F.Cu",
    "attrs": [
@@ -6608,7 +6608,7 @@
    "in_schematic": true
   },
   "Q5": {
-   "footprint": "Samacsys:NVD5117PLT4GVF01",
+   "footprint": "Samacsys:NVD5117PLT4GVF01__v2",
    "value": "NJVMJD127T4G",
    "layer": "F.Cu",
    "attrs": [
@@ -6688,7 +6688,7 @@
    "in_schematic": true
   },
   "Q6": {
-   "footprint": "Samacsys:NVD5117PLT4GVF01",
+   "footprint": "Samacsys:NVD5117PLT4GVF01__v2",
    "value": "NJVMJD127T4G",
    "layer": "F.Cu",
    "attrs": [
@@ -6945,7 +6945,7 @@
    "in_schematic": true
   },
   "R102": {
-   "footprint": "Tesla:R_1210_3225Metric",
+   "footprint": "Tesla:R_1210_3225Metric__v2",
    "value": "4R99",
    "layer": "F.Cu",
    "attrs": [
@@ -6983,7 +6983,7 @@
    "in_schematic": true
   },
   "R106": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v7",
    "value": "3K9",
    "layer": "F.Cu",
    "attrs": [
@@ -7003,7 +7003,7 @@
    "in_schematic": true
   },
   "R107": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "220R",
    "layer": "F.Cu",
    "attrs": [
@@ -7022,7 +7022,7 @@
    "in_schematic": true
   },
   "R108": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "220R",
    "layer": "F.Cu",
    "attrs": [
@@ -7041,7 +7041,7 @@
    "in_schematic": true
   },
   "R109": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "1K8",
    "layer": "F.Cu",
    "attrs": [
@@ -7079,7 +7079,7 @@
    "in_schematic": true
   },
   "R110": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "1K8",
    "layer": "F.Cu",
    "attrs": [
@@ -7117,7 +7117,7 @@
    "in_schematic": true
   },
   "R112": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "220R",
    "layer": "F.Cu",
    "attrs": [
@@ -7136,7 +7136,7 @@
    "in_schematic": true
   },
   "R113": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "10K",
    "layer": "F.Cu",
    "attrs": [
@@ -7155,7 +7155,7 @@
    "in_schematic": true
   },
   "R114": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "10K",
    "layer": "F.Cu",
    "attrs": [
@@ -7174,7 +7174,7 @@
    "in_schematic": true
   },
   "R115": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "10K",
    "layer": "F.Cu",
    "attrs": [
@@ -7193,7 +7193,7 @@
    "in_schematic": true
   },
   "R116": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "10K",
    "layer": "F.Cu",
    "attrs": [
@@ -7212,7 +7212,7 @@
    "in_schematic": true
   },
   "R117": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "0R",
    "layer": "F.Cu",
    "attrs": [
@@ -7231,7 +7231,7 @@
    "in_schematic": true
   },
   "R118": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "1K",
    "layer": "F.Cu",
    "attrs": [
@@ -7250,7 +7250,7 @@
    "in_schematic": true
   },
   "R119": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "10K",
    "layer": "F.Cu",
    "attrs": [
@@ -7269,7 +7269,7 @@
    "in_schematic": true
   },
   "R12": {
-   "footprint": "Tesla:R_1210_3225Metric",
+   "footprint": "Tesla:R_1210_3225Metric__v2",
    "value": "4R99",
    "layer": "F.Cu",
    "attrs": [
@@ -7288,7 +7288,7 @@
    "in_schematic": true
   },
   "R120": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "2K2",
    "layer": "F.Cu",
    "attrs": [
@@ -7307,7 +7307,7 @@
    "in_schematic": true
   },
   "R121": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "2K2",
    "layer": "F.Cu",
    "attrs": [
@@ -7326,7 +7326,7 @@
    "in_schematic": true
   },
   "R122": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "3K3",
    "layer": "F.Cu",
    "attrs": [
@@ -7345,7 +7345,7 @@
    "in_schematic": true
   },
   "R123": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "1K",
    "layer": "F.Cu",
    "attrs": [
@@ -7364,7 +7364,7 @@
    "in_schematic": true
   },
   "R124": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "3K6",
    "layer": "F.Cu",
    "attrs": [
@@ -7383,7 +7383,7 @@
    "in_schematic": true
   },
   "R125": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "6K2",
    "layer": "F.Cu",
    "attrs": [
@@ -7402,7 +7402,7 @@
    "in_schematic": true
   },
   "R126": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "3K6",
    "layer": "F.Cu",
    "attrs": [
@@ -7421,7 +7421,7 @@
    "in_schematic": true
   },
   "R127": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "6K2",
    "layer": "F.Cu",
    "attrs": [
@@ -7440,7 +7440,7 @@
    "in_schematic": true
   },
   "R128": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "10K",
    "layer": "F.Cu",
    "attrs": [
@@ -7459,7 +7459,7 @@
    "in_schematic": true
   },
   "R129": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "10K",
    "layer": "F.Cu",
    "attrs": [
@@ -7554,7 +7554,7 @@
    "in_schematic": true
   },
   "R130": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "10K",
    "layer": "F.Cu",
    "attrs": [
@@ -7573,7 +7573,7 @@
    "in_schematic": true
   },
   "R131": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "1K",
    "layer": "F.Cu",
    "attrs": [
@@ -7592,7 +7592,7 @@
    "in_schematic": true
   },
   "R132": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "1K",
    "layer": "F.Cu",
    "attrs": [
@@ -7763,7 +7763,7 @@
    "in_schematic": true
   },
   "R138": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "2K2",
    "layer": "F.Cu",
    "attrs": [
@@ -7782,7 +7782,7 @@
    "in_schematic": true
   },
   "R139": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v5",
    "value": "10k",
    "layer": "F.Cu",
    "attrs": [
@@ -7820,7 +7820,7 @@
    "in_schematic": true
   },
   "R140": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v5",
    "value": "10k",
    "layer": "F.Cu",
    "attrs": [
@@ -7839,7 +7839,7 @@
    "in_schematic": true
   },
   "R141": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v8",
    "value": "3K9",
    "layer": "F.Cu",
    "attrs": [
@@ -8143,7 +8143,7 @@
    "in_schematic": true
   },
   "R15": {
-   "footprint": "Tesla:R_0603_1608Metric",
+   "footprint": "Tesla:R_0603_1608Metric__v2",
    "value": "22K",
    "layer": "F.Cu",
    "attrs": [
@@ -8694,7 +8694,7 @@
    "in_schematic": true
   },
   "R1671": {
-   "footprint": "Resistor_SMD:R_1210_3225Metric",
+   "footprint": "Resistor_SMD:R_1210_3225Metric__v2",
    "value": "4K7",
    "layer": "F.Cu",
    "attrs": [
@@ -8713,7 +8713,7 @@
    "in_schematic": true
   },
   "R1672": {
-   "footprint": "Resistor_SMD:R_1210_3225Metric",
+   "footprint": "Resistor_SMD:R_1210_3225Metric__v2",
    "value": "4K7",
    "layer": "F.Cu",
    "attrs": [
@@ -8732,7 +8732,7 @@
    "in_schematic": true
   },
   "R1673": {
-   "footprint": "Resistor_SMD:R_1210_3225Metric",
+   "footprint": "Resistor_SMD:R_1210_3225Metric__v2",
    "value": "4K7",
    "layer": "F.Cu",
    "attrs": [
@@ -8998,7 +8998,7 @@
    "in_schematic": true
   },
   "R1721": {
-   "footprint": "Tesla:R_0603_1608Metric",
+   "footprint": "Tesla:R_0603_1608Metric__v3",
    "value": "27K",
    "layer": "F.Cu",
    "attrs": [
@@ -9017,7 +9017,7 @@
    "in_schematic": true
   },
   "R1722": {
-   "footprint": "Tesla:R_0603_1608Metric",
+   "footprint": "Tesla:R_0603_1608Metric__v3",
    "value": "27K",
    "layer": "F.Cu",
    "attrs": [
@@ -9036,7 +9036,7 @@
    "in_schematic": true
   },
   "R1723": {
-   "footprint": "Tesla:R_0603_1608Metric",
+   "footprint": "Tesla:R_0603_1608Metric__v3",
    "value": "27K",
    "layer": "F.Cu",
    "attrs": [
@@ -9055,7 +9055,7 @@
    "in_schematic": true
   },
   "R173": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v4",
    "value": "50K",
    "layer": "F.Cu",
    "attrs": [
@@ -9074,7 +9074,7 @@
    "in_schematic": true
   },
   "R174": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v4",
    "value": "50K",
    "layer": "F.Cu",
    "attrs": [
@@ -9188,7 +9188,7 @@
    "in_schematic": true
   },
   "R182": {
-   "footprint": "Tesla:R_0603_1608Metric",
+   "footprint": "Tesla:R_0603_1608Metric__v2",
    "value": "100K",
    "layer": "F.Cu",
    "attrs": [
@@ -9264,7 +9264,7 @@
    "in_schematic": true
   },
   "R186": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v4",
    "value": "50K",
    "layer": "F.Cu",
    "attrs": [
@@ -9283,7 +9283,7 @@
    "in_schematic": true
   },
   "R19": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "680R",
    "layer": "F.Cu",
    "attrs": [
@@ -9435,7 +9435,7 @@
    "in_schematic": true
   },
   "R200": {
-   "footprint": "Tesla:R_0603_1608Metric",
+   "footprint": "Tesla:R_0603_1608Metric__v2",
    "value": "20R",
    "layer": "F.Cu",
    "attrs": [
@@ -9454,7 +9454,7 @@
    "in_schematic": true
   },
   "R2001": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "330R",
    "layer": "F.Cu",
    "attrs": [
@@ -9473,7 +9473,7 @@
    "in_schematic": true
   },
   "R2007": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "1K",
    "layer": "F.Cu",
    "attrs": [
@@ -9492,7 +9492,7 @@
    "in_schematic": true
   },
   "R2008": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "1K",
    "layer": "F.Cu",
    "attrs": [
@@ -9606,7 +9606,7 @@
    "in_schematic": true
   },
   "R21": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "10K",
    "layer": "F.Cu",
    "attrs": [
@@ -9663,7 +9663,7 @@
    "in_schematic": true
   },
   "R22": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "10K",
    "layer": "F.Cu",
    "attrs": [
@@ -9739,7 +9739,7 @@
    "in_schematic": true
   },
   "R228": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "100K",
    "layer": "F.Cu",
    "attrs": [
@@ -9777,7 +9777,7 @@
    "in_schematic": true
   },
   "R23": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "4K7",
    "layer": "F.Cu",
    "attrs": [
@@ -9834,7 +9834,7 @@
    "in_schematic": true
   },
   "R238": {
-   "footprint": "Tesla:R_0603_1608Metric",
+   "footprint": "Tesla:R_0603_1608Metric__v2",
    "value": "80.6R",
    "layer": "F.Cu",
    "attrs": [
@@ -9853,7 +9853,7 @@
    "in_schematic": true
   },
   "R24": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "4K7",
    "layer": "F.Cu",
    "attrs": [
@@ -9929,7 +9929,7 @@
    "in_schematic": true
   },
   "R25": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v3",
    "value": "10K",
    "layer": "F.Cu",
    "attrs": [
@@ -9986,7 +9986,7 @@
    "in_schematic": true
   },
   "R257": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "100K",
    "layer": "F.Cu",
    "attrs": [
@@ -10005,7 +10005,7 @@
    "in_schematic": true
   },
   "R26": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "120R",
    "layer": "F.Cu",
    "attrs": [
@@ -10024,7 +10024,7 @@
    "in_schematic": true
   },
   "R265": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "1K",
    "layer": "F.Cu",
    "attrs": [
@@ -10119,7 +10119,7 @@
    "in_schematic": true
   },
   "R28": {
-   "footprint": "Tesla:R_0603_1608Metric",
+   "footprint": "Tesla:R_0603_1608Metric__v2",
    "value": "33.2K",
    "layer": "F.Cu",
    "attrs": [
@@ -10157,7 +10157,7 @@
    "in_schematic": true
   },
   "R29": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "1K",
    "layer": "F.Cu",
    "attrs": [
@@ -10233,7 +10233,7 @@
    "in_schematic": true
   },
   "R3000": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "1K",
    "layer": "F.Cu",
    "attrs": [
@@ -10271,7 +10271,7 @@
    "in_schematic": true
   },
   "R31": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "4K7",
    "layer": "F.Cu",
    "attrs": [
@@ -10290,7 +10290,7 @@
    "in_schematic": true
   },
   "R32": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "4K7",
    "layer": "F.Cu",
    "attrs": [
@@ -10404,7 +10404,7 @@
    "in_schematic": true
   },
   "R33": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "1K5",
    "layer": "F.Cu",
    "attrs": [
@@ -10442,7 +10442,7 @@
    "in_schematic": true
   },
   "R34": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "1K5",
    "layer": "F.Cu",
    "attrs": [
@@ -10461,7 +10461,7 @@
    "in_schematic": true
   },
   "R35": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "4K7",
    "layer": "F.Cu",
    "attrs": [
@@ -10480,7 +10480,7 @@
    "in_schematic": true
   },
   "R36": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "4K7",
    "layer": "F.Cu",
    "attrs": [
@@ -10499,7 +10499,7 @@
    "in_schematic": true
   },
   "R37": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "1K5",
    "layer": "F.Cu",
    "attrs": [
@@ -10518,7 +10518,7 @@
    "in_schematic": true
   },
   "R38": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "1K5",
    "layer": "F.Cu",
    "attrs": [
@@ -10537,7 +10537,7 @@
    "in_schematic": true
   },
   "R384": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v4",
    "value": "0R",
    "layer": "F.Cu",
    "attrs": [
@@ -10556,7 +10556,7 @@
    "in_schematic": true
   },
   "R39": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "1K",
    "layer": "F.Cu",
    "attrs": [
@@ -10575,7 +10575,7 @@
    "in_schematic": true
   },
   "R4": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v6",
    "value": "10K",
    "layer": "F.Cu",
    "attrs": [
@@ -10594,7 +10594,7 @@
    "in_schematic": true
   },
   "R40": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "1K",
    "layer": "F.Cu",
    "attrs": [
@@ -11069,7 +11069,7 @@
    "in_schematic": true
   },
   "R41": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "4K7",
    "layer": "F.Cu",
    "attrs": [
@@ -11088,7 +11088,7 @@
    "in_schematic": true
   },
   "R42": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "47K",
    "layer": "F.Cu",
    "attrs": [
@@ -11107,7 +11107,7 @@
    "in_schematic": true
   },
   "R43": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "1K",
    "layer": "F.Cu",
    "attrs": [
@@ -11126,7 +11126,7 @@
    "in_schematic": true
   },
   "R44": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "47K",
    "layer": "F.Cu",
    "attrs": [
@@ -11145,7 +11145,7 @@
    "in_schematic": true
   },
   "R45": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v2",
    "value": "3K3",
    "layer": "F.Cu",
    "attrs": [
@@ -11183,7 +11183,7 @@
    "in_schematic": true
   },
   "R47": {
-   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "footprint": "Resistor_SMD:R_2512_6332Metric__v2",
    "value": "3K9",
    "layer": "F.Cu",
    "attrs": [
@@ -11202,7 +11202,7 @@
    "in_schematic": true
   },
   "R48": {
-   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "footprint": "Resistor_SMD:R_2512_6332Metric__v2",
    "value": "3K9",
    "layer": "F.Cu",
    "attrs": [
@@ -11221,7 +11221,7 @@
    "in_schematic": true
   },
   "R49": {
-   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "footprint": "Resistor_SMD:R_2512_6332Metric__v2",
    "value": "3K9",
    "layer": "F.Cu",
    "attrs": [
@@ -11240,7 +11240,7 @@
    "in_schematic": true
   },
   "R5": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v9",
    "value": "10K",
    "layer": "F.Cu",
    "attrs": [
@@ -11259,7 +11259,7 @@
    "in_schematic": true
   },
   "R50": {
-   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "footprint": "Resistor_SMD:R_2512_6332Metric__v2",
    "value": "3K9",
    "layer": "F.Cu",
    "attrs": [
@@ -11753,7 +11753,7 @@
    "in_schematic": true
   },
   "R52": {
-   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "footprint": "Resistor_SMD:R_2512_6332Metric__v2",
    "value": "3K9",
    "layer": "F.Cu",
    "attrs": [
@@ -11772,7 +11772,7 @@
    "in_schematic": true
   },
   "R53": {
-   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "footprint": "Resistor_SMD:R_2512_6332Metric__v2",
    "value": "3K9",
    "layer": "F.Cu",
    "attrs": [
@@ -11791,7 +11791,7 @@
    "in_schematic": true
   },
   "R54": {
-   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "footprint": "Resistor_SMD:R_2512_6332Metric__v2",
    "value": "3K9",
    "layer": "F.Cu",
    "attrs": [
@@ -11810,7 +11810,7 @@
    "in_schematic": true
   },
   "R55": {
-   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "footprint": "Resistor_SMD:R_2512_6332Metric__v2",
    "value": "3K9",
    "layer": "F.Cu",
    "attrs": [
@@ -11848,7 +11848,7 @@
    "in_schematic": true
   },
   "R57": {
-   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "footprint": "Resistor_SMD:R_2512_6332Metric__v2",
    "value": "3K9",
    "layer": "F.Cu",
    "attrs": [
@@ -11867,7 +11867,7 @@
    "in_schematic": true
   },
   "R58": {
-   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "footprint": "Resistor_SMD:R_2512_6332Metric__v2",
    "value": "3K9",
    "layer": "F.Cu",
    "attrs": [
@@ -11886,7 +11886,7 @@
    "in_schematic": true
   },
   "R59": {
-   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "footprint": "Resistor_SMD:R_2512_6332Metric__v2",
    "value": "3K9",
    "layer": "F.Cu",
    "attrs": [
@@ -11905,7 +11905,7 @@
    "in_schematic": true
   },
   "R6": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v3",
    "value": "1K5",
    "layer": "F.Cu",
    "attrs": [
@@ -11924,7 +11924,7 @@
    "in_schematic": true
   },
   "R60": {
-   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "footprint": "Resistor_SMD:R_2512_6332Metric__v2",
    "value": "3K9",
    "layer": "F.Cu",
    "attrs": [
@@ -12418,7 +12418,7 @@
    "in_schematic": true
   },
   "R62": {
-   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "footprint": "Resistor_SMD:R_2512_6332Metric__v2",
    "value": "3K9",
    "layer": "F.Cu",
    "attrs": [
@@ -12437,7 +12437,7 @@
    "in_schematic": true
   },
   "R63": {
-   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "footprint": "Resistor_SMD:R_2512_6332Metric__v2",
    "value": "3K9",
    "layer": "F.Cu",
    "attrs": [
@@ -12456,7 +12456,7 @@
    "in_schematic": true
   },
   "R64": {
-   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "footprint": "Resistor_SMD:R_2512_6332Metric__v2",
    "value": "3K9",
    "layer": "F.Cu",
    "attrs": [
@@ -12475,7 +12475,7 @@
    "in_schematic": true
   },
   "R65": {
-   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "footprint": "Resistor_SMD:R_2512_6332Metric__v2",
    "value": "3K9",
    "layer": "F.Cu",
    "attrs": [
@@ -12513,7 +12513,7 @@
    "in_schematic": true
   },
   "R67": {
-   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "footprint": "Resistor_SMD:R_2512_6332Metric__v2",
    "value": "3K9",
    "layer": "F.Cu",
    "attrs": [
@@ -12532,7 +12532,7 @@
    "in_schematic": true
   },
   "R68": {
-   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "footprint": "Resistor_SMD:R_2512_6332Metric__v2",
    "value": "3K9",
    "layer": "F.Cu",
    "attrs": [
@@ -12551,7 +12551,7 @@
    "in_schematic": true
   },
   "R69": {
-   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "footprint": "Resistor_SMD:R_2512_6332Metric__v2",
    "value": "3K9",
    "layer": "F.Cu",
    "attrs": [
@@ -12570,7 +12570,7 @@
    "in_schematic": true
   },
   "R7": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v3",
    "value": "4K7",
    "layer": "F.Cu",
    "attrs": [
@@ -12589,7 +12589,7 @@
    "in_schematic": true
   },
   "R70": {
-   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "footprint": "Resistor_SMD:R_2512_6332Metric__v2",
    "value": "3K9",
    "layer": "F.Cu",
    "attrs": [
@@ -12665,7 +12665,7 @@
    "in_schematic": true
   },
   "R72": {
-   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "footprint": "Resistor_SMD:R_2512_6332Metric__v2",
    "value": "3K9",
    "layer": "F.Cu",
    "attrs": [
@@ -12684,7 +12684,7 @@
    "in_schematic": true
   },
   "R73": {
-   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "footprint": "Resistor_SMD:R_2512_6332Metric__v2",
    "value": "3K9",
    "layer": "F.Cu",
    "attrs": [
@@ -12703,7 +12703,7 @@
    "in_schematic": true
   },
   "R74": {
-   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "footprint": "Resistor_SMD:R_2512_6332Metric__v2",
    "value": "3K9",
    "layer": "F.Cu",
    "attrs": [
@@ -12722,7 +12722,7 @@
    "in_schematic": true
   },
   "R75": {
-   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "footprint": "Resistor_SMD:R_2512_6332Metric__v2",
    "value": "3K9",
    "layer": "F.Cu",
    "attrs": [
@@ -12760,7 +12760,7 @@
    "in_schematic": true
   },
   "R77": {
-   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "footprint": "Resistor_SMD:R_2512_6332Metric__v2",
    "value": "3K9",
    "layer": "F.Cu",
    "attrs": [
@@ -12779,7 +12779,7 @@
    "in_schematic": true
   },
   "R78": {
-   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "footprint": "Resistor_SMD:R_2512_6332Metric__v2",
    "value": "3K9",
    "layer": "F.Cu",
    "attrs": [
@@ -12798,7 +12798,7 @@
    "in_schematic": true
   },
   "R79": {
-   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "footprint": "Resistor_SMD:R_2512_6332Metric__v2",
    "value": "3K9",
    "layer": "F.Cu",
    "attrs": [
@@ -12817,7 +12817,7 @@
    "in_schematic": true
   },
   "R8": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v3",
    "value": "10K",
    "layer": "F.Cu",
    "attrs": [
@@ -12836,7 +12836,7 @@
    "in_schematic": true
   },
   "R80": {
-   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "footprint": "Resistor_SMD:R_2512_6332Metric__v2",
    "value": "3K9",
    "layer": "F.Cu",
    "attrs": [
@@ -12988,7 +12988,7 @@
    "in_schematic": true
   },
   "R9": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v4",
    "value": "27K",
    "layer": "F.Cu",
    "attrs": [
@@ -13026,7 +13026,7 @@
    "in_schematic": true
   },
   "R96": {
-   "footprint": "Tesla:R_1210_3225Metric",
+   "footprint": "Tesla:R_1210_3225Metric__v2",
    "value": "4R99",
    "layer": "F.Cu",
    "attrs": [
@@ -13064,7 +13064,7 @@
    "in_schematic": true
   },
   "R98": {
-   "footprint": "Resistor_SMD:R_0805_2012Metric",
+   "footprint": "Resistor_SMD:R_0805_2012Metric__v3",
    "value": "1K",
    "layer": "F.Cu",
    "attrs": [
@@ -14468,7 +14468,7 @@
    "in_schematic": true
   },
   "U22": {
-   "footprint": "Samascys:SOT230P700X180-4N",
+   "footprint": "Samascys:SOT230P700X180-4N__v2",
    "value": "NCV8452STT3G",
    "layer": "F.Cu",
    "attrs": [
@@ -14530,7 +14530,7 @@
    "in_schematic": true
   },
   "U292": {
-   "footprint": "Package_SO:SOIC-24W_7.5x15.4mm_P1.27mm",
+   "footprint": "Package_SO:SOIC-24W_7.5x15.4mm_P1.27mm__v2",
    "value": "STGAP1AS",
    "layer": "F.Cu",
    "attrs": [
@@ -14571,7 +14571,7 @@
    "in_schematic": true
   },
   "U293": {
-   "footprint": "Package_SO:SOIC-24W_7.5x15.4mm_P1.27mm",
+   "footprint": "Package_SO:SOIC-24W_7.5x15.4mm_P1.27mm__v3",
    "value": "STGAP1AS",
    "layer": "F.Cu",
    "attrs": [
@@ -14664,7 +14664,7 @@
    "in_schematic": true
   },
   "U301": {
-   "footprint": "Package_SO:SOIC-24W_7.5x15.4mm_P1.27mm",
+   "footprint": "Package_SO:SOIC-24W_7.5x15.4mm_P1.27mm__v3",
    "value": "STGAP1AS",
    "layer": "F.Cu",
    "attrs": [
@@ -14746,7 +14746,7 @@
    "in_schematic": true
   },
   "U303": {
-   "footprint": "Package_SO:SOIC-24W_7.5x15.4mm_P1.27mm",
+   "footprint": "Package_SO:SOIC-24W_7.5x15.4mm_P1.27mm__v3",
    "value": "STGAP1AS",
    "layer": "F.Cu",
    "attrs": [
@@ -14940,7 +14940,7 @@
    "in_schematic": true
   },
   "U55": {
-   "footprint": "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",
+   "footprint": "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm__v2",
    "value": "SN65HVD230",
    "layer": "F.Cu",
    "attrs": [
@@ -15144,7 +15144,7 @@
    "in_schematic": true
   },
   "Z191": {
-   "footprint": "Tesla:D_SOD-323",
+   "footprint": "Tesla:D_SOD-323__v3",
    "value": "8.2V",
    "layer": "F.Cu",
    "attrs": [
@@ -15163,7 +15163,7 @@
    "in_schematic": true
   },
   "Z192": {
-   "footprint": "Tesla:D_SOD-323",
+   "footprint": "Tesla:D_SOD-323__v3",
    "value": "8.2V",
    "layer": "F.Cu",
    "attrs": [
@@ -15182,7 +15182,7 @@
    "in_schematic": true
   },
   "Z193": {
-   "footprint": "Tesla:D_SOD-323",
+   "footprint": "Tesla:D_SOD-323__v3",
    "value": "8.2V",
    "layer": "F.Cu",
    "attrs": [
@@ -15372,7 +15372,7 @@
    "in_schematic": true
   },
   "Z231": {
-   "footprint": "Tesla:D_SOD-323",
+   "footprint": "Tesla:D_SOD-323__v2",
    "value": "8.2V",
    "layer": "F.Cu",
    "attrs": [
@@ -15391,7 +15391,7 @@
    "in_schematic": true
   },
   "Z232": {
-   "footprint": "Tesla:D_SOD-323",
+   "footprint": "Tesla:D_SOD-323__v2",
    "value": "8.2V",
    "layer": "F.Cu",
    "attrs": [
@@ -15410,7 +15410,7 @@
    "in_schematic": true
   },
   "Z233": {
-   "footprint": "Tesla:D_SOD-323",
+   "footprint": "Tesla:D_SOD-323__v2",
    "value": "8.2V",
    "layer": "F.Cu",
    "attrs": [
@@ -15429,7 +15429,7 @@
    "in_schematic": true
   },
   "Z241": {
-   "footprint": "Tesla:D_SOD-323",
+   "footprint": "Tesla:D_SOD-323__v3",
    "value": "8.2V",
    "layer": "F.Cu",
    "attrs": [
@@ -15448,7 +15448,7 @@
    "in_schematic": true
   },
   "Z242": {
-   "footprint": "Tesla:D_SOD-323",
+   "footprint": "Tesla:D_SOD-323__v3",
    "value": "8.2V",
    "layer": "F.Cu",
    "attrs": [
@@ -15467,7 +15467,7 @@
    "in_schematic": true
   },
   "Z243": {
-   "footprint": "Tesla:D_SOD-323",
+   "footprint": "Tesla:D_SOD-323__v3",
    "value": "8.2V",
    "layer": "F.Cu",
    "attrs": [
@@ -19201,7 +19201,5 @@
   }
  },
  "schematic_only_refs": [],
- "warnings": [
-  "Capacitor_Tantalum_SMD:CP_EIA-3528-15_AVX-H: pad geometry variant CP_EIA-3528-15_AVX-H__v2 (first seen on C44)"
- ]
+ "warnings": []
 }
