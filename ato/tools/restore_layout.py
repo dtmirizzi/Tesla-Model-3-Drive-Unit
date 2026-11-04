@@ -45,6 +45,34 @@ FP_SCALARS = ("locked", "clearance", "zone_connect", "solder_mask_margin",
               "solder_paste_margin", "solder_paste_margin_ratio")
 FP_LISTS = ("group", "fp_text", "model")
 PAD_SCALARS = ("thermal_bridge_angle",)
+# properties atopile itself owns; everything else on a footprint is restored
+ATO_OWNED = {"atopile_address", "atopile_subaddresses", "LCSC", "lcsc_id", "Partnumber", "Manufacturer"}
+
+
+def restore_properties(new_fp, ref_fp, part_unchanged: bool) -> int:
+    """atopile writes an empty Value and fills other fields from symbol defaults.
+
+    Unchanged part: restore the reference's text fields exactly and keep only
+    atopile's own (hidden) bookkeeping fields on top.
+    Changed part: show the new part number as Value.
+    """
+    props = children(new_fp, "property")
+    if not part_unchanged:
+        pn = next((p[2] for p in props if p[1] == "Partnumber"), None)
+        val = next((p for p in props if p[1] == "Value"), None)
+        if pn and val is not None and val[2] == "":
+            val[2] = pn
+            return 1
+        return 0
+    ref_props = {p[1]: p for p in children(ref_fp, "property") if p[1] != "ki_fp_filters"}
+    keep = [p for p in props if p[1] in ATO_OWNED and p[1] not in ref_props]
+    rebuilt = list(ref_props.values()) + keep
+    if [sexp.dumps(p) for p in props] == [sexp.dumps(p) for p in rebuilt]:
+        return 0
+    first = next(i for i, c in enumerate(new_fp) if isinstance(c, list) and head(c) == "property")
+    new_fp[:] = [c for c in new_fp if not (isinstance(c, list) and head(c) == "property")]
+    new_fp[first:first] = copy.deepcopy(rebuilt)
+    return 1
 
 
 LOCKED = re.compile(r"^\t\t\(locked yes\)$|\(locked yes\)", re.M)
@@ -138,7 +166,9 @@ def main() -> int:
     ap.add_argument("--board", type=Path, default=BOARD, help="atopile-built board (edited in place)")
     args = ap.parse_args()
 
-    expected = {r: c["footprint"] for r, c in json.loads((ATO / "reference" / "netlist.json").read_text())["components"].items()}
+    comps = json.loads((ATO / "reference" / "netlist.json").read_text())["components"]
+    expected = {r: c["footprint"] for r, c in comps.items()}
+    expected_pn = {r: c["mpn"] or c["value"] for r, c in comps.items()}
     ref = {prop(f, "Reference"): f for f in children(sexp.loads(args.ref.read_text()), "footprint")}
 
     ref_text = args.ref.read_text()
@@ -161,7 +191,8 @@ def main() -> int:
             r = prop(fp, "Reference")
             rf = ref.get(r)
             if rf is not None and str(fp[1]) == expected.get(r) and placement(fp) == placement(rf):
-                k = restore(fp, rf)
+                pn = next((p[2] for p in children(fp, "property") if p[1] == "Partnumber"), None)
+                k = restore(fp, rf) + restore_properties(fp, rf, part_unchanged=(pn in (None, expected_pn.get(r))))
                 if k:
                     new = sexp.dumps(fp, indent=1)
                     n_fp += 1

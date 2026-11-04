@@ -85,6 +85,8 @@ def load(path: Path):
             "layer": value(fp, "layer"),
             "at": (round(float(at[1]), 4), round(float(at[2]), 4), round(float(at[3]) % 360, 3) if len(at) > 3 else 0.0),
             "body": fp_body(fp),
+            "props": {p[1]: _canon([c for c in p if not (isinstance(c, list) and c and c[0] == "uuid")])
+                      for p in children(fp, "property") if p[1] != "ki_fp_filters"},
             "pads": sorted(
                 (str(p[1]), str(p[2]), str(p[3]),
                  round(float(child(p, "at")[1]), 3), round(float(child(p, "at")[2]), 3))
@@ -175,6 +177,21 @@ def main() -> int:
     if sum(body_diff.values()) > 15:
         errors.append(f"... {sum(body_diff.values())} footprints differ in total: "
                       + ", ".join(f"{'/'.join(k)} x{v}" for k, v in body_diff.most_common()))
+
+    # 1c. text fields: every original field (Reference/Value text, position,
+    # layer, visibility, hidden metadata) must survive unchanged; atopile may
+    # only add its own hidden bookkeeping fields
+    ato_owned = {"atopile_address", "atopile_subaddresses", "LCSC", "lcsc_id", "Partnumber", "Manufacturer"}
+    prop_diff = []
+    for r in sorted(set(o_fps) & set(n_fps)):
+        op, np_ = o_fps[r]["props"], n_fps[r]["props"]
+        bad = [k for k in op if op[k] != np_.get(k)] + [k for k in np_ if k not in op and k not in ato_owned]
+        if bad:
+            prop_diff.append((r, bad))
+    for r, bad in prop_diff[:10]:
+        errors.append(f"{r}: text fields differ: {bad[:6]}")
+    if len(prop_diff) > 10:
+        errors.append(f"... text fields differ on {len(prop_diff)} footprints in total")
 
     # 2. connectivity
     common = {k for k in o_pads if k in n_pads}
