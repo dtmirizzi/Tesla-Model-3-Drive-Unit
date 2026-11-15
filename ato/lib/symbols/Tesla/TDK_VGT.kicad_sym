@@ -1,0 +1,1002 @@
+(kicad_symbol_lib
+	(version 20241209)
+	(generator "kicad_symbol_editor")
+	(generator_version "9.0")
+	(symbol "TDK_VGT"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "T1"
+			(at -1.3822 14.478 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TDK_VGT"
+			(at -1.3822 11.938 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Tesla:VGT22EPC-200S6A12"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "VGT22EPC-200S6A12"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "transformer coil magnet"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "TDK_VGT_0_1"
+			(polyline
+				(pts
+					(xy -6.35 -29.21)
+					(xy -5.715 -29.21)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -5.715 -20.32)
+					(xy -5.08 -20.32)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -5.715 -20.32)
+					(xy -5.715 -31.75)
+					(xy -6.35 -31.75)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -3.8099 -16.5099)
+				(mid -4.1819 -17.4079)
+				(end -5.0799 -17.7799)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -5.0799 -15.2399)
+				(mid -4.1819 -15.6119)
+				(end -3.8099 -16.5099)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -3.8099 -19.0499)
+				(mid -4.1819 -19.9479)
+				(end -5.0799 -20.3199)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -5.0799 -17.7799)
+				(mid -4.1819 -18.1519)
+				(end -3.8099 -19.0499)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -1.27 3.81)
+				(mid -1.656 2.9336)
+				(end -2.54 2.5654)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -1.27 1.27)
+				(mid -1.656 0.3936)
+				(end -2.54 0.0254)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -1.27 -1.27)
+				(mid -1.656 -2.1464)
+				(end -2.54 -2.5146)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -1.27 -3.81)
+				(mid -1.656 -4.6864)
+				(end -2.54 -5.0546)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -2.54 5.08)
+				(mid -1.642 4.708)
+				(end -1.27 3.81)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -2.54 2.54)
+				(mid -1.642 2.168)
+				(end -1.27 1.27)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -2.54 0)
+				(mid -1.642 -0.372)
+				(end -1.27 -1.27)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -2.54 -2.54)
+				(mid -1.642 -2.912)
+				(end -1.27 -3.81)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -1.27 -12.7)
+				(mid -1.642 -13.598)
+				(end -2.54 -13.97)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -2.54 -11.43)
+				(mid -1.642 -11.802)
+				(end -1.27 -12.7)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -1.27 -15.24)
+				(mid -1.642 -16.138)
+				(end -2.54 -16.51)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -2.54 -13.97)
+				(mid -1.642 -14.342)
+				(end -1.27 -15.24)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -1.27 -17.78)
+				(mid -1.642 -18.678)
+				(end -2.54 -19.05)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -2.54 -16.51)
+				(mid -1.642 -16.882)
+				(end -1.27 -17.78)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -1.27 -20.32)
+				(mid -1.642 -21.218)
+				(end -2.54 -21.59)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -2.54 -19.05)
+				(mid -1.642 -19.422)
+				(end -1.27 -20.32)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.54 -25.4)
+					(xy -2.54 -21.59)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 -33.02)
+					(xy 0 10.16)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 10.16)
+					(xy 1.27 -33.02)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 3.81 2.54)
+				(mid 2.912 2.912)
+				(end 2.54 3.81)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 3.81 0)
+				(mid 2.912 0.372)
+				(end 2.54 1.27)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 3.81 -2.54)
+				(mid 2.912 -2.168)
+				(end 2.54 -1.27)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 3.81 -5.08)
+				(mid 2.912 -4.708)
+				(end 2.54 -3.81)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 3.81 -11.43)
+				(mid 2.912 -11.058)
+				(end 2.54 -10.16)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 3.81 -13.97)
+				(mid 2.912 -13.598)
+				(end 2.54 -12.7)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 3.81 -16.51)
+				(mid 2.912 -16.138)
+				(end 2.54 -15.24)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 3.81 -19.05)
+				(mid 2.912 -18.678)
+				(end 2.54 -17.78)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 3.81 -24.13)
+				(mid 2.912 -23.758)
+				(end 2.54 -22.86)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 3.81 -26.67)
+				(mid 2.912 -26.298)
+				(end 2.54 -25.4)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 3.81 -29.21)
+				(mid 2.912 -28.838)
+				(end 2.54 -27.94)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 3.81 -31.75)
+				(mid 2.912 -31.378)
+				(end 2.54 -30.48)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 2.54 3.81)
+				(mid 2.926 4.6864)
+				(end 3.81 5.0546)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 2.54 1.27)
+				(mid 2.926 2.1464)
+				(end 3.81 2.5146)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 2.54 -1.27)
+				(mid 2.926 -0.3936)
+				(end 3.81 -0.0254)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 2.54 -3.81)
+				(mid 2.926 -2.9336)
+				(end 3.81 -2.5654)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 2.54 -10.16)
+				(mid 2.926 -9.2836)
+				(end 3.81 -8.9154)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 2.54 -12.7)
+				(mid 2.926 -11.8236)
+				(end 3.81 -11.4554)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 2.54 -15.24)
+				(mid 2.926 -14.3636)
+				(end 3.81 -13.9954)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 2.54 -17.78)
+				(mid 2.926 -16.9036)
+				(end 3.81 -16.5354)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 2.54 -22.86)
+				(mid 2.926 -21.9836)
+				(end 3.81 -21.6154)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 2.54 -25.4)
+				(mid 2.926 -24.5236)
+				(end 3.81 -24.1554)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 2.54 -27.94)
+				(mid 2.926 -27.0636)
+				(end 3.81 -26.6954)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 2.54 -30.48)
+				(mid 2.926 -29.6036)
+				(end 3.81 -29.2354)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "TDK_VGT_1_1"
+			(pin passive line
+				(at -10.16 5.08 0)
+				(length 7.62)
+				(name "IN+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -10.16 0 0)
+				(length 7.62)
+				(name "PM"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -10.16 -5.08 0)
+				(length 7.62)
+				(name "IN-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -10.16 -11.43 0)
+				(length 7.62)
+				(name "IN+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -10.16 -15.24 0)
+				(length 5.08)
+				(name "IN+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -10.16 -21.59 0)
+				(length 7.62)
+				(name "IN-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -10.16 -25.4 0)
+				(length 7.62)
+				(name "IN-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -10.16 -29.21 0)
+				(length 3.81)
+				(name "IN-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -10.16 -31.75 0)
+				(length 3.81)
+				(name "IN-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 11.43 5.08 180)
+				(length 7.62)
+				(name "IN-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "18"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 11.43 0 180)
+				(length 7.62)
+				(name "PM"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "17"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 11.43 -5.08 180)
+				(length 7.62)
+				(name "IN+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "16"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 11.43 -8.89 180)
+				(length 7.62)
+				(name "IN-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "15"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 11.43 -13.97 180)
+				(length 7.62)
+				(name "PM"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "14"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 11.43 -19.05 180)
+				(length 7.62)
+				(name "IN+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "13"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 11.43 -21.59 180)
+				(length 7.62)
+				(name "IN-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "12"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 11.43 -26.67 180)
+				(length 7.62)
+				(name "PM"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "11"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 11.43 -31.75 180)
+				(length 7.62)
+				(name "IN+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+)

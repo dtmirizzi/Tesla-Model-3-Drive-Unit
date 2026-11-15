@@ -1,0 +1,235 @@
+(footprint "M3DU_Mosfets"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at -1.463 -10.2502)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "CH1234"
+		(at 5.715 1.143)
+		(unlocked yes)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_rect
+		(start 0 0)
+		(end 79.619 -10.619)
+		(stroke
+			(width 0.12)
+			(type dash)
+		)
+		(fill no)
+		(layer "F.SilkS")
+	)
+	(fp_text user "G"
+		(at 13.455 -2.032)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "S"
+		(at 46.246 -2.032)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "S"
+		(at 65.913 -2.032)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "G"
+		(at 32.898 -2.032)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "G"
+		(at 73.025 -2.032)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "S"
+		(at 25.898 -2.032)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "G"
+		(at 52.771 -2.032)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "S"
+		(at 6.455 -2.032)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "${REFERENCE}"
+		(at 5.715 2.643)
+		(unlocked yes)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole oval
+		(at 7.93 -5.461)
+		(size 5 3.5)
+		(drill 1.5
+			(offset -1.5 0)
+		)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+	)
+	(pad "2" thru_hole oval
+		(at 11.43 -5.461)
+		(size 5 3.5)
+		(drill 1.5
+			(offset 1.5 0)
+		)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+	)
+	(pad "3" thru_hole oval
+		(at 27.742 -5.461)
+		(size 5 3.5)
+		(drill 1.5
+			(offset -1.5 0)
+		)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+	)
+	(pad "4" thru_hole oval
+		(at 31.242 -5.461)
+		(size 5 3.5)
+		(drill 1.5
+			(offset 1.5 0)
+		)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+	)
+	(pad "5" thru_hole oval
+		(at 47.681 -5.461)
+		(size 5 3.5)
+		(drill 1.5
+			(offset -1.5 0)
+		)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+	)
+	(pad "6" thru_hole oval
+		(at 51.181 -5.461)
+		(size 5 3.5)
+		(drill 1.5
+			(offset 1.5 0)
+		)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+	)
+	(pad "7" thru_hole oval
+		(at 67.62 -5.461)
+		(size 5 3.5)
+		(drill 1.5
+			(offset -1.5 0)
+		)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+	)
+	(pad "8" thru_hole oval
+		(at 71.12 -5.461)
+		(size 5 3.5)
+		(drill 1.5
+			(offset 1.5 0)
+		)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+	)
+	(embedded_fonts no)
+)

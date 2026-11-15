@@ -1,0 +1,8 @@
+build/
+.ato/
+.venv/
+tools/__pycache__/
+layouts/**/backups/
+*.kicad_prl
+*.lck
+fp-info-cache

@@ -1,0 +1,310 @@
+(footprint "FGD3N60LSDTM"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "FGD3N60LSDTM-2")
+	(tags "Transistor IGBT")
+	(property "Reference" "REF**"
+		(at 5.175 -4.825 90)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "FGD3N60LSDTM"
+		(at 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.onsemi.com/download/data-sheet/pdf/FGD3N60LSD-D.PDF"
+		(at 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Obsolete - IGBT, 600V, 3A, 1.2V, DPAK, Planar"
+		(at 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Height" "2.517"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Name" "onsemi"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Part_Number" "FGD3N60LSDTM"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Part Number" "512-FGD3N60LSDTM"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/ON-Semiconductor-Fairchild/FGD3N60LSDTM?qs=1RUpyYoSILuyeMyjatYm%252BQ%3D%3D"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Arrow Part Number" "FGD3N60LSDTM"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Arrow Price/Stock" "https://www.arrow.com/en/products/fgd3n60lsdtm/on-semiconductor"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -3.27 1.39)
+		(end -3.27 1.674)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start 3.27 1.674)
+		(end 3.27 1.39)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start -3.27 1.674)
+		(end 3.27 1.674)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start -2.3 5.9)
+		(end -2.3 5.9)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start -2.3 6)
+		(end -2.3 6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_arc
+		(start -2.3 5.9)
+		(mid -2.25 5.95)
+		(end -2.3 6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_arc
+		(start -2.3 6)
+		(mid -2.35 5.95)
+		(end -2.3 5.9)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start 4.27 -6.5)
+		(end 4.27 6.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+	)
+	(fp_line
+		(start -4.27 -6.5)
+		(end 4.27 -6.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+	)
+	(fp_line
+		(start 4.27 6.5)
+		(end -4.27 6.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+	)
+	(fp_line
+		(start -4.27 6.5)
+		(end -4.27 -6.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+	)
+	(fp_line
+		(start 3.27 -4.42)
+		(end -3.27 -4.42)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start -3.27 -4.42)
+		(end -3.27 1.675)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start 3.27 1.675)
+		(end 3.27 -4.42)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start -3.27 1.675)
+		(end 3.27 1.675)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.3 4)
+		(size 1.4 3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "2" smd rect
+		(at 0 -2.25)
+		(size 6 6.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "3" smd rect
+		(at 2.3 4)
+		(size 1.4 3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(embedded_fonts no)
+	(model "${KICAD6_3RD_PARTY}/Samacsys.3dshapes/NJVMJD127T4G.stp"
+		(offset
+			(xyz 0 -0.65 2.25)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 180)
+		)
+	)
+)

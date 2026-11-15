@@ -1,0 +1,278 @@
+(footprint "DIOM5026X229N"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "DO-214AC (SMA)_2023")
+	(tags "TVS Diode (Uni-directional)")
+	(property "Reference" "REF**"
+		(at 6.075 -0.025)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "SMAJ7.0A"
+		(at 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.littelfuse.com/media?resourcetype=datasheets&itemid=75e32973-b177-4ee3-a0ff-cedaf1abdb93&filename=smaj-datasheet"
+		(at 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "ESD Suppressors / TVS Diodes 400W 7V 5% Uni-Directional"
+		(at 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Height" "2.29"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Name" "LITTELFUSE"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Part_Number" "SMAJ7.0A"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Part Number" "576-SMAJ7.0A"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Littelfuse/SMAJ70A?qs=zHiv0nsVGmqwPZkMuKJUUw%3D%3D"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Arrow Part Number" "SMAJ7.0A"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Arrow Price/Stock" "https://www.arrow.com/en/products/smaj7.0a/littelfuse?region=europe"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -2.52 1.298)
+		(end 2.52 1.298)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start 2.52 -1.298)
+		(end -2.825 -1.298)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start -3.4 -1.645)
+		(end 3.4 -1.645)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+	)
+	(fp_line
+		(start -3.4 1.645)
+		(end -3.4 -1.645)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+	)
+	(fp_line
+		(start 3.4 -1.645)
+		(end 3.4 1.645)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+	)
+	(fp_line
+		(start 3.4 1.645)
+		(end -3.4 1.645)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+	)
+	(fp_line
+		(start -2.52 -1.298)
+		(end 2.52 -1.298)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start -2.52 -0.522)
+		(end -1.745 -1.298)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start -2.52 1.298)
+		(end -2.52 -1.298)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start 2.52 -1.298)
+		(end 2.52 1.298)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start 2.52 1.298)
+		(end -2.52 1.298)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.05 0 90)
+		(size 1.55 2.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "2" smd rect
+		(at 2.05 0 90)
+		(size 1.55 2.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(embedded_fonts no)
+	(model "${KICAD6_3RD_PARTY}/Samacsys.3dshapes/SMAJ7.0A.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+	(model "${KICAD_3RD_PARTY}/Samacsys.3dshapes/SMAJ7.0A.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

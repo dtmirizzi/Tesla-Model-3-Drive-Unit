@@ -1,0 +1,202 @@
+(footprint "HV_HVIL"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "TMV 2-1215SHI")
+	(tags "Power Supply")
+	(property "Reference" "REF**"
+		(at -8.35 -2.5)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "HV_Hvil"
+		(at 4.9 6.2)
+		(layer "F.SilkS")
+		(hide yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "https://tracopower.com/tmv2hi-datasheet/"
+		(at 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "HV Hvil"
+		(at 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Height" "10.2"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Name" "Traco Power"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Part_Number" "TMV 2-1215SHI"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Part Number" ""
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Price/Stock" ""
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Arrow Part Number" ""
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Arrow Price/Stock" ""
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_circle
+		(center 0 0)
+		(end 5.5 0)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 7.65 2.075)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "" np_thru_hole circle
+		(at 0 0)
+		(size 3.5 3.5)
+		(drill 3.5)
+		(layers "*.Mask")
+	)
+	(pad "1" thru_hole circle
+		(at -3.5 0)
+		(size 3 3)
+		(drill 2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+	)
+	(pad "2" thru_hole circle
+		(at 3.5 0)
+		(size 3 3)
+		(drill 2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+	)
+	(pad "3" thru_hole circle
+		(at 0 -3.5)
+		(size 3 3)
+		(drill 2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+	)
+	(pad "4" thru_hole circle
+		(at 0 3.5)
+		(size 3 3)
+		(drill 2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+	)
+	(embedded_fonts no)
+	(model "TMV_2-1215SHI.stp"
+		(offset
+			(xyz 40.68999802 -27.81999928 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 0)
+		)
+	)
+)

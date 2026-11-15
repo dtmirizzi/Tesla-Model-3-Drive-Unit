@@ -1,0 +1,230 @@
+(kicad_symbol_lib
+	(version 20241209)
+	(generator "kicad_symbol_editor")
+	(generator_version "9.0")
+	(symbol "SMAJ7.0A"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.762)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "D"
+			(at 10.16 8.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "SMAJ7.0A"
+			(at 10.16 6.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "Samacsys:DIOM5026X229N"
+			(at 10.16 3.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.littelfuse.com/media?resourcetype=datasheets&itemid=75e32973-b177-4ee3-a0ff-cedaf1abdb93&filename=smaj-datasheet"
+			(at 10.16 1.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+				(hide yes)
+			)
+		)
+		(property "Description" "ESD Suppressors / TVS Diodes 400W 7V 5% Uni-Directional"
+			(at 10.16 -1.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+				(hide yes)
+			)
+		)
+		(property "Height" "2.29"
+			(at 10.16 -3.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "LITTELFUSE"
+			(at 10.16 -6.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "SMAJ7.0A"
+			(at 10.16 -8.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "576-SMAJ7.0A"
+			(at 10.16 -11.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Littelfuse/SMAJ70A?qs=zHiv0nsVGmqwPZkMuKJUUw%3D%3D"
+			(at 10.16 -13.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+				(hide yes)
+			)
+		)
+		(property "Arrow Part Number" "SMAJ7.0A"
+			(at 10.16 -16.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+				(hide yes)
+			)
+		)
+		(property "Arrow Price/Stock" "https://www.arrow.com/en/products/smaj7.0a/littelfuse?region=europe"
+			(at 10.16 -19.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+				(hide yes)
+			)
+		)
+		(symbol "SMAJ7.0A_0_0"
+			(pin passive line
+				(at 0 0 0)
+				(length 5.08)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 15.24 0 180)
+				(length 5.08)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "SMAJ7.0A_0_1"
+			(polyline
+				(pts
+					(xy 4.064 2.54)
+					(xy 5.08 2.032)
+				)
+				(stroke
+					(width 0.1524)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 5.08 0)
+					(xy 10.16 2.54)
+					(xy 10.16 -2.54)
+					(xy 5.08 0)
+				)
+				(stroke
+					(width 0.1524)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 5.08 -2.032)
+					(xy 5.08 2.032)
+				)
+				(stroke
+					(width 0.1524)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 5.08 -2.032)
+					(xy 6.096 -2.54)
+				)
+				(stroke
+					(width 0.1524)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+)

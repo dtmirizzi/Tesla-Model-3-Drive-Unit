@@ -1,0 +1,230 @@
+(kicad_symbol_lib
+	(version 20241209)
+	(generator "kicad_symbol_editor")
+	(generator_version "9.0")
+	(symbol "SS54B"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.762)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "D"
+			(at 11.43 5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SS54B"
+			(at 11.43 2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Samacsys:DIOM5336X244N"
+			(at 11.43 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://datasheet.datasheetarchive.com/originals/distributors/Datasheets-3/DSA-43270.pdf"
+			(at 11.43 -2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "HY Electronic Corp SS54B, SMT Rectifier Schottky Diode, 40V 5A, 2-Pin SMB"
+			(at 11.43 -5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Height" "2.44"
+			(at 11.43 -7.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "HY Electronic"
+			(at 11.43 -10.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "SS54B"
+			(at 11.43 -12.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" ""
+			(at 11.43 -15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" ""
+			(at 11.43 -17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Arrow Part Number" ""
+			(at 11.43 -20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 11.43 -22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(symbol "SS54B_0_0"
+			(pin passive line
+				(at 0 0 0)
+				(length 2.54)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 15.24 0 180)
+				(length 2.54)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "SS54B_0_1"
+			(polyline
+				(pts
+					(xy 2.54 0)
+					(xy 5.08 0)
+				)
+				(stroke
+					(width 0.1524)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 5.08 2.54)
+					(xy 5.08 -2.54)
+				)
+				(stroke
+					(width 0.1524)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 5.08 0)
+					(xy 10.16 2.54)
+					(xy 10.16 -2.54)
+					(xy 5.08 0)
+				)
+				(stroke
+					(width 0.254)
+					(type solid)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy 10.16 0)
+					(xy 12.7 0)
+				)
+				(stroke
+					(width 0.1524)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+)

@@ -1,0 +1,176 @@
+(footprint "VGT22EPC-200S6A12"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "surface-mounted straight pin header, 1x12, 2.54mm pitch, single row, style 1 (pin 1 left)")
+	(tags "Surface mounted pin header SMD 1x12 2.54mm single row style1 pin1 left")
+	(property "Reference" "REF**"
+		(at 2.8 -2 180)
+		(layer "F.SilkS")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "TDK_VGT"
+		(at -5.5 16.2 180)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "~"
+		(at 40.23 8.07)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "VGT22EPC-200S6A12"
+		(at 40.23 8.07)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_rect
+		(start -19.3 -14.6)
+		(end 13.6 15.8)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+	)
+	(fp_rect
+		(start -20.1 -15.5)
+		(end 14.1 16.9)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+	)
+	(pad "1" smd rect
+		(at -17.1 12 90)
+		(size 5.4 1.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "2" smd rect
+		(at -14.1 12 90)
+		(size 5.4 1.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "3" smd rect
+		(at -11.1 12 90)
+		(size 5.4 1.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "4" smd rect
+		(at -4 12 90)
+		(size 5.4 1.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "5" smd rect
+		(at -1 12 90)
+		(size 5.4 1.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "6" smd rect
+		(at 3.1 12 90)
+		(size 5.4 1.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "7" smd rect
+		(at 6.1 12 90)
+		(size 5.4 1.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "8" smd rect
+		(at 9.1 12 90)
+		(size 5.4 1.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "9" smd rect
+		(at 12.1 12 90)
+		(size 5.4 1.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "10" smd rect
+		(at 12.1 -10.8 90)
+		(size 5.4 1.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "11" smd rect
+		(at 9.6 -10.8 90)
+		(size 5.4 1.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "12" smd rect
+		(at 7.1 -10.8 90)
+		(size 5.4 1.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "13" smd rect
+		(at 0 -10.8 90)
+		(size 5.4 1.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "14" smd rect
+		(at -2.5 -10.8 90)
+		(size 5.4 1.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "15" smd rect
+		(at -5 -10.8 90)
+		(size 5.4 1.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "16" smd rect
+		(at -12.1 -10.8 90)
+		(size 5.4 1.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "17" smd rect
+		(at -14.6 -10.8 90)
+		(size 5.4 1.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "18" smd rect
+		(at -17.1 -10.8 90)
+		(size 5.4 1.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(embedded_fonts no)
+	(model "${KICAD6_3RD_PARTY}/Tesla.pretty/VGT22EPC-200S6A12.stp"
+		(offset
+			(xyz -2.5 0 6)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

@@ -1,0 +1,148 @@
+(footprint "TestPoint_Keystone_5000-5004_Miniature"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Keystone Miniature THM Test Point 5000-5004, http://www.keyelco.com/product-pdf.cfm?p=1309")
+	(tags "Through Hole Mount Test Points")
+	(property "Reference" "REF**"
+		(at 2.5146 2.413)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "TestPoint"
+		(at 0 2.5)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "~"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "test point"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_circle
+		(center 0 0)
+		(end 1.4 0)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 1.65 0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+	)
+	(fp_line
+		(start -0.75 -0.25)
+		(end 0.75 -0.25)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start -0.75 0.25)
+		(end -0.75 -0.25)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start 0.75 -0.25)
+		(end 0.75 0.25)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start 0.75 0.25)
+		(end -0.75 0.25)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 1.25 0)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -2.5)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 2 2)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+	)
+	(embedded_fonts no)
+	(model "${KICAD8_3DMODEL_DIR}/TestPoint.3dshapes/TestPoint_Keystone_5000-5004_Miniature.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

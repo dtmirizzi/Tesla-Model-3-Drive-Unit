@@ -88,3 +88,5 @@ Added V3 Schematic and board layout.
 
 09/04/26 : An amazing contribution : https://github.com/jrbe/Tesla-Model-3-Current-Sensor-Block
            Prototypes on order.
+
+atopile port: [`ato/`](ato/README.md) describes the V3.2 board as code, organised into modules with one shared gate-driver phase. It is checked pad by pad against the KiCad design and keeps the original layout.

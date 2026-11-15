@@ -1,0 +1,227 @@
+(footprint "SOT95P237X112-3N"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "SOT95P237X112-3N")
+	(tags "Integrated Circuit")
+	(property "Reference" "REF**"
+		(at 0.025 -3.3 270)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "TL432AQDBZRQ1"
+		(at -3.4544 -2.54 180)
+		(layer "F.SilkS")
+		(hide yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "http://componentsearchengine.com/Datasheets/1/TL432AQDBZRQ1.pdf"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Automotive adjustable precision shunt regulator (pin layout: RKA)"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Height" ""
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Name" "Texas Instruments"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Part_Number" "TL432AQDBZRQ1"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Part Number" "595-TL432AQDBZRQ1"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TL432AQDBZRQ1?qs=IDSsxkoac0x7JFh2egSvWA%3D%3D"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Arrow Part Number" "TL432AQDBZRQ1"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Arrow Price/Stock" "https://www.arrow.com/en/products/tl432aqdbzrq1/texas-instruments?region=nac"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -0.2794 1.524)
+		(end 0.7112 1.524)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start 0.7112 1.524)
+		(end 0.7112 0.5842)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start -0.7112 -0.3302)
+		(end -0.7112 0.3302)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start 0.7112 -0.5842)
+		(end 0.7112 -1.524)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start 0.3048 -1.524)
+		(end -0.2794 -1.524)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start 0.7112 -1.524)
+		(end 0.3048 -1.524)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_text user "${REFERENCE}"
+		(at -3.4544 -2.54 180)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -1.0922 -0.9398 90)
+		(size 0.5588 1.3208)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "2" smd rect
+		(at -1.0922 0.9398 90)
+		(size 0.5588 1.3208)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "3" smd rect
+		(at 1.0922 0 90)
+		(size 0.508 1.3208)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(embedded_fonts no)
+	(model "${KICAD6_3RD_PARTY}/Tesla.pretty/TL432AQDBVR.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

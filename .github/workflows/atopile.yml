@@ -1,0 +1,121 @@
+name: atopile port
+
+on:
+  push:
+    paths: ["ato/**", "Design/M3DU_BoardV3_2/**", ".github/workflows/atopile.yml"]
+  pull_request:
+    paths: ["ato/**", "Design/M3DU_BoardV3_2/**", ".github/workflows/atopile.yml"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build + prove equivalence to KiCad V3.2
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: ato
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - name: Install atopile
+        run: pip install atopile==0.15.9 pandas xlrd
+
+      # 1. the board committed in ato/layouts must already be the V3.2 board
+      - name: "Check: committed atopile board vs KiCad V3.2"
+        run: python -I tools/check_netlist.py --title "Committed board (ato/layouts) vs KiCad V3.2"
+
+      # 2. rebuild everything from the KiCad sources
+      - name: Regenerate from KiCad and build
+        run: PYTHON=python tools/port.sh --no-check
+
+      # 3. the rebuilt board must still be the V3.2 board, pad by pad
+      - name: "Check: rebuilt board vs KiCad V3.2 (netlist + layout)"
+        run: python -I tools/check_netlist.py --title "Rebuilt board vs KiCad V3.2"
+
+      # 4. the BOM atopile emits must match the JLC BOM used to build V3.2
+      - name: "Check: atopile BOM vs JLC BOM"
+        run: python -I tools/check_bom.py
+
+      # 5. committed generated code must match what the generators produce
+      - name: "Check: generated sources are up to date"
+        run: |
+          if ! git diff --exit-code --stat -- main.ato src parts lib reference; then
+            echo "::error::Generated atopile sources are stale. Run ato/tools/port.sh and commit the result."
+            exit 1
+          fi
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: atopile-build
+          path: |
+            ato/layouts/default/default.kicad_pcb
+            ato/layouts/default/default.kicad_pro
+            ato/build/builds/default/*.bom.*
+            ato/build/builds/default/power_tree.md
+
+  fab:
+    name: KiCad DRC + fabrication outputs
+    needs: build
+    runs-on: ubuntu-24.04
+    container:
+      image: kicad/kicad:9.0
+      # the image defaults to the unprivileged `kicad` user, which cannot write
+      # to the Actions workspace
+      options: --user root
+    steps:
+      - uses: actions/checkout@v4  # original V3.2 board + tools/compare_drc.py
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: atopile-build
+          path: out
+
+      - name: DRC of the original V3.2 board (baseline)
+        run: |
+          kicad-cli pcb drc --format json --severity-error \
+            -o out/drc-original.json Design/M3DU_BoardV3_2/M3DU_BoardV3_2.kicad_pcb
+
+      - name: DRC of the atopile board
+        run: |
+          kicad-cli pcb drc --format json --severity-error \
+            -o out/drc.json out/layouts/default/default.kicad_pcb
+          kicad-cli pcb drc --severity-error -o out/drc.rpt out/layouts/default/default.kicad_pcb
+
+      # gate: the atopile board may not add DRC violations to the original's
+      - name: "Check: no DRC violations beyond the original board's"
+        run: python3 ato/tools/compare_drc.py out/drc-original.json out/drc.json
+
+      - name: Gerbers, drill, positions (atopile board + original board)
+        run: |
+          plot() {  # <board.kicad_pcb> <outdir>
+            mkdir -p "$2"
+            kicad-cli pcb export gerbers -o "$2/" "$1"
+            kicad-cli pcb export drill -o "$2/" "$1"
+            kicad-cli pcb export pos --format csv --units mm -o "$2/positions.csv" "$1"
+          }
+          plot out/layouts/default/default.kicad_pcb out/fab
+          plot Design/M3DU_BoardV3_2/M3DU_BoardV3_2.kicad_pcb out/fab-original
+
+      # gate: what would be sent to the fab must be what V3.2 sent
+      - name: "Check: fab outputs identical to the original board's"
+        run: python3 ato/tools/compare_fab.py out/fab-original out/fab
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: fabrication
+          path: out/fab/
+          if-no-files-found: error
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: drc-report
+          path: |
+            out/drc.rpt
+            out/drc.json
+            out/drc-original.json

@@ -1,0 +1,335 @@
+(footprint "SOIC127P600X175-8N"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "8 SO-3")
+	(tags "Integrated Circuit")
+	(property "Reference" "REF**"
+		(at 0.0048 -3.6)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "TDA2822D013TR"
+		(at 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.st.com/resource/en/datasheet/tda2822d.pdf"
+		(at 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "STMICROELECTRONICS - TDA2822D013TR - Audio Power Amplifier, 300 mW, AB, 2 Channel, 1.8V to 15V, SOIC, 8 Pins"
+		(at 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Height" "1.75"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Name" "STMicroelectronics"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Part_Number" "TDA2822D013TR"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Part Number" "511-TDA2822D013TR"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Price/Stock" "https://www.mouser.com/Search/Refine.aspx?Keyword=511-TDA2822D013TR"
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "RS Part Number" ""
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "RS Price/Stock" ""
+		(at 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -3.475 -2.58)
+		(end -1.95 -2.58)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start -1.6 -2.45)
+		(end 1.6 -2.45)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start -1.6 2.45)
+		(end -1.6 -2.45)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start 1.6 -2.45)
+		(end 1.6 2.45)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start 1.6 2.45)
+		(end -1.6 2.45)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start -3.725 -2.75)
+		(end 3.725 -2.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+	)
+	(fp_line
+		(start -3.725 2.75)
+		(end -3.725 -2.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+	)
+	(fp_line
+		(start 3.725 -2.75)
+		(end 3.725 2.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+	)
+	(fp_line
+		(start 3.725 2.75)
+		(end -3.725 2.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+	)
+	(fp_line
+		(start -1.95 -2.45)
+		(end 1.95 -2.45)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start -1.95 -1.18)
+		(end -0.68 -2.45)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start -1.95 2.45)
+		(end -1.95 -2.45)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start 1.95 -2.45)
+		(end 1.95 2.45)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start 1.95 2.45)
+		(end -1.95 2.45)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.712 -1.905 90)
+		(size 0.65 1.525)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "2" smd rect
+		(at -2.712 -0.635 90)
+		(size 0.65 1.525)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "3" smd rect
+		(at -2.712 0.635 90)
+		(size 0.65 1.525)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "4" smd rect
+		(at -2.712 1.905 90)
+		(size 0.65 1.525)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "5" smd rect
+		(at 2.712 1.905 90)
+		(size 0.65 1.525)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "6" smd rect
+		(at 2.712 0.635 90)
+		(size 0.65 1.525)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "7" smd rect
+		(at 2.712 -0.635 90)
+		(size 0.65 1.525)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "8" smd rect
+		(at 2.712 -1.905 90)
+		(size 0.65 1.525)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(embedded_fonts no)
+	(model "MAX3490EESA+T.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+	(model "${KICAD6_3RD_PARTY}/Samacsys.3dshapes/MAX3490EESA+T.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
